@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102042680787",
+    "project_id": "galaxygame-4d9b7",
+    "storage_bucket": "galaxygame-4d9b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102042680787:android:9b5a7f57626faeac2d0326",
+        "android_client_info": {
+          "package_name": "com.example.galaxygame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102042680787-csc1gofds7u4bft1h0gaq7ls1e1tkdsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl6B3lRvd2JfZBUjxuMjAzTvJcsceToLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102042680787-csc1gofds7u4bft1h0gaq7ls1e1tkdsq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
