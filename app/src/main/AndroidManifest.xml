@@ -13,10 +13,28 @@
         android:theme="@style/Theme.GalaxyGame"
         tools:targetApi="31">
         <activity
-            android:name=".RecruitArmy"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:name=".VisitAlienPlanetActivity"
             android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".homeSolarSystem"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecruitArmy"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

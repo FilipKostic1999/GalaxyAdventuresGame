@@ -272,28 +272,6 @@ class MainActivity : AppCompatActivity() {
     fun savePlayerData() {
 
 
-        /*
-
-        val sharedSoldi = getSharedPreferences("Soldi", AppCompatActivity.MODE_PRIVATE)
-        var Soldi = sharedSoldi.getInt("Soldi", 0)
-
-
-
-        Soldi = 50
-
-        val editSoldi = sharedSoldi.edit()
-        editSoldi.putInt("Soldi", Soldi)
-        editSoldi.commit()
-
-
-
-
-*/
-
-
-
-
-
 
 
 

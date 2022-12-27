@@ -225,6 +225,7 @@ class RecruitArmy : AppCompatActivity() {
                             tankRecruitArrow.isEnabled = true
                             tankQuantityTxt.isVisible = true
                             tankTxt.isVisible = true
+                            tankRecruitArrow.isEnabled = true
 
 
                         } else if (levelMilitaryBase == 3) {
@@ -244,6 +245,9 @@ class RecruitArmy : AppCompatActivity() {
                             airplane2Txt.isVisible = true
                             tankTxt.isVisible = true
                             sateliteTxt.isVisible = true
+                            airplane2RecruitArrow.isEnabled = true
+                            tankRecruitArrow.isEnabled = true
+                            sateliteRecruitArrow.isEnabled = true
 
                         } else if (levelMilitaryBase == 4) {
 
@@ -265,6 +269,9 @@ class RecruitArmy : AppCompatActivity() {
                             airplane2Txt.isVisible = true
                             tankTxt.isVisible = true
                             sateliteTxt.isVisible = true
+                            airplane2RecruitArrow.isEnabled = true
+                            tankRecruitArrow.isEnabled = true
+                            sateliteRecruitArrow.isEnabled = true
 
                         } else if (levelMilitaryBase == 5) {
 
@@ -290,6 +297,9 @@ class RecruitArmy : AppCompatActivity() {
                             airplane2Txt.isVisible = true
                             tankTxt.isVisible = true
                             sateliteTxt.isVisible = true
+                            airplane2RecruitArrow.isEnabled = true
+                            tankRecruitArrow.isEnabled = true
+                            sateliteRecruitArrow.isEnabled = true
 
                         }
 
