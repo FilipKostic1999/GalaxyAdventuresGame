@@ -37,6 +37,58 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
 
+        } else if (SelectedPlanet == 111) {
+
+            /* Id number of a second visitable planet in the same solar system is the same number of
+           the first visitable planet in the system repeated three times
+            */
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
+
+        } else if (SelectedPlanet == 2) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+
+        } else if (SelectedPlanet == 3) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 4) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 444) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 5) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 6) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 7) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 777) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 8) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 9) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
+        } else if (SelectedPlanet == 999) {
+
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+
         }
 
 

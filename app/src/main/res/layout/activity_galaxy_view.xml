@@ -107,7 +107,7 @@
         app:srcCompat="@drawable/signalsign" />
 
     <ImageView
-        android:id="@+id/signalSolSystem9"
+        android:id="@+id/signalSolSystem9ZorgonColony"
         android:layout_width="47dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -3,52 +3,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/solsystemsix"
     android:layout_height="match_parent"
-    android:id="@+id/SelectedSolLayout"
-    android:background="@drawable/solsystem1"
-    tools:context=".SolSystem1">
+    tools:context=".SolSystem6">
 
     <TextView
-        android:id="@+id/solSystem1Planet1Txt"
-        android:layout_width="84dp"
-        android:layout_height="66dp"
+        android:id="@+id/solSystem6GasGiant"
+        android:layout_width="103dp"
+        android:layout_height="83dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.708"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.768" />
 
     <TextView
-        android:id="@+id/solSystem1HotPlanetTxt"
-        android:layout_width="69dp"
-        android:layout_height="54dp"
+        android:id="@+id/solSystem6WarmPlanet"
+        android:layout_width="56dp"
+        android:layout_height="57dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintVertical_bias="0.745" />
 
     <TextView
-        android:id="@+id/solSystem1CoolPlanetTxt"
-        android:layout_width="117dp"
-        android:layout_height="82dp"
+        android:id="@+id/solSystem6StormyPlanet"
+        android:layout_width="118dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.005" />
 
     <TextView
-        android:id="@+id/solSystem1GreenPlanetTxt"
-        android:layout_width="64dp"
-        android:layout_height="66dp"
+        android:id="@+id/solSystem6Planet1"
+        android:layout_width="96dp"
+        android:layout_height="87dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.321" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
