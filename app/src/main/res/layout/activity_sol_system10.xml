@@ -3,40 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/zorgonsolarsystemtwo"
+    android:background="@drawable/zorgonsolarsystemone"
     android:layout_height="match_parent"
-    tools:context=".solSystem9">
+    tools:context=".SolSystem10">
 
     <TextView
-        android:id="@+id/solSystem9Planet1"
-        android:layout_width="89dp"
-        android:layout_height="71dp"
+        android:id="@+id/solSystem10Planet1"
+        android:layout_width="86dp"
+        android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.685"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
-        android:id="@+id/solSystem9Planet2"
-        android:layout_width="143dp"
-        android:layout_height="117dp"
+        android:id="@+id/solSystem10Planet2"
+        android:layout_width="65dp"
+        android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.399"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768" />
+        app:layout_constraintVertical_bias="0.729" />
 
     <TextView
-        android:id="@+id/solSystem9GasGiant"
-        android:layout_width="74dp"
+        android:id="@+id/solSystem10Planet3"
+        android:layout_width="78dp"
         android:layout_height="63dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.984"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.873" />
 </androidx.constraintlayout.widget.ConstraintLayout>

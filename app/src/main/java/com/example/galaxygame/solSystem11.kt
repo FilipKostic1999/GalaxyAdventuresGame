@@ -6,22 +6,22 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 
-class solSystem9 : AppCompatActivity() {
+class solSystem11 : AppCompatActivity() {
 
 
-    lateinit var solSystem9Planet1: TextView
-    lateinit var solSystem9Planet2: TextView
-    lateinit var solSystem9GasGiant: TextView
+    lateinit var solSystem11Planet1 : TextView
+    lateinit var solSystem11Planet2 : TextView
+    lateinit var solSystem11StormyPlanet : TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sol_system9)
+        setContentView(R.layout.activity_sol_system11)
 
 
-        solSystem9Planet1 = findViewById(R.id.solSystem9Planet1)
-        solSystem9Planet2 = findViewById(R.id.solSystem9Planet2)
-        solSystem9GasGiant = findViewById(R.id.solSystem9GasGiant)
-
+        solSystem11Planet1 = findViewById(R.id.solSystem11Planet1)
+        solSystem11Planet2 = findViewById(R.id.solSystem11Planet2)
+        solSystem11StormyPlanet = findViewById(R.id.solSystem11StormyPlanet)
 
 
         val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
@@ -29,27 +29,9 @@ class solSystem9 : AppCompatActivity() {
 
 
 
+        solSystem11Planet1.setOnClickListener {
 
-        solSystem9Planet1.setOnClickListener {
-
-            SelectedPlanet = 9
-
-            val editSelectedPlanet = sharedSelectedPlanet.edit()
-            editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
-            editSelectedPlanet.commit()
-
-            val intent = Intent(this, VisitAlienPlanetActivity :: class.java)
-            startActivity(intent)
-
-        }
-
-
-
-
-
-        solSystem9Planet2.setOnClickListener {
-
-            SelectedPlanet = 999
+            SelectedPlanet = 11
 
             val editSelectedPlanet = sharedSelectedPlanet.edit()
             editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
@@ -62,14 +44,27 @@ class solSystem9 : AppCompatActivity() {
 
 
 
-        solSystem9GasGiant.setOnClickListener {
 
-            Toast.makeText(this, "This planet is a gassy giant", Toast.LENGTH_SHORT).show()
+        solSystem11Planet2.setOnClickListener {
+
+            SelectedPlanet = 111111
+
+            val editSelectedPlanet = sharedSelectedPlanet.edit()
+            editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
+            editSelectedPlanet.commit()
+
+            val intent = Intent(this, VisitAlienPlanetActivity :: class.java)
+            startActivity(intent)
 
         }
 
 
 
+        solSystem11StormyPlanet.setOnClickListener {
+
+            Toast.makeText(this, "This planet is too stormy to visit", Toast.LENGTH_SHORT).show()
+
+        }
 
 
 

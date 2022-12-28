@@ -89,6 +89,34 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
 
+        } else if (SelectedPlanet == 10) {
+
+
+
+        } else if (SelectedPlanet== 101010) {
+
+
+
+        } else if (SelectedPlanet==10101010) {
+
+
+
+        } else if (SelectedPlanet == 11) {
+
+
+
+        } else if (SelectedPlanet == 111111) {
+
+
+
+        } else if(SelectedPlanet==12) {
+
+
+
+        } else if (SelectedPlanet == 13) {
+
+
+
         }
 
 

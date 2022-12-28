@@ -22,8 +22,12 @@ class GalaxyViewActivity : AppCompatActivity() {
     lateinit var signalSolSystem6 : ImageView
     lateinit var signalSolSystem7 : ImageView
     lateinit var signalSolSystem8 : ImageView
+    lateinit var signalSolSystem11 : ImageView
+    lateinit var signalSolSystem12 : ImageView
+    lateinit var signalSolSystem13 : ImageView
 
     lateinit var signalSolSystem9ZorgonColony: ImageView
+    lateinit var signalSolSystem10ZorgonColony: ImageView
 
 
     @SuppressLint("SuspiciousIndentation")
@@ -44,8 +48,12 @@ class GalaxyViewActivity : AppCompatActivity() {
         signalSolSystem6 = findViewById(R.id.signalSolSystem6)
         signalSolSystem7 = findViewById(R.id.signalSolSystem7)
         signalSolSystem8 = findViewById(R.id.signalSolSystem8)
+        signalSolSystem11 = findViewById(R.id.signalSolSystem11)
+        signalSolSystem12 = findViewById(R.id.signalSolSystem12)
+        signalSolSystem13 = findViewById(R.id.signalSolSystem13)
 
         signalSolSystem9ZorgonColony = findViewById(R.id.signalSolSystem9ZorgonColony)
+        signalSolSystem10ZorgonColony = findViewById(R.id.signalSolSystem10ZorgonColony)
 
 
 
@@ -145,6 +153,46 @@ class GalaxyViewActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+
+
+        signalSolSystem10ZorgonColony.setOnClickListener {
+
+            val intent = Intent(this, SolSystem10 :: class.java)
+            startActivity(intent)
+
+        }
+
+
+
+
+
+
+        signalSolSystem11.setOnClickListener {
+
+            val intent = Intent(this, solSystem11 :: class.java)
+            startActivity(intent)
+
+        }
+
+
+
+        signalSolSystem12.setOnClickListener {
+
+            val intent = Intent(this, SolSystem12 :: class.java)
+            startActivity(intent)
+
+        }
+
+
+
+        signalSolSystem13.setOnClickListener {
+
+            val intent = Intent(this, SolSystem13 :: class.java)
+            startActivity(intent)
+
+        }
+
 
 
 

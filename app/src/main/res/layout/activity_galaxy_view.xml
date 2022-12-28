@@ -64,10 +64,10 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintVertical_bias="0.414"
         app:srcCompat="@drawable/signalsign" />
 
     <ImageView
@@ -119,7 +119,7 @@
         app:srcCompat="@drawable/signalsign" />
 
     <ImageView
-        android:id="@+id/signalSolSystem10"
+        android:id="@+id/signalSolSystem10ZorgonColony"
         android:layout_width="47dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,18 +142,18 @@
         app:layout_constraintVertical_bias="0.79"
         app:srcCompat="@drawable/signalsign" />
 
+
     <ImageView
         android:id="@+id/signalSolSystem12"
         android:layout_width="47dp"
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.747"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.472"
+        app:layout_constraintVertical_bias="0.296"
         app:srcCompat="@drawable/signalsign" />
-
 
     <ImageView
         android:id="@+id/signalSolSystem13"
@@ -167,42 +167,6 @@
         app:layout_constraintVertical_bias="0.335"
         app:srcCompat="@drawable/signalsign" />
 
-    <ImageView
-        android:id="@+id/signalSolSystem14"
-        android:layout_width="47dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.393"
-        app:srcCompat="@drawable/signalsign" />
-
-
-    <ImageView
-        android:id="@+id/signalSolSystem15"
-        android:layout_width="47dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.593"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.178"
-        app:srcCompat="@drawable/signalsign" />
-
-    <ImageView
-        android:id="@+id/signalSolSystem16"
-        android:layout_width="47dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.157"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
-        app:srcCompat="@drawable/signalsign" />
 
     <ImageView
         android:id="@+id/yourSolSystemArrowImg"
