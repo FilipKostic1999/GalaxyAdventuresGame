@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.72" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/attackImg"
         android:layout_width="49dp"
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,5 +84,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.556" />
+
+    <ImageView
+        android:id="@+id/pictureOfAlien"
+        android:layout_width="104dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.759"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048"
+        app:srcCompat="@drawable/alien4" />
+
+    <TextView
+        android:id="@+id/nameOfAlienTxt"
+        android:layout_width="117dp"
+        android:layout_height="35dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

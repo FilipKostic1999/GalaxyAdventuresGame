@@ -52,8 +52,40 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
+    // Aliens data before generation of random civilisations in the galaxy
+
+
+     var AlienCiv1Name : String? = null
+     var AlienCiv1Picture : Int? = null
+     var AlienCiv1Soldiers : Double? = null
+     var AlienCiv1SpacePlanes : Double? = null
+     var AlienCiv1SpaceJets : Double? = null
+     var AlienCiv1Tanks : Double? = null
+     var AlienCiv1NuclearSatelites : Double? = null
+
+     var AlienCiv2Name : String? = null
+     var AlienCiv2Picture : Int? = null
+     var AlienCiv2Soldiers : Double? = null
+     var AlienCiv2SpacePlanes : Double? = null
+     var AlienCiv2SpaceJets : Double? = null
+     var AlienCiv2Tanks : Double? = null
+     var AlienCiv2NuclearSatelites : Double? = null
+
+
+
+
+
+
+
+
     lateinit var database : FirebaseFirestore
     lateinit var savedDataOfUser : playerData
+    lateinit var savedDataOfAliens : aliens
     lateinit var containerRl : ConstraintLayout
 
 
@@ -83,6 +115,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+        // Snapshot of player data
 
 
             database.collection("users").document("User path")
@@ -148,6 +182,47 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
+
+
+
+
+
+
+
+
+        // Snapshot of alien civilisations data
+
+
+        database.collection("users").document("User path")
+            .collection("Saved aliens data")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedDataOfAliens = document.toObject()!!
+
+                        // Fetches the data of first civilisation in galaxy
+
+                        AlienCiv1Name = savedDataOfAliens.nameAlienRace1
+                        AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
+
+                        // Fetches the data of second civilisation in galaxy
+
+                        AlienCiv2Name = savedDataOfAliens.nameAlienRace2
+                        AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
+
+
+
+
+
+                    }
+                }
+            }
+
+
+
+
 
 
 
@@ -241,6 +316,10 @@ class MainActivity : AppCompatActivity() {
 
         galaxyView.setOnClickListener {
 
+
+            generateAlienCivilisations()
+
+
             val intent = Intent(this, GalaxyViewActivity :: class.java)
             startActivity(intent)
 
@@ -294,4 +373,224 @@ class MainActivity : AppCompatActivity() {
 
             }
     }
+
+
+
+
+
+
+
+
+   fun generateAlienCivilisations() {
+
+       var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, nameAlienRace2 = AlienCiv2Name)
+
+
+
+
+       if (dataOfAlienCivilisations.nameAlienRace1 == null) {
+
+
+
+           // Generating random alien civilisations
+
+
+           var randomNumString1 = (1..3).shuffled().last()  //random number from 1 to 3
+           var randomNumString2 = (1..3).shuffled().last()
+
+
+           // Chooses random name for civilisation 1
+
+           if (randomNumString1 == 1) {
+               AlienCiv1Name = "Gausians"
+           } else if (randomNumString1 == 2) {
+            AlienCiv1Name = "Rivians"
+           } else if (randomNumString1 == 3) {
+               AlienCiv1Name = "Polirians"
+           }
+
+           // Chooses random name for civilisation 2
+
+           if (randomNumString2 == 1) {
+               AlienCiv2Name = "Iritians"
+           } else if (randomNumString1 == 2) {
+               AlienCiv2Name = "Saurians"
+           } else if (randomNumString1 == 3) {
+               AlienCiv2Name = "Likatrians"
+           }
+
+
+
+
+
+           // Choosing a picture for every alien civilisation
+
+           var randomNumber1 = (1..4).shuffled().last()
+           var randomNumber2 = (1..4).shuffled().last()
+
+
+
+
+
+
+           // Selecting level military base for every alien civilisation
+
+           var randomMilitaryBaseAlien1 = (1..5).shuffled().last()
+           var randomMilitaryBaseAlien2 = (1..5).shuffled().last()
+
+
+          var  randomMilitaryBaseAlien1Double = randomMilitaryBaseAlien1.toDouble()
+          var  randomMilitaryBaseAlien2Double = randomMilitaryBaseAlien2.toDouble()
+
+
+
+           // Generating an army for every alien civilisation
+
+
+
+
+           // First alien
+
+
+           var randomSoldiersAlien1 = (100..800).shuffled().last()
+           var randomSpacePlanesAlien1 = (40..320).shuffled().last()
+           var randomTanksAlien1 = (80..400).shuffled().last()
+           var randomSpaceJetsAlien1 = (20..160).shuffled().last()
+           var randomNuclearSatelitesAlien1 = (1..10).shuffled().last()
+
+           var randomSoldiersAlien1Double = randomSoldiersAlien1.toDouble()
+           var randomSpacePlanesAlien1Double = randomSpacePlanesAlien1.toDouble()
+           var randomTanksAlien1Double = randomTanksAlien1.toDouble()
+           var randomSpaceJetsAlien1Double = randomSpaceJetsAlien1.toDouble()
+           var randomNuclearSatelitesAlien1Double = randomNuclearSatelitesAlien1.toDouble()
+
+
+
+           AlienCiv1Soldiers = randomSoldiersAlien1Double
+           AlienCiv1SpacePlanes = randomSpacePlanesAlien1Double
+           AlienCiv1Tanks = 0.0
+           AlienCiv1SpaceJets = 0.0
+           AlienCiv1NuclearSatelites = 0.0
+
+           if (randomMilitaryBaseAlien1Double >= 2.0) {
+               AlienCiv1Tanks = randomTanksAlien1Double
+           }
+
+           if (randomMilitaryBaseAlien1 >= 3) {
+               AlienCiv1Tanks = randomTanksAlien1Double
+               AlienCiv1SpaceJets = randomSpaceJetsAlien1Double
+               AlienCiv1NuclearSatelites = randomNuclearSatelitesAlien1Double
+           }
+
+
+
+
+           // Second alien
+
+
+
+
+           var randomSoldiersAlien2 = (100..800).shuffled().last()
+           var randomSpacePlanesAlien2 = (40..320).shuffled().last()
+           var randomTanksAlien2 = (80..400).shuffled().last()
+           var randomSpaceJetsAlien2 = (20..160).shuffled().last()
+           var randomNuclearSatelitesAlien2 = (1..10).shuffled().last()
+
+           var randomSoldiersAlien2Double = randomSoldiersAlien2.toDouble()
+           var randomSpacePlanesAlien2Double = randomSpacePlanesAlien2.toDouble()
+           var randomTanksAlien2Double = randomTanksAlien2.toDouble()
+           var randomSpaceJetsAlien2Double = randomSpaceJetsAlien2.toDouble()
+           var randomNuclearSatelitesAlien2Double = randomNuclearSatelitesAlien2.toDouble()
+
+
+
+           AlienCiv2Soldiers = randomSoldiersAlien2Double
+           AlienCiv2SpacePlanes = randomSpacePlanesAlien2Double
+           AlienCiv2Tanks = 0.0
+           AlienCiv2SpaceJets = 0.0
+           AlienCiv2NuclearSatelites = 0.0
+
+           if (randomMilitaryBaseAlien2Double >= 2.0) {
+               AlienCiv2Tanks = randomTanksAlien2Double
+           }
+
+           if (randomMilitaryBaseAlien2 >= 3) {
+               AlienCiv2Tanks = randomTanksAlien2Double
+               AlienCiv2SpaceJets = randomSpaceJetsAlien2Double
+               AlienCiv2NuclearSatelites = randomNuclearSatelitesAlien2Double
+           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           // Inserting values to every alien civilisation
+
+
+           dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = randomNumber1,
+               soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+               spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+               nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = randomMilitaryBaseAlien1Double,
+
+               /*Alien civilisation 1 aspects written*/
+
+               nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = randomNumber2,
+               soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+               spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+               nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = randomMilitaryBaseAlien2Double
+
+               /*Alien civilisation 2 aspects written*/)
+
+
+
+
+
+
+           // Saving generated data of alien civilisations
+
+
+           database.collection("users").document("User path").collection("Saved aliens data")
+               .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+               .addOnCompleteListener {
+
+
+
+               }
+
+       }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
