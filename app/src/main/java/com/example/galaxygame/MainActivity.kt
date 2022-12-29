@@ -413,9 +413,9 @@ class MainActivity : AppCompatActivity() {
 
            if (randomNumString2 == 1) {
                AlienCiv2Name = "Iritians"
-           } else if (randomNumString1 == 2) {
+           } else if (randomNumString2 == 2) {
                AlienCiv2Name = "Saurians"
-           } else if (randomNumString1 == 3) {
+           } else if (randomNumString2 == 3) {
                AlienCiv2Name = "Likatrians"
            }
 
