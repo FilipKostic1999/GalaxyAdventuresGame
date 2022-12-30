@@ -61,7 +61,7 @@ class WarSimulatorActivity : AppCompatActivity() {
     var AlienCiv2NuclearSatelites : Double? = null
 
 
-    var alienSoldiersLeft : Double? = 0.0
+    var alienSoldiersLeft : Double? = 10.0
     var alienSpacePlanesLeft : Double? = 0.0
     var alienTanksLeft : Double? = 0.0
     var alienSpaceJetsLeft : Double? = 0.0
@@ -1561,6 +1561,7 @@ class WarSimulatorActivity : AppCompatActivity() {
             var dataOfAlienCivilisations = aliens(
                 nameAlienRace1 = AlienCiv1Name,
                 pictureAlienRace1 = AlienCiv1Picture,
+                militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
                 soldiersAlienRace1 = alienSoldiersLeft,
                 spacePlanesAlienRace1 = alienSpacePlanesLeft,
