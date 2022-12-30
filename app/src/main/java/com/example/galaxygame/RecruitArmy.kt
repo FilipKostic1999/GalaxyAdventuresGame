@@ -321,7 +321,7 @@ class RecruitArmy : AppCompatActivity() {
             if (money >= 10 && resourses >= 25) {
                 money -= 10
                 resourses -= 25
-                soldierQuantity ++
+                soldierQuantity += 100
                 soldierQuantityTxt.text = "$soldierQuantity"
             }
 
@@ -333,7 +333,7 @@ class RecruitArmy : AppCompatActivity() {
             if (money >= 10 && resourses >= 25) {
                 money -= 10
                 resourses -= 25
-                airplaneQuantity ++
+                airplaneQuantity += 10
                 airplanequantityTxt.text = "$airplaneQuantity"
             }
 
@@ -362,7 +362,7 @@ class RecruitArmy : AppCompatActivity() {
             if (money >= 10 && resourses >= 25) {
                 money -= 10
                 resourses -= 25
-                airplane2Quantity ++
+                airplane2Quantity += 10
                 airplane2QuantityTxt.text = "$airplane2Quantity"
             }
 
@@ -377,7 +377,7 @@ class RecruitArmy : AppCompatActivity() {
             if (money >= 10 && resourses >= 25) {
                 money -= 10
                 resourses -= 25
-                tankQuantity ++
+                tankQuantity += 10
                 tankQuantityTxt.text = "$tankQuantity"
             }
 
