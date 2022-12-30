@@ -501,116 +501,287 @@ class WarSimulatorActivity : AppCompatActivity() {
         // Preparing enemy army
 
 
+        // Preparing alien 1 army
 
-        if (selectedPlanetV == 1) {
+        if (selectedPlanetV == 1) { //
 
             // Chosen alien civilisations army is selected by shared pref
 
 
-            if (AlienCiv1MilitaryBase == 1.0) {
+            if (AlienCiv1MilitaryBase == 1.0) { //
 
-                alienSoldierUnits.HP = alienSoldierLv1.HP * AlienCiv1Soldiers!!
-                alienSoldierUnits.damage = alienSoldierLv1.damage * AlienCiv1Soldiers!!
+                alienSoldierUnits.HP = alienSoldierLv1.HP * AlienCiv1Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv1.damage * AlienCiv1Soldiers!! //
+
                 alienSoldierUnits.speed = alienSoldierLv1.speed
                 alienSoldierUnits.criticalProbability = alienSoldierLv1.criticalProbability
 
-                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!!
-                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!!
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!! //
+
                 alienSpacePlaneUnits.speed = alienSpacePlane.speed
                 alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
 
 
-            } else if (AlienCiv1MilitaryBase == 2.0) {
+            } else if (AlienCiv1MilitaryBase == 2.0) { //
 
-                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv1Soldiers!!
-                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv1Soldiers!!
+                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv1Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv1Soldiers!! //
+
                 alienSoldierUnits.speed = alienSoldierLv2.speed
                 alienSoldierUnits.criticalProbability = alienSoldierLv2.criticalProbability
 
-                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!!
-                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!!
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!! //
+
                 alienSpacePlaneUnits.speed = alienSpacePlane.speed
                 alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
 
-                alienTankUnits.HP = alienTankLv1.HP * AlienCiv1Tanks!!
-                alienTankUnits.damage = alienTankLv1.damage * AlienCiv1Tanks!!
+                alienTankUnits.HP = alienTankLv1.HP * AlienCiv1Tanks!! //
+                alienTankUnits.damage = alienTankLv1.damage * AlienCiv1Tanks!! //
+
                 alienTankUnits.speed = alienTankLv1.speed
                 alienTankUnits.criticalProbability = alienTankLv1.criticalProbability
 
-            } else if (AlienCiv1MilitaryBase == 3.0) {
+            } else if (AlienCiv1MilitaryBase == 3.0) { //
 
-                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv1Soldiers!!
-                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv1Soldiers!!
+                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv1Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv1Soldiers!! //
+
                 alienSoldierUnits.speed = alienSoldierLv2.speed
                 alienSoldierUnits.criticalProbability = alienSoldierLv2.criticalProbability
 
-                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!!
-                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!!
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!! //
+
                 alienSpacePlaneUnits.speed = alienSpacePlane.speed
                 alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
 
-                alienTankUnits.HP = alienTankLv1.HP * AlienCiv1Tanks!!
-                alienTankUnits.damage = alienTankLv1.damage * AlienCiv1Tanks!!
+                alienTankUnits.HP = alienTankLv1.HP * AlienCiv1Tanks!! //
+                alienTankUnits.damage = alienTankLv1.damage * AlienCiv1Tanks!! //
+
                 alienTankUnits.speed = alienTankLv1.speed
                 alienTankUnits.criticalProbability = alienTankLv1.criticalProbability
 
-                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!!
-                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!!
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!! //
+
                 alienSpaceJetUnits.speed = alienSpaceJet.speed
                 alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
 
-            } else if (AlienCiv1MilitaryBase == 4.0) {
+            } else if (AlienCiv1MilitaryBase == 4.0) { //
 
-                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv1Soldiers!!
-                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv1Soldiers!!
+                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv1Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv1Soldiers!! //
+
                 alienSoldierUnits.speed = alienSoldierLv3.speed
                 alienSoldierUnits.criticalProbability = alienSoldierLv3.criticalProbability
 
-                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!!
-                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!!
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!! //
+
                 alienSpacePlaneUnits.speed = alienSpacePlane.speed
                 alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
 
-                alienTankUnits.HP = alienTankLv2.HP * AlienCiv1Tanks!!
-                alienTankUnits.damage = alienTankLv2.damage * AlienCiv1Tanks!!
+                alienTankUnits.HP = alienTankLv2.HP * AlienCiv1Tanks!! //
+                alienTankUnits.damage = alienTankLv2.damage * AlienCiv1Tanks!! //
+
                 alienTankUnits.speed = alienTankLv2.speed
                 alienTankUnits.criticalProbability = alienTankLv2.criticalProbability
 
 
-                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!!
-                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!!
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!! //
+
                 alienSpaceJetUnits.speed = alienSpaceJet.speed
                 alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
 
-            } else if (AlienCiv1MilitaryBase == 5.0) {
+            } else if (AlienCiv1MilitaryBase == 5.0) { //
 
-                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv1Soldiers!!
-                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv1Soldiers!!
+                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv1Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv1Soldiers!! //
+
                 alienSoldierUnits.speed = alienSoldierLv3.speed
                 alienSoldierUnits.criticalProbability = alienSoldierLv3.criticalProbability
 
-                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!!
-                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!!
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv1SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv1SpacePlanes!! //
+
                 alienSpacePlaneUnits.speed = alienSpacePlane.speed
                 alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
 
-                alienTankUnits.HP = alienTankLv2.HP * AlienCiv1Tanks!!
-                alienTankUnits.damage = alienTankLv2.damage * AlienCiv1Tanks!!
+                alienTankUnits.HP = alienTankLv2.HP * AlienCiv1Tanks!! //
+                alienTankUnits.damage = alienTankLv2.damage * AlienCiv1Tanks!! //
+
                 alienTankUnits.speed = alienTankLv2.speed
                 alienTankUnits.criticalProbability = alienTankLv2.criticalProbability
 
 
-                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!!
-                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!!
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv1SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv1SpaceJets!! //
+
                 alienSpaceJetUnits.speed = alienSpaceJet.speed
                 alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
             }
 
 
-            alienMilitaryBase = AlienCiv1MilitaryBase
+            alienMilitaryBase = AlienCiv1MilitaryBase //
 
 
         }
+
+
+
+
+
+
+
+        // Preparing alien 2 army
+
+        if (selectedPlanetV == 2) { //
+
+            // Chosen alien civilisations army is selected by shared pref
+
+
+            if (AlienCiv2MilitaryBase == 1.0) { //
+
+                alienSoldierUnits.HP = alienSoldierLv1.HP * AlienCiv2Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv1.damage * AlienCiv2Soldiers!! //
+
+                alienSoldierUnits.speed = alienSoldierLv1.speed
+                alienSoldierUnits.criticalProbability = alienSoldierLv1.criticalProbability
+
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv2SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv2SpacePlanes!! //
+
+                alienSpacePlaneUnits.speed = alienSpacePlane.speed
+                alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
+
+
+            } else if (AlienCiv2MilitaryBase == 2.0) { //
+
+                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv2Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv2Soldiers!! //
+
+                alienSoldierUnits.speed = alienSoldierLv2.speed
+                alienSoldierUnits.criticalProbability = alienSoldierLv2.criticalProbability
+
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv2SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv2SpacePlanes!! //
+
+                alienSpacePlaneUnits.speed = alienSpacePlane.speed
+                alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
+
+                alienTankUnits.HP = alienTankLv1.HP * AlienCiv2Tanks!! //
+                alienTankUnits.damage = alienTankLv1.damage * AlienCiv2Tanks!! //
+
+                alienTankUnits.speed = alienTankLv1.speed
+                alienTankUnits.criticalProbability = alienTankLv1.criticalProbability
+
+            } else if (AlienCiv2MilitaryBase == 3.0) { //
+
+                alienSoldierUnits.HP = alienSoldierLv2.HP * AlienCiv2Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv2.damage * AlienCiv2Soldiers!! //
+
+                alienSoldierUnits.speed = alienSoldierLv2.speed
+                alienSoldierUnits.criticalProbability = alienSoldierLv2.criticalProbability
+
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv2SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv2SpacePlanes!! //
+
+                alienSpacePlaneUnits.speed = alienSpacePlane.speed
+                alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
+
+                alienTankUnits.HP = alienTankLv1.HP * AlienCiv2Tanks!! //
+                alienTankUnits.damage = alienTankLv1.damage * AlienCiv2Tanks!! //
+
+                alienTankUnits.speed = alienTankLv1.speed
+                alienTankUnits.criticalProbability = alienTankLv1.criticalProbability
+
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv2SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv2SpaceJets!! //
+
+                alienSpaceJetUnits.speed = alienSpaceJet.speed
+                alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
+
+            } else if (AlienCiv2MilitaryBase == 4.0) { //
+
+                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv2Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv2Soldiers!! //
+
+                alienSoldierUnits.speed = alienSoldierLv3.speed
+                alienSoldierUnits.criticalProbability = alienSoldierLv3.criticalProbability
+
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv2SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv2SpacePlanes!! //
+
+                alienSpacePlaneUnits.speed = alienSpacePlane.speed
+                alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
+
+                alienTankUnits.HP = alienTankLv2.HP * AlienCiv2Tanks!! //
+                alienTankUnits.damage = alienTankLv2.damage * AlienCiv2Tanks!! //
+
+                alienTankUnits.speed = alienTankLv2.speed
+                alienTankUnits.criticalProbability = alienTankLv2.criticalProbability
+
+
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv2SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv2SpaceJets!! //
+
+                alienSpaceJetUnits.speed = alienSpaceJet.speed
+                alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
+
+            } else if (AlienCiv2MilitaryBase == 5.0) { //
+
+                alienSoldierUnits.HP = alienSoldierLv3.HP * AlienCiv2Soldiers!! //
+                alienSoldierUnits.damage = alienSoldierLv3.damage * AlienCiv2Soldiers!! //
+
+                alienSoldierUnits.speed = alienSoldierLv3.speed
+                alienSoldierUnits.criticalProbability = alienSoldierLv3.criticalProbability
+
+                alienSpacePlaneUnits.HP = alienSpacePlane.HP * AlienCiv2SpacePlanes!! //
+                alienSpacePlaneUnits.damage = alienSpacePlane.damage * AlienCiv2SpacePlanes!! //
+
+                alienSpacePlaneUnits.speed = alienSpacePlane.speed
+                alienSpacePlaneUnits.criticalProbability = alienSpacePlane.criticalProbability
+
+                alienTankUnits.HP = alienTankLv2.HP * AlienCiv2Tanks!! //
+                alienTankUnits.damage = alienTankLv2.damage * AlienCiv2Tanks!! //
+
+                alienTankUnits.speed = alienTankLv2.speed
+                alienTankUnits.criticalProbability = alienTankLv2.criticalProbability
+
+
+                alienSpaceJetUnits.HP = alienSpaceJet.HP * AlienCiv2SpaceJets!! //
+                alienSpaceJetUnits.damage = alienSpaceJet.damage * AlienCiv2SpaceJets!! //
+
+                alienSpaceJetUnits.speed = alienSpaceJet.speed
+                alienSpaceJetUnits.criticalProbability = alienSpaceJet.criticalProbability
+            }
+
+
+            alienMilitaryBase = AlienCiv2MilitaryBase //
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1555,19 +1726,36 @@ class WarSimulatorActivity : AppCompatActivity() {
     fun saveAlienData() {
 
 
+        // War with alien 1
+
 
         if (selectedPlanetV == 1) {
 
             var dataOfAlienCivilisations = aliens(
+
+                // Alien 1
                 nameAlienRace1 = AlienCiv1Name,
                 pictureAlienRace1 = AlienCiv1Picture,
                 militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
-                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+
+                // Army Alien 1
                 soldiersAlienRace1 = alienSoldiersLeft,
                 spacePlanesAlienRace1 = alienSpacePlanesLeft,
                 spaceJetsAlienRace1 = alienSpaceJetsLeft,
-                tanksAlienRace1 = alienTanksLeft
-            )
+                tanksAlienRace1 = alienTanksLeft,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+
+                // Alien 2
+                nameAlienRace2 = AlienCiv2Name,
+                pictureAlienRace2 = AlienCiv2Picture,
+                militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+
+                // Army Alien 2
+                soldiersAlienRace2 = AlienCiv2Soldiers,
+                spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets,
+                tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
 
 
 
@@ -1581,6 +1769,61 @@ class WarSimulatorActivity : AppCompatActivity() {
                 }
 
         }
+
+
+
+        // War with alien 2
+
+
+        if (selectedPlanetV == 2) {
+
+            var dataOfAlienCivilisations = aliens(
+
+                // Alien 1
+                nameAlienRace1 = AlienCiv1Name,
+                pictureAlienRace1 = AlienCiv1Picture,
+                militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+
+                // Army Alien 1
+                soldiersAlienRace1 = AlienCiv1Soldiers,
+                spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets,
+                tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+
+                // Alien 2
+                nameAlienRace2 = AlienCiv2Name,
+                pictureAlienRace2 = AlienCiv2Picture,
+                militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+
+                // Army Alien 2
+                soldiersAlienRace2 = alienSoldiersLeft,
+                spacePlanesAlienRace2 = alienSpacePlanesLeft,
+                spaceJetsAlienRace2 = alienSpaceJetsLeft,
+                tanksAlienRace2 = alienTanksLeft,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 
