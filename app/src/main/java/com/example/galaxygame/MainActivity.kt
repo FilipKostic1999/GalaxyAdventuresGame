@@ -9,7 +9,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
@@ -83,6 +85,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+    lateinit var savedMessages : messages
+
+
+
+
+
+
+
+
+    lateinit var redMsgIcon : ImageView
+
+
+
     lateinit var database : FirebaseFirestore
     lateinit var savedDataOfUser : playerData
     lateinit var savedDataOfAliens : aliens
@@ -106,11 +122,22 @@ class MainActivity : AppCompatActivity() {
         factory = findViewById(R.id.factoryImage)
         resoursesAmountText = findViewById(R.id.resoursesAmountText)
         containerRl = findViewById(R.id.idRLayout)
+        redMsgIcon = findViewById(R.id.redMsgIcon)
 
 
 
 
         database = Firebase.firestore
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -232,6 +259,50 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        // Snapshot of messages
+
+
+        database.collection("users").document("User path")
+            .collection("Messages")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedMessages = document.toObject()!!
+
+
+
+                        if (savedMessages.isItNewMessage == true) {
+
+                            redMsgIcon.setImageResource(R.drawable.messageicon)
+
+                        } else if (savedMessages.isItNewMessage == false) {
+
+                            redMsgIcon.setImageResource(R.drawable.redmsgicon)
+
+                        }
+
+
+
+
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -255,6 +326,30 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+        redMsgIcon.setOnClickListener {
+
+
+
+            var newMessage = messages(messageContent = savedMessages.messageContent, isItNewMessage = false)
+
+
+
+            database.collection("users").document("User path").collection("Messages")
+                .document("MessageDocument").set(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+
+                }
+
+            val intent = Intent(this, MessagesActivity :: class.java)
+            startActivity(intent)
+
+
+        }
 
 
 
@@ -320,6 +415,14 @@ class MainActivity : AppCompatActivity() {
             generateAlienCivilisations()
 
 
+            var isThereGeneralMessage = (1..7).shuffled().last()
+
+            if (isThereGeneralMessage == 1) {
+                sendGeneralMessage()
+
+            }
+
+
             val intent = Intent(this, GalaxyViewActivity :: class.java)
             startActivity(intent)
 
@@ -330,6 +433,21 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -373,6 +491,59 @@ class MainActivity : AppCompatActivity() {
 
             }
     }
+
+
+
+
+
+
+
+
+    fun sendGeneralMessage() {
+
+
+
+        var chooseMessage = (1..3).shuffled().last()
+        var messageText = ""
+
+
+
+        if (chooseMessage == 1) {
+            messageText = "Zorgon have devastated a planet"
+        } else if (chooseMessage == 2) {
+            messageText = "You colonized a planet"
+        } else if (chooseMessage == 3) {
+            messageText = "Somebody wants to ally with you"
+        }
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true)
+
+
+
+        database.collection("users").document("User path").collection("Messages")
+            .document("MessageDocument").set(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
 
 
 

@@ -9,17 +9,6 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/messageIcon"
-        android:layout_width="57dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/messageicon" />
-
-    <ImageView
         android:id="@+id/moneyIcon"
         android:layout_width="78dp"
         android:layout_height="52dp"
@@ -128,6 +117,18 @@
         app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/redMsgIcon"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077"
+        app:srcCompat="@drawable/redmsgicon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
