@@ -82,11 +82,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    var calculator : Int = 0
+
+
 
 
 
 
     lateinit var savedMessages : messages
+
 
 
 
@@ -132,7 +136,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        val sharedNewMessageNotify = getSharedPreferences("NewMessageNotify", AppCompatActivity.MODE_PRIVATE)
+        var NewMessageNotify = sharedNewMessageNotify.getBoolean("NewMessageNotify", false)
 
+
+
+
+
+
+        if (NewMessageNotify == true) {
+
+            redMsgIcon.setImageResource(R.drawable.messageicon)
+
+        } else if (NewMessageNotify == false) {
+
+            redMsgIcon.setImageResource(R.drawable.redmsgicon)
+
+        }
 
 
 
@@ -271,17 +291,18 @@ class MainActivity : AppCompatActivity() {
 
                         savedMessages = document.toObject()!!
 
+                        calculator += savedMessages.constantNumber
 
 
-                        if (savedMessages.isItNewMessage == true) {
 
-                            redMsgIcon.setImageResource(R.drawable.messageicon)
 
-                        } else if (savedMessages.isItNewMessage == false) {
+                        //    redMsgIcon.setImageResource(R.drawable.messageicon)
 
-                            redMsgIcon.setImageResource(R.drawable.redmsgicon)
 
-                        }
+
+
+
+
 
 
 
@@ -327,23 +348,24 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
         redMsgIcon.setOnClickListener {
 
 
-
-            var newMessage = messages(messageContent = savedMessages.messageContent, isItNewMessage = false)
-
+            redMsgIcon.setImageResource(R.drawable.redmsgicon)
 
 
-            database.collection("users").document("User path").collection("Messages")
-                .document("MessageDocument").set(newMessage)
+            NewMessageNotify = false
+
+            val editNewMessageNotify = sharedNewMessageNotify.edit()
+            editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+            editNewMessageNotify.commit()
 
 
-                .addOnCompleteListener {
-
-
-
-                }
 
             val intent = Intent(this, MessagesActivity :: class.java)
             startActivity(intent)
@@ -431,10 +453,22 @@ class MainActivity : AppCompatActivity() {
 
             var isThereGeneralMessage = (1..7).shuffled().last()
 
-            if (isThereGeneralMessage == 1) {
+            if (isThereGeneralMessage >= 1) {
+
                 sendGeneralMessage()
 
+                NewMessageNotify = true
+
+                val editNewMessageNotify = sharedNewMessageNotify.edit()
+                editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                editNewMessageNotify.commit()
+
+                redMsgIcon.setImageResource(R.drawable.messageicon)
+
             }
+
+
+
 
 
             // CPU
@@ -535,12 +569,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        var newMessage = messages(messageContent = messageText, isItNewMessage = true)
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+        docNumber = calculator)
 
 
 
-        database.collection("users").document("User path").collection("Messages")
-            .document("MessageDocument").set(newMessage)
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
 
 
             .addOnCompleteListener {
@@ -548,6 +583,8 @@ class MainActivity : AppCompatActivity() {
 
 
             }
+
+        calculator = 0
 
 
 

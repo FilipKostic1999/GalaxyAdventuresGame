@@ -56,11 +56,12 @@ class MessagesActivity : AppCompatActivity() {
 
 
 
+
         // Snapshot of messages
 
 
         database.collection("users").document("User path")
-            .collection("Messages")
+            .collection("Messages").orderBy("docNumber", Query.Direction.DESCENDING)
 
             .addSnapshotListener { snapshot, e ->
                 if (snapshot != null) {
@@ -69,7 +70,6 @@ class MessagesActivity : AppCompatActivity() {
                         savedMessages = document.toObject()!!
 
 
-                        arrayListOfMessages.clear()
 
                         arrayListOfMessages.add(savedMessages)
 
