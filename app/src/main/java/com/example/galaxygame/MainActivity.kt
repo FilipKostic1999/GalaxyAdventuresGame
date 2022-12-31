@@ -401,6 +401,16 @@ class MainActivity : AppCompatActivity() {
             savePlayerData()
 
 
+            // CPU automatic functions
+
+            isPlayerAttacked()
+
+            // CPU
+
+
+
+
+
         }
 
 
@@ -415,12 +425,19 @@ class MainActivity : AppCompatActivity() {
             generateAlienCivilisations()
 
 
+
+            // CPU automatic functions
+
+
             var isThereGeneralMessage = (1..7).shuffled().last()
 
             if (isThereGeneralMessage == 1) {
                 sendGeneralMessage()
 
             }
+
+
+            // CPU
 
 
             val intent = Intent(this, GalaxyViewActivity :: class.java)
@@ -740,6 +757,35 @@ class MainActivity : AppCompatActivity() {
                }
 
        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+    fun isPlayerAttacked() {
+
+
+        var isPlayerAttacked = (1..500).shuffled().last()
+
+        if(isPlayerAttacked == 10) {
+            val intent = Intent(this, PlayerAttackedWarSimulator :: class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
+
 
 
     }
