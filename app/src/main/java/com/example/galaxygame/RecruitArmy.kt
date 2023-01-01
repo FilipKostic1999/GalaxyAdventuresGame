@@ -67,6 +67,7 @@ class RecruitArmy : AppCompatActivity() {
     var levelGeneralDevelopment : Int = 1
     var levelScientificDevelopment : Int = 1
     var levelSpionage : Int = 1
+    var isDamagedAlivePlayer : Double = 2.0
 
 
 
@@ -191,6 +192,7 @@ class RecruitArmy : AppCompatActivity() {
                         airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
                         tankQuantity = savedDataOfUser.savedTankUnitQuantity
                         sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+                        isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
 
 
 
@@ -439,25 +441,6 @@ class RecruitArmy : AppCompatActivity() {
     fun savePlayerData() {
 
 
-        /*
-
-        val sharedSoldi = getSharedPreferences("Soldi", AppCompatActivity.MODE_PRIVATE)
-        var Soldi = sharedSoldi.getInt("Soldi", 0)
-
-
-
-        Soldi = 50
-
-        val editSoldi = sharedSoldi.edit()
-        editSoldi.putInt("Soldi", Soldi)
-        editSoldi.commit()
-
-
-
-
-*/
-
-
 
 
 
@@ -469,7 +452,7 @@ class RecruitArmy : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment, savedLevelSpionage = levelSpionage,
             savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity)
+            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer)
 
 
 

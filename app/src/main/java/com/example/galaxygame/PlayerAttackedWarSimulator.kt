@@ -1487,7 +1487,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-                soldierQuantity = 0.0
+                soldierQuantity = 10.0
                 airplaneQuantity = 0.0
                 tankQuantity = 0.0
                 airplane2Quantity = 0.0

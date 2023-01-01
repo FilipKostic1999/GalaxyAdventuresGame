@@ -110,6 +110,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_visit_alien_planet)
@@ -125,6 +126,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         nuclearSateliteImg = findViewById(R.id.nuclearSateliteImg)
         strikeBtn = findViewById(R.id.strikeBtn)
         explosionPic = findViewById(R.id.explosionPic)
+
+
+
+
 
 
         database = Firebase.firestore
@@ -433,6 +438,9 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                         AlienCiv1NuclearSatelites = AlienCiv1NuclearSatelites!! - 1.0
                         isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
 
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+
                     }
 
 
@@ -475,6 +483,9 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                         AlienCiv2NuclearSatelites = AlienCiv2NuclearSatelites!! - 1.0
                         isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
 
                     }
 
@@ -552,7 +563,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 } else {
 
                     Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
-                    alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! - 1.0
+
+                    if (alienCiv1RelationWithPlayer!! > 0) {
+                        alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! - 1.0
+                    }
 
                     saveAlienData()
 
@@ -611,7 +625,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 } else {
 
                     Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
-                    alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! - 1.0
+
+                   if (alienCiv2RelationWithPlayer!! > 0) {
+                       alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! - 1.0
+                   }
 
                     saveAlienData()
                 }
@@ -624,12 +641,6 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
             } // Alien 2
-
-
-
-
-
-
 
 
 

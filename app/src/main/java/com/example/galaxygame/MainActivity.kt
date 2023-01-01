@@ -4,11 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -30,6 +32,10 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var collectTaxBtn : ImageView
     lateinit var galaxyView : ImageView
+    lateinit var homeWorldExplosion : ImageView
+
+
+    lateinit var repairWorldBtn : Button
 
 
     var moneyTaxAmount : Int = 0
@@ -137,11 +143,19 @@ class MainActivity : AppCompatActivity() {
         resoursesAmountText = findViewById(R.id.resoursesAmountText)
         containerRl = findViewById(R.id.idRLayout)
         redMsgIcon = findViewById(R.id.redMsgIcon)
+        homeWorldExplosion = findViewById(R.id.homeWorldExplosion)
+        repairWorldBtn = findViewById(R.id.repairWorldBtn)
 
 
 
 
         database = Firebase.firestore
+
+
+        homeWorldExplosion.isVisible = false
+
+        repairWorldBtn.isVisible = false
+        repairWorldBtn.isEnabled = false
 
 
 
@@ -210,6 +224,8 @@ class MainActivity : AppCompatActivity() {
                             isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
 
 
+
+
                             Log.d("!!!", "$moneyAmount")
 
 
@@ -236,6 +252,40 @@ class MainActivity : AppCompatActivity() {
                             } else if (levelGeneralDevelopment == 3) {
 
                                 containerRl.background = resources.getDrawable(R.drawable.developedthree)
+
+                            }
+
+
+
+
+
+
+                            // If the homeworld of the player is destroied or damaged
+
+
+                            if(isDamagedAlivePlayer <= 0) {
+
+                                containerRl.background = resources.getDrawable(R.drawable.destoiedplanet)
+                                comandCenterPicture.isEnabled = false
+                                factory.isEnabled = false
+                                militaryBase.isEnabled = false
+                                galaxyView.isEnabled = false
+                                collectTaxBtn.isEnabled = false
+                                homeWorldExplosion.isVisible = false
+                                repairWorldBtn.isVisible = false
+                                repairWorldBtn.isEnabled = false
+
+                            } else if (isDamagedAlivePlayer == 1.0) {
+
+                                homeWorldExplosion.isVisible = true
+                                repairWorldBtn.isVisible = true
+                                repairWorldBtn.isEnabled = true
+
+                            } else if (isDamagedAlivePlayer >= 2) {
+
+                                homeWorldExplosion.isVisible = false
+                                repairWorldBtn.isVisible = false
+                                repairWorldBtn.isEnabled = false
 
                             }
 
@@ -311,16 +361,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                        //    redMsgIcon.setImageResource(R.drawable.messageicon)
-
-
-
-
-
-
-
-
-
 
 
                     }
@@ -358,6 +398,32 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }, 0, 1000)
+
+
+
+
+
+
+
+
+
+
+        repairWorldBtn.setOnClickListener {
+
+            moneyAmount -= 1000
+
+            isDamagedAlivePlayer += isDamagedAlivePlayer
+
+            savePlayerData()
+
+        }
+
+
+
+
+
+
+
 
 
 
@@ -842,7 +908,7 @@ class MainActivity : AppCompatActivity() {
     fun isPlayerAttacked() {
 
 
-        var isPlayerAttacked = (1..500).shuffled().last()
+        var isPlayerAttacked = 10
 
         if(isPlayerAttacked == 10) {
             val intent = Intent(this, PlayerAttackedWarSimulator :: class.java)
