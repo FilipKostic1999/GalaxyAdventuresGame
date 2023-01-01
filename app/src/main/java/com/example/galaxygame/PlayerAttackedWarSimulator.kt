@@ -32,7 +32,14 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var levelGeneralDevelopment : Int = 1
     var levelScientificDevelopment : Int = 1
     var levelSpionage : Int = 1
+    var damageToPlayerPlanet : Double = 0.0
 
+
+
+// Aliens
+
+
+    // Alien 1
 
 
 
@@ -44,6 +51,12 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var AlienCiv1SpaceJets : Double? = null
     var AlienCiv1Tanks : Double? = null
     var AlienCiv1NuclearSatelites : Double? = null
+    var isAlienCiv1Damaged : Double? = null
+    var alienCiv1RelationWithPlayer : Double? = null
+
+
+    // Alien 2
+
 
     var AlienCiv2Name : String? = null
     var AlienCiv2Picture : Int? = null
@@ -53,12 +66,19 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var AlienCiv2SpaceJets : Double? = null
     var AlienCiv2Tanks : Double? = null
     var AlienCiv2NuclearSatelites : Double? = null
+    var isAlienCiv2Damaged : Double? = null
+    var alienCiv2RelationWithPlayer : Double? = null
+
+
+    // Aliens universal variables
 
 
     var alienSoldiersLeft : Double? = 10.0
     var alienSpacePlanesLeft : Double? = 0.0
     var alienTanksLeft : Double? = 0.0
     var alienSpaceJetsLeft : Double? = 0.0
+    var alienMilitaryBase : Double? = null
+    var levelDamageToAlienPlanet : Double = 0.0
 
 
 
@@ -70,7 +90,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var selectedTanksDouble : Double = 0.0
 
 
-    var alienMilitaryBase : Double? = null
+
 
 
     var attacker = warUnits(0.0, 0.0, 0.0, 0.0)
@@ -274,6 +294,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                         levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
                         levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
                         levelSpionage = savedDataOfUser.savedLevelSpionage
+                        damageToPlayerPlanet = savedDataOfUser.isDamagedAlive
 
 
 
@@ -314,6 +335,8 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                         AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
                         AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
                         AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
+                        isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
+                        alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
 
 
 
@@ -329,6 +352,8 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                         AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
                         AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
                         AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
+                        isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
+                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
 
 
 
@@ -1468,6 +1493,9 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                 airplane2Quantity = 0.0
 
 
+                damageToPlayerPlanet -= 1.0
+
+
 
 
 
@@ -1677,7 +1705,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
             savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity)
+            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = damageToPlayerPlanet)
 
 
 
@@ -1726,6 +1754,12 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                 tanksAlienRace1 = alienTanksLeft,
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
 
+                // Damage to alien 1 planet and relations
+                alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+                isAlienRace1Damaged = isAlienCiv1Damaged,
+
+
+
                 // Alien 2
                 nameAlienRace2 = AlienCiv2Name,
                 pictureAlienRace2 = AlienCiv2Picture,
@@ -1736,7 +1770,11 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                 spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
                 spaceJetsAlienRace2 = AlienCiv2SpaceJets,
                 tanksAlienRace2 = AlienCiv2Tanks,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+                // Damage to alien 2 planet and relations
+                alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+                isAlienRace2Damaged = isAlienCiv2Damaged)
 
 
 
@@ -1772,6 +1810,11 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                 tanksAlienRace1 = AlienCiv1Tanks,
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
 
+                // Damage to alien 1 planet and relations
+                alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+                isAlienRace1Damaged = isAlienCiv1Damaged,
+
+
                 // Alien 2
                 nameAlienRace2 = AlienCiv2Name,
                 pictureAlienRace2 = AlienCiv2Picture,
@@ -1782,7 +1825,11 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                 spacePlanesAlienRace2 = alienSpacePlanesLeft,
                 spaceJetsAlienRace2 = alienSpaceJetsLeft,
                 tanksAlienRace2 = alienTanksLeft,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+                // Damage to alien 2 planet and relations
+                alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+                isAlienRace2Damaged = isAlienCiv2Damaged)
 
 
 

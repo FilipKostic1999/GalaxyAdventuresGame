@@ -23,6 +23,40 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     lateinit var spyArmyTextView : TextView
     lateinit var pictureofAlien : ImageView
     lateinit var attackImg : ImageView
+    lateinit var explosionPic : ImageView
+
+
+
+
+
+    var moneyAmount : Int = 0
+    var resoursesAmount : Int = 0
+    var levelInfrastructure : Int = 1
+    var levelFactory : Int = 1
+    var levelMilitaryBase : Int = 1
+    var levelGeneralDevelopment : Int = 1
+    var levelScientificDevelopment : Int = 1
+    var spionageLevelPlayer : Int = 1
+    var isDamagedAlivePlayer : Double = 2.0
+
+
+    var soldierQuantity : Double = 100.0
+    var airplaneQuantity : Double = 40.0
+    var cargoplaneQuantity : Double = 10.0
+    var airplane2Quantity : Double = 0.0
+    var tankQuantity : Double = 0.0
+    var sateliteQuantity : Double = 0.0
+
+
+
+
+
+
+
+
+
+
+
 
 
     var AlienCiv1Name : String? = null
@@ -32,6 +66,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     var AlienCiv1SpaceJets : Double? = null
     var AlienCiv1Tanks : Double? = null
     var AlienCiv1NuclearSatelites : Double? = null
+    var AlienCiv1MilitaryBase : Double? = null
+    var isAlienCiv1Damaged : Double? = null
+    var alienCiv1RelationWithPlayer : Double? = null
+
 
     var AlienCiv2Name : String? = null
     var AlienCiv2Picture : Int? = null
@@ -40,24 +78,22 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     var AlienCiv2SpaceJets : Double? = null
     var AlienCiv2Tanks : Double? = null
     var AlienCiv2NuclearSatelites : Double? = null
+    var AlienCiv2MilitaryBase : Double? = null
+    var isAlienCiv2Damaged : Double? = null
+    var alienCiv2RelationWithPlayer : Double? = null
 
 
 
 
 
 
-
-
-    var soldiers : Double? = null
-    var spacePlanes : Double? = null
-    var spaceJets : Double? = null
-    var tanks : Double? = null
-    var nuclearSatelites : Double? = null
 
 
     var alienMilitaryBase : Double? = null
-    lateinit var playerDataSpionage : playerData
-    var spionageLevelPlayer : Int = 0
+    lateinit var savedDataOfUser : playerData
+
+
+
 
 
 
@@ -88,6 +124,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         strikeWithNuclearSatelitesBtn = findViewById(R.id.strikeWithNuclearSatelitesBtn)
         nuclearSateliteImg = findViewById(R.id.nuclearSateliteImg)
         strikeBtn = findViewById(R.id.strikeBtn)
+        explosionPic = findViewById(R.id.explosionPic)
 
 
         database = Firebase.firestore
@@ -98,9 +135,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         nuclearSateliteImg.isVisible = false
 
 
+        explosionPic.isVisible = false
+
 
         val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
         var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
+
 
 
 
@@ -114,13 +154,27 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 if (snapshot != null) {
                     for (document in snapshot.documents) {
 
-                        playerDataSpionage = document.toObject()!!
+                        savedDataOfUser = document.toObject()!!
+
+                        moneyAmount = savedDataOfUser.savedMoneyAmount
+                        resoursesAmount = savedDataOfUser.savedResoursesAmount
+                        levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
+                        levelFactory = savedDataOfUser.savedLevelFactory
+                        levelMilitaryBase = savedDataOfUser.savedLevelMilitaryBase
+                        levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
+                        levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
+                        spionageLevelPlayer = savedDataOfUser.savedLevelSpionage
 
 
-                        spionageLevelPlayer = playerDataSpionage.savedLevelSpionage
+                        soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
+                        airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
+                        cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
+                        airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
+                        tankQuantity = savedDataOfUser.savedTankUnitQuantity
+                        sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
 
 
-
+                        isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
 
 
 
@@ -153,43 +207,32 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                        if (SelectedPlanet == 1) {   /* Number of alien civilisation always matches
-
-                        the number of the planet and solar system where it resides. In order to display
-                        the alien civilisation that is selected by planet the shared pref displays
-                        only the content that is connected to selected planet number
-
-                        */
 
                             // Fetches the data of first civilisation in galaxy
 
                             AlienCiv1Name = savedDataOfAliens.nameAlienRace1
-                            nameOfAlienTxt.text = "$AlienCiv1Name"
                             AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
                             AlienCiv1Soldiers = savedDataOfAliens.soldiersAlienRace1
                             AlienCiv1SpacePlanes = savedDataOfAliens.spacePlanesAlienRace1
                             AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
                             AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
                             AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
+                            AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
 
-
-
-
-                            // Prepares views for spionage
-
-                            soldiers = savedDataOfAliens.soldiersAlienRace1
-                            spacePlanes = savedDataOfAliens.spacePlanesAlienRace1
-                            spaceJets = savedDataOfAliens.spaceJetsAlienRace1
-                            tanks = savedDataOfAliens.tanksAlienRace1
-                            nuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
-
-                            alienMilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
+                            isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
+                            alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
 
 
 
 
 
-                            // Displays picture of alien based on number
+
+                        if (SelectedPlanet == 1) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv1Name"
+
 
                             if (AlienCiv1Picture == 1) {
                                 pictureofAlien.setImageResource(R.drawable.alien1)
@@ -202,37 +245,34 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                             }
 
 
+                            if (isAlienCiv1Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv1Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+
+
+
                         }
 
 
 
-                        if (SelectedPlanet == 2) {
 
 
                             // Fetches the data of second civilisation in galaxy
 
                             AlienCiv2Name = savedDataOfAliens.nameAlienRace2
-                            nameOfAlienTxt.text = "$AlienCiv2Name"
                             AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
                             AlienCiv2Soldiers = savedDataOfAliens.soldiersAlienRace2
                             AlienCiv2SpacePlanes = savedDataOfAliens.spacePlanesAlienRace2
                             AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
                             AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
                             AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
+                            AlienCiv2MilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
 
-
-
-
-
-                            // Prepares views for spionage
-
-                            soldiers = savedDataOfAliens.soldiersAlienRace2
-                            spacePlanes = savedDataOfAliens.spacePlanesAlienRace2
-                            spaceJets = savedDataOfAliens.spaceJetsAlienRace2
-                            tanks = savedDataOfAliens.tanksAlienRace2
-                            nuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
-
-                            alienMilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
+                            isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
+                            alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
 
 
 
@@ -241,7 +281,16 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                            // Displays picture of alien based on number
+
+
+
+                        if (SelectedPlanet == 2) {
+
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv2Name"
+
 
                             if (AlienCiv2Picture == 1) {
                                 pictureofAlien.setImageResource(R.drawable.alien1)
@@ -252,6 +301,22 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                             } else if (AlienCiv2Picture == 4) {
                                 pictureofAlien.setImageResource(R.drawable.alien4)
                             }
+
+
+
+                            if (isAlienCiv2Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv2Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+
+
+
+
+
+
+
 
                         }
 
@@ -274,8 +339,35 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         attackImg.setOnClickListener {
 
-            val intent = Intent(this, WarSimulatorActivity :: class.java)
-            startActivity(intent)
+            // Alien 1
+
+            if (SelectedPlanet == 1 && isAlienCiv1Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 1 && isAlienCiv1Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+            // Alien 2
+
+
+            if (SelectedPlanet == 2 && isAlienCiv2Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 2 && isAlienCiv2Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
 
         }
 
@@ -302,35 +394,152 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        strikeBtn.setOnClickListener {
+
+
+
+            if (sateliteQuantity > 0) {
+
+
+
+                // Alien civilisation 1
+
+
+                if (SelectedPlanet == 1 && isAlienCiv1Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv1Damaged = isAlienCiv1Damaged!! - 1.0
+                        alienCiv1RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv1Damaged = isAlienCiv1Damaged!! - 2.0
+                        alienCiv1RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+                    if (AlienCiv1NuclearSatelites!! > 0.0) {
+
+                        AlienCiv1NuclearSatelites = AlienCiv1NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                    }
+
+
+
+                } else if (SelectedPlanet == 1 && isAlienCiv1Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 2
+
+
+
+
+                if (SelectedPlanet == 2 && isAlienCiv2Damaged!! > 0) { // Alien 2
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv2Damaged = isAlienCiv2Damaged!! - 1.0
+                        alienCiv2RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv2Damaged = isAlienCiv2Damaged!! - 2.0
+                        alienCiv2RelationWithPlayer = 0.0
+
+                    }
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+                    if (AlienCiv2NuclearSatelites!! > 0.0) {
+
+                        AlienCiv2NuclearSatelites = AlienCiv2NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                    }
+
+
+                } else if (SelectedPlanet == 2 && isAlienCiv2Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+                savePlayerData()
+                saveAlienData()
+
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         spyBtn.setOnClickListener {
 
 
-            if (SelectedPlanet == 1) {
+            if (SelectedPlanet == 1 && isAlienCiv1Damaged!! > 0) {
 
                 var spied = (1..5).shuffled().last()
 
                 if(spied <= spionageLevelPlayer) {
 
-                    if (alienMilitaryBase == 1.0) {
+                    if (AlienCiv1MilitaryBase == 1.0) {
 
-                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites"
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV1: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV1: $AlienCiv1NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 2.0) {
+                    } else if (AlienCiv1MilitaryBase == 2.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV1: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV1: $AlienCiv1NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 3.0) {
+                    } else if (AlienCiv1MilitaryBase == 3.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV1: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV1: $AlienCiv1NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 4.0) {
+                    } else if (AlienCiv1MilitaryBase == 4.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV2: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV1: $AlienCiv1NuclearSatelites"
 
 
-                    } else if (alienMilitaryBase == 5.0) {
+                    } else if (AlienCiv1MilitaryBase == 5.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV2: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV2: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV2: $AlienCiv1NuclearSatelites"
 
                     }
 
@@ -342,12 +551,20 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                 } else {
 
-                    Toast.makeText(this, "Your spy has been captured", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+                    alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! - 1.0
+
+                    saveAlienData()
 
                 }
 
 
-            }  // Firs alien
+            } else if (SelectedPlanet == 1 && isAlienCiv1Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            } // Alien 1
 
 
 
@@ -356,32 +573,32 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-            if (SelectedPlanet == 2) {
+            if (SelectedPlanet == 2 && isAlienCiv2Damaged!! > 0) {
 
                 var spied = (1..5).shuffled().last()
 
                 if(spied <= spionageLevelPlayer) {
 
-                    if (alienMilitaryBase == 1.0) {
+                    if (AlienCiv2MilitaryBase == 1.0) {
 
-                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv2Soldiers,  Space planes LV1: $AlienCiv2SpacePlanes,  Tanks LV1: $AlienCiv2Tanks,  Space Jets LV1: $AlienCiv2SpaceJets,  Nuclear satelites LV1: $AlienCiv2NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 2.0) {
+                    } else if (AlienCiv2MilitaryBase == 2.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv2Soldiers,  Space planes LV1: $AlienCiv2SpacePlanes,  Tanks LV1: $AlienCiv2Tanks,  Space Jets LV1: $AlienCiv2SpaceJets,  Nuclear satelites LV1: $AlienCiv2NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 3.0) {
+                    } else if (AlienCiv2MilitaryBase == 3.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv2Soldiers,  Space planes LV1: $AlienCiv2SpacePlanes,  Tanks LV1: $AlienCiv2Tanks,  Space Jets LV1: $AlienCiv2SpaceJets,  Nuclear satelites LV1: $AlienCiv2NuclearSatelites"
 
-                    } else if (alienMilitaryBase == 4.0) {
+                    } else if (AlienCiv2MilitaryBase == 4.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv2Soldiers,  Space planes LV1: $AlienCiv2SpacePlanes,  Tanks LV2: $AlienCiv2Tanks,  Space Jets LV1: $AlienCiv2SpaceJets,  Nuclear satelites LV1: $AlienCiv2NuclearSatelites"
 
 
-                    } else if (alienMilitaryBase == 5.0) {
+                    } else if (AlienCiv2MilitaryBase == 5.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV2: $nuclearSatelites "
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv2Soldiers,  Space planes LV1: $AlienCiv2SpacePlanes,  Tanks LV1: $AlienCiv2Tanks,  Space Jets LV1: $AlienCiv2SpaceJets,  Nuclear satelites LV2: $AlienCiv2NuclearSatelites"
 
                     }
 
@@ -393,13 +610,20 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                 } else {
 
-                    Toast.makeText(this, "Your spy has been captured", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+                    alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! - 1.0
 
+                    saveAlienData()
                 }
 
 
 
-            } // Second Alien
+            } else if (SelectedPlanet == 2 && isAlienCiv2Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            } // Alien 2
 
 
 
@@ -520,4 +744,104 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
     }
+
+
+
+  fun  savePlayerData() {
+
+      var data = playerData(savedMoneyAmount = moneyAmount, savedResoursesAmount = resoursesAmount,
+          savedLevelInfrastructure = levelInfrastructure, savedLevelFactory = levelFactory, savedLevelMilitaryBase= levelMilitaryBase,
+          savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
+          savedLevelSpionage = spionageLevelPlayer, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
+          savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
+          savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer)
+
+
+
+      database.collection("users").document("User path").collection("Saved data")
+          .document("hmkogjk").set(data)
+
+
+          .addOnCompleteListener {
+
+
+
+          }
+
+
+
+
+  }
+
+
+
+
+  fun  saveAlienData() {
+
+      // War with alien 1
+
+
+
+          var dataOfAlienCivilisations = aliens(
+
+              // Alien 1
+              nameAlienRace1 = AlienCiv1Name,
+              pictureAlienRace1 = AlienCiv1Picture,
+              militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+
+              // Army Alien 1
+              soldiersAlienRace1 = AlienCiv1Soldiers,
+              spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+              spaceJetsAlienRace1 = AlienCiv1SpaceJets,
+              tanksAlienRace1 = AlienCiv1Tanks,
+              nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+
+              // Level damage alien planet 1 and relations
+              alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+              isAlienRace1Damaged = isAlienCiv1Damaged,
+
+
+              // Alien 2
+              nameAlienRace2 = AlienCiv2Name,
+              pictureAlienRace2 = AlienCiv2Picture,
+              militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+
+              // Army Alien 2
+              soldiersAlienRace2 = AlienCiv2Soldiers,
+              spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+              spaceJetsAlienRace2 = AlienCiv2SpaceJets,
+              tanksAlienRace2 = AlienCiv2Tanks,
+              nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+              // Level damage alien planet 1 and relations
+              alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+              isAlienRace2Damaged = isAlienCiv2Damaged
+          )
+
+
+
+          database.collection("users").document("User path").collection("Saved aliens data")
+              .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+              .addOnCompleteListener {
+
+
+              }
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
