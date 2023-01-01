@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
     var levelGeneralDevelopment : Int = 1
     var levelScientificDevelopment : Int = 1
     var levelSpionage : Int = 1
+    var isDamagedAlivePlayer : Double = 2.0
 
 
     var soldierQuantity : Double = 100.0
@@ -51,6 +52,9 @@ class MainActivity : AppCompatActivity() {
     var airplane2Quantity : Double = 0.0
     var tankQuantity : Double = 0.0
     var sateliteQuantity : Double = 0.0
+
+
+
 
 
 
@@ -69,6 +73,10 @@ class MainActivity : AppCompatActivity() {
      var AlienCiv1SpaceJets : Double? = null
      var AlienCiv1Tanks : Double? = null
      var AlienCiv1NuclearSatelites : Double? = null
+     var isAlienCiv1Damaged : Double? = null
+     var alienCiv1RelationWithPlayer : Double? = null
+
+
 
      var AlienCiv2Name : String? = null
      var AlienCiv2Picture : Int? = null
@@ -77,6 +85,8 @@ class MainActivity : AppCompatActivity() {
      var AlienCiv2SpaceJets : Double? = null
      var AlienCiv2Tanks : Double? = null
      var AlienCiv2NuclearSatelites : Double? = null
+     var isAlienCiv2Damaged : Double? = null
+     var alienCiv2RelationWithPlayer : Double? = null
 
 
 
@@ -187,12 +197,17 @@ class MainActivity : AppCompatActivity() {
                             levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
                             levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
                             levelSpionage = savedDataOfUser.savedLevelSpionage
+
+
                             soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
                             airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
                             cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
                             airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
                             tankQuantity = savedDataOfUser.savedTankUnitQuantity
                             sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+
+
+                            isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
 
 
                             Log.d("!!!", "$moneyAmount")
@@ -528,7 +543,7 @@ class MainActivity : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
             savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity)
+            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer)
 
 
 
@@ -749,6 +764,22 @@ class MainActivity : AppCompatActivity() {
 
 
 
+           // Creating random relations with player for every alien race
+
+           // First alien
+
+
+           var relationsAlien1 = (2..10).shuffled().last()
+           var relationsAlien1ToDouble = relationsAlien1.toDouble()
+           alienCiv1RelationWithPlayer = relationsAlien1ToDouble
+
+
+           // Second Alien
+
+           var relationsAlien2 = (2..10).shuffled().last()
+           var relationsAlien2ToDouble = relationsAlien2.toDouble()
+           alienCiv2RelationWithPlayer = relationsAlien2ToDouble
+
 
 
 
@@ -765,13 +796,15 @@ class MainActivity : AppCompatActivity() {
                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = randomMilitaryBaseAlien1Double,
+               isAlienRace1Damaged = 2.0, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
 
                /*Alien civilisation 1 aspects written*/
 
                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = randomNumber2,
                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
-               nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = randomMilitaryBaseAlien2Double
+               nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = randomMilitaryBaseAlien2Double,
+               isAlienRace2Damaged = 2.0, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer
 
                /*Alien civilisation 2 aspects written*/)
 

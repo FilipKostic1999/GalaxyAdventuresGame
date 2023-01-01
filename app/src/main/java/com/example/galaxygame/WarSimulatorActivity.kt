@@ -38,7 +38,14 @@ class WarSimulatorActivity : AppCompatActivity() {
     var levelGeneralDevelopment : Int = 1
     var levelScientificDevelopment : Int = 1
     var levelSpionage : Int = 1
+    var damageToPlayerPlanet : Double = 0.0
 
+
+
+    // Aliens
+
+
+    // Alien 1
 
 
 
@@ -50,6 +57,12 @@ class WarSimulatorActivity : AppCompatActivity() {
     var AlienCiv1SpaceJets : Double? = null
     var AlienCiv1Tanks : Double? = null
     var AlienCiv1NuclearSatelites : Double? = null
+    var isAlienCiv1Damaged : Double? = null
+    var alienCiv1RelationWithPlayer : Double? = null
+
+
+    // Alien 2
+
 
     var AlienCiv2Name : String? = null
     var AlienCiv2Picture : Int? = null
@@ -59,12 +72,19 @@ class WarSimulatorActivity : AppCompatActivity() {
     var AlienCiv2SpaceJets : Double? = null
     var AlienCiv2Tanks : Double? = null
     var AlienCiv2NuclearSatelites : Double? = null
+    var isAlienCiv2Damaged : Double? = null
+    var alienCiv2RelationWithPlayer : Double? = null
+
+
+    // Aliens universal variables
 
 
     var alienSoldiersLeft : Double? = 10.0
     var alienSpacePlanesLeft : Double? = 0.0
     var alienTanksLeft : Double? = 0.0
     var alienSpaceJetsLeft : Double? = 0.0
+    var alienMilitaryBase : Double? = null
+    var levelDamageToAlienPlanet : Double = 0.0
 
 
 
@@ -82,7 +102,7 @@ class WarSimulatorActivity : AppCompatActivity() {
     var selectedTanksDouble : Double = 0.0
 
 
-    var alienMilitaryBase : Double? = null
+
 
 
     var attacker = warUnits(0.0, 0.0, 0.0, 0.0)
@@ -110,6 +130,8 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+
+
     var alienSoldierLv1 = warUnits(5.0, 10.0, 20.0, 10.0)
     var alienSoldierLv2 = warUnits(15.0, 25.0, 20.0, 15.0)
     var alienSoldierLv3 = warUnits(40.0, 40.0, 35.0, 20.0)
@@ -125,6 +147,8 @@ class WarSimulatorActivity : AppCompatActivity() {
     var alienSpacePlaneUnits = warUnits(120.0, 240.0, 80.0, 5.0)
     var alienSpaceJetUnits = warUnits(480.0, 800.0, 95.0, 8.0)
     var alienTankUnits = warUnits(2000.0, 100.0, 5.0, 10.0)
+
+
 
 
     var selectedPlanetV : Int = 0
@@ -275,6 +299,8 @@ class WarSimulatorActivity : AppCompatActivity() {
                         levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
                         levelSpionage = savedDataOfUser.savedLevelSpionage
 
+                        damageToPlayerPlanet = savedDataOfUser.isDamagedAlive
+
 
                         if (militaryBaseLevel < 2) {
                             soldiersTxt.text = "Soldiers Lv1 : $soldierQuantity"
@@ -338,12 +364,18 @@ class WarSimulatorActivity : AppCompatActivity() {
 
                             AlienCiv1Name = savedDataOfAliens.nameAlienRace1
                             AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
+
+
                             AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
                             AlienCiv1Soldiers = savedDataOfAliens.soldiersAlienRace1
                             AlienCiv1SpacePlanes = savedDataOfAliens.spacePlanesAlienRace1
                             AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
                             AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
                             AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
+
+
+                            isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
+                            alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
 
 
 
@@ -359,6 +391,10 @@ class WarSimulatorActivity : AppCompatActivity() {
                         AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
                         AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
                         AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
+
+
+                        isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
+                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
 
 
 
@@ -626,6 +662,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
             alienMilitaryBase = AlienCiv1MilitaryBase //
+            levelDamageToAlienPlanet = isAlienCiv1Damaged!! //
 
 
         }
@@ -761,6 +798,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
             alienMilitaryBase = AlienCiv2MilitaryBase //
+            levelDamageToAlienPlanet = isAlienCiv2Damaged!! //
 
 
         }
@@ -1638,6 +1676,12 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+                // Alien planet becomes more damaged
+
+                levelDamageToAlienPlanet -= 1
+
+
+
 
 
 
@@ -1696,7 +1740,7 @@ class WarSimulatorActivity : AppCompatActivity() {
                 savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
                 savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
                 savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-                savedSateliteUnitQuantity= sateliteQuantity)
+                savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = damageToPlayerPlanet)
 
 
 
@@ -1745,6 +1789,13 @@ class WarSimulatorActivity : AppCompatActivity() {
                 tanksAlienRace1 = alienTanksLeft,
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
 
+                // Level damage alien planet 1 and relations
+                alienRace1RelationWithPlayer = 0.0,
+                isAlienRace1Damaged = levelDamageToAlienPlanet,
+
+
+
+
                 // Alien 2
                 nameAlienRace2 = AlienCiv2Name,
                 pictureAlienRace2 = AlienCiv2Picture,
@@ -1755,7 +1806,11 @@ class WarSimulatorActivity : AppCompatActivity() {
                 spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
                 spaceJetsAlienRace2 = AlienCiv2SpaceJets,
                 tanksAlienRace2 = AlienCiv2Tanks,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+                // Level damage alien planet 1 and relations
+                alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+                isAlienRace2Damaged = isAlienCiv2Damaged)
 
 
 
@@ -1791,6 +1846,12 @@ class WarSimulatorActivity : AppCompatActivity() {
                 tanksAlienRace1 = AlienCiv1Tanks,
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
 
+                // Level damage alien 1 planet
+                alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+                isAlienRace1Damaged = isAlienCiv1Damaged,
+
+
+
                 // Alien 2
                 nameAlienRace2 = AlienCiv2Name,
                 pictureAlienRace2 = AlienCiv2Picture,
@@ -1801,7 +1862,12 @@ class WarSimulatorActivity : AppCompatActivity() {
                 spacePlanesAlienRace2 = alienSpacePlanesLeft,
                 spaceJetsAlienRace2 = alienSpaceJetsLeft,
                 tanksAlienRace2 = alienTanksLeft,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites)
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+
+                // Level damage alien 2 planet
+                alienRace2RelationWithPlayer = 0.0,
+                isAlienRace2Damaged = levelDamageToAlienPlanet)
 
 
 

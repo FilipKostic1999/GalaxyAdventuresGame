@@ -313,24 +313,24 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                     if (alienMilitaryBase == 1.0) {
 
-                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites"
 
                     } else if (alienMilitaryBase == 2.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
                     } else if (alienMilitaryBase == 3.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
                     } else if (alienMilitaryBase == 4.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
 
                     } else if (alienMilitaryBase == 5.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV2: $nuclearSatelites "
 
                     }
 
@@ -364,24 +364,24 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                     if (alienMilitaryBase == 1.0) {
 
-                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV1: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
                     } else if (alienMilitaryBase == 2.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
                     } else if (alienMilitaryBase == 3.0) {
 
-                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV2: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV1: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
                     } else if (alienMilitaryBase == 4.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV1: $nuclearSatelites "
 
 
                     } else if (alienMilitaryBase == 5.0) {
 
-                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets "
+                        spyArmyTextView.text = "Soldiers LV3: $soldiers,  Space planes LV1: $spacePlanes,  Tanks LV2: $tanks,  Space Jets LV1: $spaceJets,  Nuclear satelites LV2: $nuclearSatelites "
 
                     }
 

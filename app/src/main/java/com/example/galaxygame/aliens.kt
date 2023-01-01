@@ -6,11 +6,13 @@ data class aliens(@DocumentId var DocumentId: String? = null, var nameAlienRace1
                   var pictureAlienRace1 : Int? = null, var soldiersAlienRace1 : Double? = null,
                   var spacePlanesAlienRace1 : Double? = null, var spaceJetsAlienRace1 : Double? = null,
                   var tanksAlienRace1 : Double? = null, var nuclearSatelitesAlienRace1 : Double? = null,
-                  var militaryBaseAlienRace1 : Double? = null, /* first Alien Is Set */
+                  var militaryBaseAlienRace1 : Double? = null, var isAlienRace1Damaged : Double? = null,
+                  var alienRace1RelationWithPlayer : Double? = null, /* first Alien Is Set */
 
                   var nameAlienRace2: String? = null,
                   var pictureAlienRace2 : Int? = null, var soldiersAlienRace2 : Double? = null,
                   var spacePlanesAlienRace2 : Double? = null, var spaceJetsAlienRace2 : Double? = null,
                   var tanksAlienRace2 : Double? = null, var nuclearSatelitesAlienRace2 : Double? = null,
-                  var militaryBaseAlienRace2 : Double? = null, /* second Alien Is Set */)
+                  var militaryBaseAlienRace2 : Double? = null, var isAlienRace2Damaged : Double? = null,
+                  var alienRace2RelationWithPlayer : Double? = null /* second Alien Is Set */)
 
