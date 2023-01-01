@@ -49,6 +49,13 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+    var messageText : String = ""
+    var calculator : Int = 0
+    var SelectedPlanetV : Int = 0
+    lateinit var savedMessages : messages
+
+
+
 
 
 
@@ -147,6 +154,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
 
 
+        SelectedPlanetV = SelectedPlanet
 
 
 
@@ -327,7 +335,33 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+                    }
+                }
+            }
 
+
+
+
+
+
+
+
+
+
+
+        // Snapshot of messages
+
+
+        database.collection("users").document("User path")
+            .collection("Messages")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedMessages = document.toObject()!!
+
+                        calculator += savedMessages.constantNumber
 
 
 
@@ -337,6 +371,24 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                     }
                 }
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -433,6 +485,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
                     if (AlienCiv1NuclearSatelites!! > 0.0) {
 
                         AlienCiv1NuclearSatelites = AlienCiv1NuclearSatelites!! - 1.0
@@ -440,7 +493,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
 
+                        nuclearAttackMessage()
 
+                    } else if (AlienCiv1NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
                     }
 
 
@@ -450,6 +506,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                     Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
 
                 }
+
 
 
 
@@ -486,7 +543,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
 
+                        nuclearAttackMessage()
 
+                    }  else if (AlienCiv2NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
                     }
 
 
@@ -568,6 +628,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                         alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! - 1.0
                     }
 
+                    spionageDiscoveredMessage()
                     saveAlienData()
 
                 }
@@ -630,6 +691,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                        alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! - 1.0
                    }
 
+                    spionageDiscoveredMessage()
                     saveAlienData()
                 }
 
@@ -787,6 +849,263 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
+    fun failedNuclearResponseMessage() {
+
+        var nuclearStrikeMessage = (1..4).shuffled().last()
+
+
+
+
+        if (SelectedPlanetV == 1) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv1Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv1Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 2) { // Alien 2
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv2Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText = "$AlienCiv2Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText = "$AlienCiv2Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv2Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    fun spionageDiscoveredMessage() {
+
+        var spionageMessage = (1..4).shuffled().last()
+
+
+
+
+        if (SelectedPlanetV == 1) { // Alien 1
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv1Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv1Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 2) { // Alien 2
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv2Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv2Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv2Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv2Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    fun nuclearAttackMessage() {
+
+        var nuclearStrikeMessage = (1..4).shuffled().last()
+
+
+
+
+        if (SelectedPlanetV == 1) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv1Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv1Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 2) { // Alien 2
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv2Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText = "$AlienCiv2Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText = "$AlienCiv2Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv2Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   fun  saveAlienData() {
 
       // War with alien 1
@@ -842,6 +1161,15 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
       }
+
+
+
+
+
+
+
+
+
 
 
 

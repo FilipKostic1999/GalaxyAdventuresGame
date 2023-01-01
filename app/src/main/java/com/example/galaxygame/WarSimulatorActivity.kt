@@ -85,6 +85,7 @@ class WarSimulatorActivity : AppCompatActivity() {
     var alienSpaceJetsLeft : Double? = 0.0
     var alienMilitaryBase : Double? = null
     var levelDamageToAlienPlanet : Double = 0.0
+    var alienRelationship : Double = 0.0
 
 
 
@@ -100,6 +101,11 @@ class WarSimulatorActivity : AppCompatActivity() {
     var selectedCargoPlanesDouble : Double = 0.0
     var selectedSpaceJetsDouble : Double = 0.0
     var selectedTanksDouble : Double = 0.0
+
+
+    lateinit var savedMessages : messages
+    var messageText : String = ""
+    var calculator : Int = 0
 
 
 
@@ -262,6 +268,47 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
         }
+
+
+
+
+
+
+        // Snapshot of messages
+
+
+        database.collection("users").document("User path")
+            .collection("Messages")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedMessages = document.toObject()!!
+
+                        calculator += savedMessages.constantNumber
+
+
+
+
+
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -663,6 +710,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
             alienMilitaryBase = AlienCiv1MilitaryBase //
             levelDamageToAlienPlanet = isAlienCiv1Damaged!! //
+            alienRelationship = alienCiv1RelationWithPlayer!! //
 
 
         }
@@ -799,6 +847,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
             alienMilitaryBase = AlienCiv2MilitaryBase //
             levelDamageToAlienPlanet = isAlienCiv2Damaged!! //
+            alienRelationship = alienCiv1RelationWithPlayer!! //
 
 
         }
@@ -1531,6 +1580,14 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+                    alienWinningAttackMessage()
+                    alienRelationship = 0.0
+
+
+
+
+
+
 
 
                 Log.d("!!!", "Alien wins")
@@ -1676,9 +1733,20 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-                // Alien planet becomes more damaged
+                // Alien planet becomes more damaged and relationship with player change
 
                 levelDamageToAlienPlanet -= 1
+
+                var relationsChange = (1..10).shuffled().last()
+
+                if (relationsChange <= 7) {
+                    alienRelationship = 6.0
+                    friendlyAttackMessage()
+                } else {
+                    alienRelationship = 0.0
+                    angryAttackMessage()
+                }
+
 
 
 
@@ -1723,6 +1791,272 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+    fun alienWinningAttackMessage() {
+
+        var nuclearStrikeMessage = (1..4).shuffled().last()
+
+
+
+        if (selectedPlanetV == 1) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv1Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv1Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 2) { // Alien 2
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv2Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv2Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv2Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv2Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    fun friendlyAttackMessage() {
+
+        var nuclearStrikeMessage = (1..4).shuffled().last()
+
+
+
+        if (selectedPlanetV == 1) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv1Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv1Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 2) { // Alien 2
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv2Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv2Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv2Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv2Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    fun angryAttackMessage() {
+
+        var nuclearStrikeMessage = (1..4).shuffled().last()
+
+
+
+        if (selectedPlanetV == 1) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv1Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv1Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 2) { // Alien 2
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv2Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv2Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv2Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv2Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1783,15 +2117,15 @@ class WarSimulatorActivity : AppCompatActivity() {
                 militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
 
                 // Army Alien 1
-                soldiersAlienRace1 = alienSoldiersLeft,
-                spacePlanesAlienRace1 = alienSpacePlanesLeft,
-                spaceJetsAlienRace1 = alienSpaceJetsLeft,
-                tanksAlienRace1 = alienTanksLeft,
+                soldiersAlienRace1 = alienSoldiersLeft,   //
+                spacePlanesAlienRace1 = alienSpacePlanesLeft,  //
+                spaceJetsAlienRace1 = alienSpaceJetsLeft,   //
+                tanksAlienRace1 = alienTanksLeft,   //
                 nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
 
                 // Level damage alien planet 1 and relations
-                alienRace1RelationWithPlayer = 0.0,
-                isAlienRace1Damaged = levelDamageToAlienPlanet,
+                alienRace1RelationWithPlayer = alienRelationship,  //
+                isAlienRace1Damaged = levelDamageToAlienPlanet,  //
 
 
 
@@ -1866,7 +2200,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
                 // Level damage alien 2 planet
-                alienRace2RelationWithPlayer = 0.0,
+                alienRace2RelationWithPlayer = alienRelationship,
                 isAlienRace2Damaged = levelDamageToAlienPlanet)
 
 
