@@ -104,6 +104,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
     lateinit var savedMessages : messages
+    var newMessageNotifyV : Boolean = false
     var messageText : String = ""
     var calculator : Int = 0
 
@@ -216,6 +217,12 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+        val sharedNewMessageNotify = getSharedPreferences("NewMessageNotify", AppCompatActivity.MODE_PRIVATE)
+        var NewMessageNotify = sharedNewMessageNotify.getBoolean("NewMessageNotify", false)
+
+
+
+
         selectedPlanetV = SelectedPlanet
 
 
@@ -248,6 +255,13 @@ class WarSimulatorActivity : AppCompatActivity() {
                 cargoplaneQuantity -= selectedCargoPlanesDouble
                 tankQuantity -= selectedTanksDouble
                 airplane2Quantity -= selectedSpaceJetsDouble
+
+
+                NewMessageNotify = true
+
+                val editNewMessageNotify = sharedNewMessageNotify.edit()
+                editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                editNewMessageNotify.commit()
 
 
                 simulateWar()
@@ -1751,6 +1765,12 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+
+                // Stealing resourses from alien based on cargoplanes number
+
+                moneyAmount += (selectedCargoPlanesInt * 100)
+                resoursesAmount += (selectedCargoPlanesInt * 100)
+                cargoplaneQuantity += selectedCargoPlanesDouble
 
 
                 Log.d("!!!", "Player wins")

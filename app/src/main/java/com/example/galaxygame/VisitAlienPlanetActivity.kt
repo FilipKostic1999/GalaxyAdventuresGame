@@ -150,6 +150,11 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         explosionPic.isVisible = false
 
 
+
+        val sharedNewMessageNotify = getSharedPreferences("NewMessageNotify", AppCompatActivity.MODE_PRIVATE)
+        var NewMessageNotify = sharedNewMessageNotify.getBoolean("NewMessageNotify", false)
+
+
         val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
         var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
 
@@ -495,8 +500,20 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                         nuclearAttackMessage()
 
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
                     } else if (AlienCiv1NuclearSatelites!! <= 0) {
                         failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
                     }
 
 
@@ -545,8 +562,20 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                         nuclearAttackMessage()
 
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
                     }  else if (AlienCiv2NuclearSatelites!! <= 0) {
                         failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
                     }
 
 
@@ -631,6 +660,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                     spionageDiscoveredMessage()
                     saveAlienData()
 
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
                 }
 
 
@@ -693,6 +728,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
                     spionageDiscoveredMessage()
                     saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
                 }
 
 

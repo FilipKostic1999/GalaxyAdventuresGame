@@ -107,6 +107,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var savedMessages : messages
 
+    var SelectedPlanetV : Int = 0
+
 
 
 
@@ -159,11 +161,23 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        // The message icon knows if to turn green or red based on new messages and viewed messages
 
         val sharedNewMessageNotify = getSharedPreferences("NewMessageNotify", AppCompatActivity.MODE_PRIVATE)
         var NewMessageNotify = sharedNewMessageNotify.getBoolean("NewMessageNotify", false)
 
 
+
+        // Selected planet Int matches civilisation number which allows the system to know which alien does an action in game
+
+
+        val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
+        var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
+
+
+        // Allows variable SelectedPlanet to be read in functions
+
+        SelectedPlanetV = SelectedPlanet
 
 
 
@@ -318,13 +332,15 @@ class MainActivity : AppCompatActivity() {
 
                         AlienCiv1Name = savedDataOfAliens.nameAlienRace1
                         AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
+                        alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
+                        isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
 
                         // Fetches the data of second civilisation in galaxy
 
                         AlienCiv2Name = savedDataOfAliens.nameAlienRace2
                         AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
-
-
+                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
+                        isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
 
 
 
@@ -506,9 +522,49 @@ class MainActivity : AppCompatActivity() {
 
             // CPU automatic functions
 
-            isPlayerAttacked()
+            var isAlienAttacking = (1..50).shuffled().last()
 
-            // CPU
+
+
+            // Alien 1
+
+
+
+            if (alienCiv1RelationWithPlayer != null) {
+                if (alienCiv1RelationWithPlayer!! <= 0 && isAlienCiv1Damaged!! > 0.0) {
+
+
+                    if (isAlienAttacking == 2) {
+                        // Saves which alien attacks so that the simulator knows which army to use as the attacker
+                        SelectedPlanet = 1
+                        val editSelectedPlanet = sharedSelectedPlanet.edit()
+                        editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
+                        editSelectedPlanet.commit()
+
+                        isPlayerAttacked()
+                    }
+                }
+            }
+
+
+            // Alien 2
+
+
+            if (alienCiv2RelationWithPlayer != null) {
+                if (alienCiv2RelationWithPlayer!! <= 0 && isAlienCiv2Damaged!! > 0.0) {
+
+
+                    if (isAlienAttacking == 3) {
+                        // Saves which alien attacks so that the simulator knows which army to use as the attacker
+                        SelectedPlanet = 2
+                        val editSelectedPlanet = sharedSelectedPlanet.edit()
+                        editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
+                        editSelectedPlanet.commit()
+
+                        isPlayerAttacked()
+                    }
+                }
+            } // CPU
 
 
 
@@ -532,9 +588,9 @@ class MainActivity : AppCompatActivity() {
             // CPU automatic functions
 
 
-            var isThereGeneralMessage = (1..7).shuffled().last()
+            var isThereGeneralMessage = (1..10).shuffled().last()
 
-            if (isThereGeneralMessage >= 1) {
+            if (isThereGeneralMessage == 5) {
 
                 sendGeneralMessage()
 
@@ -635,7 +691,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        var chooseMessage = (1..3).shuffled().last()
+        var chooseMessage = (1..7).shuffled().last()
         var messageText = ""
 
 
@@ -643,11 +699,18 @@ class MainActivity : AppCompatActivity() {
         if (chooseMessage == 1) {
             messageText = "Zorgon have devastated a planet"
         } else if (chooseMessage == 2) {
-            messageText = "You colonized a planet"
+            messageText = "Heelp heelp heeeelp, the Zorgon, they killed...please help us, anyone who is listening"
         } else if (chooseMessage == 3) {
-            messageText = "Somebody wants to ally with you"
+            messageText = "Civilisations are being annihilated over the galaxy by the Zorgon"
+        } else if (chooseMessage == 4) {
+            messageText = "The civilisations in the galaxy consider forming an alliance against the Zorgon"
+        } else if (chooseMessage == 5) {
+            messageText = "Zorgon are colonising planets very fast"
+        }  else if (chooseMessage == 6) {
+            messageText = "You scientists have observed a strange spaceship in your solar system. The origin of the ship is unknown"
+        }  else if (chooseMessage == 7) {
+            messageText = "Scientists warn that meeting other civilisations can be...risky"
         }
-
 
 
         var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
@@ -908,19 +971,9 @@ class MainActivity : AppCompatActivity() {
     fun isPlayerAttacked() {
 
 
-        var isPlayerAttacked = 10
 
-        if(isPlayerAttacked == 10) {
             val intent = Intent(this, PlayerAttackedWarSimulator :: class.java)
             startActivity(intent)
-        }
-
-
-
-
-
-
-
 
 
 
