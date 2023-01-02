@@ -6,6 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.core.view.isVisible
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
 
 class GalaxyViewActivity : AppCompatActivity() {
 
@@ -30,10 +36,22 @@ class GalaxyViewActivity : AppCompatActivity() {
     lateinit var signalSolSystem10ZorgonColony: ImageView
 
 
+    lateinit var savedDataOfUser : playerData
+    lateinit var database : FirebaseFirestore
+
+
+
+    var scientificDevelopment : Int = 1
+
+
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_galaxy_view)
+
+
+
+        database = Firebase.firestore
 
 
 
@@ -60,6 +78,49 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
         var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
+
+
+
+
+
+
+
+        database.collection("users").document("User path")
+            .collection("Saved data")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedDataOfUser = document.toObject()!!
+
+                        scientificDevelopment = savedDataOfUser.savedLevelScienficResearch
+
+
+
+
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,8 +231,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem11.setOnClickListener {
 
-            val intent = Intent(this, solSystem11 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 2) {
+
+                val intent = Intent(this, solSystem11::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 2 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 

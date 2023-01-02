@@ -15,6 +15,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.firestore.model.FieldIndex
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class VisitAlienPlanetActivity : AppCompatActivity() {
 
@@ -97,6 +98,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
     var alienMilitaryBase : Double? = null
+    var civilisationSpies = (1..2).shuffled().last()
     lateinit var savedDataOfUser : playerData
 
 
@@ -160,6 +162,13 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
         SelectedPlanetV = SelectedPlanet
+
+
+
+
+        var isPlayerSpied = (1..5).shuffled().last()
+
+        var skipFirs : Int = 0
 
 
 
@@ -336,6 +345,15 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+
+
+
+
+
                         }
 
 
@@ -381,6 +399,71 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
+        Timer().scheduleAtFixedRate( object : TimerTask() {
+            override fun run () {
+
+
+
+                // Is player spied
+
+
+                if (isPlayerSpied == 3 && skipFirs == 1) {
+
+
+                    // Alien 1
+
+
+                    if (isAlienCiv1Damaged!! > 0 && civilisationSpies == 1) {
+
+
+                        if (alienCiv1RelationWithPlayer!! > 0) {
+                            alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                    // Alien 2
+
+                    if (isAlienCiv2Damaged!! > 0 && civilisationSpies == 2) {
+
+
+                        if (alienCiv2RelationWithPlayer!! > 0) {
+                            alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                }
+
+
+                skipFirs ++
+            }
+        }, 0, 1000)
 
 
 
@@ -858,6 +941,121 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    fun alienSpiesPlayerMessage() {
+
+
+        var spionageMessage = (1..4).shuffled().last()
+
+
+
+
+
+         // Alien 1
+
+        if (civilisationSpies == 1) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv1Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv1Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv1Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv1Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+         // Alien 2
+
+
+        if (civilisationSpies == 2) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv2Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv2Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv2Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv2Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+
+        }
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

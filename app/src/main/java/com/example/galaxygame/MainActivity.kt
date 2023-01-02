@@ -404,11 +404,31 @@ class MainActivity : AppCompatActivity() {
                 override fun run () {
 
                     if (moneyTaxAmount < maximumCapacity) {
-                        moneyTaxAmount += 100000
+                        if (levelInfrastructure == 1) {
+                            moneyTaxAmount += 1
+                        } else if (levelInfrastructure == 2) {
+                            moneyTaxAmount += 2
+                        } else if (levelInfrastructure == 3) {
+                            moneyTaxAmount += 5
+                        } else if (levelInfrastructure == 4) {
+                            moneyTaxAmount += 10
+                        } else if (levelInfrastructure == 5) {
+                            moneyTaxAmount += 50
+                        }
                     }
 
                     if (resoursesCollectedAmount < maximumCapacity) {
-                        resoursesCollectedAmount += 100000
+                        if (levelFactory == 1) {
+                            resoursesCollectedAmount += 1
+                        } else if (levelFactory == 2) {
+                            resoursesCollectedAmount += 2
+                        } else if (levelFactory == 3) {
+                            resoursesCollectedAmount += 5
+                        } else if (levelFactory == 4) {
+                            resoursesCollectedAmount += 10
+                        } else if (levelFactory == 5) {
+                            resoursesCollectedAmount += 50
+                        }
                     }
 
 

@@ -85,6 +85,51 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
+
+
+
+
+
+    var AlienCiv1Name : String? = null
+    var AlienCiv1Picture : Int? = null
+    var AlienCiv1Soldiers : Double? = null
+    var AlienCiv1SpacePlanes : Double? = null
+    var AlienCiv1SpaceJets : Double? = null
+    var AlienCiv1Tanks : Double? = null
+    var AlienCiv1NuclearSatelites : Double? = null
+    var AlienCiv1MilitaryBase : Double? = null
+    var isAlienCiv1Damaged : Double? = null
+    var alienCiv1RelationWithPlayer : Double? = null
+
+
+    var AlienCiv2Name : String? = null
+    var AlienCiv2Picture : Int? = null
+    var AlienCiv2Soldiers : Double? = null
+    var AlienCiv2SpacePlanes : Double? = null
+    var AlienCiv2SpaceJets : Double? = null
+    var AlienCiv2Tanks : Double? = null
+    var AlienCiv2NuclearSatelites : Double? = null
+    var AlienCiv2MilitaryBase : Double? = null
+    var isAlienCiv2Damaged : Double? = null
+    var alienCiv2RelationWithPlayer : Double? = null
+
+
+
+
+    lateinit var savedDataOfAliens : aliens
+
+
+
+
+
+
+
+
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recruit_army)
@@ -318,6 +363,111 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
+
+
+
+
+        // Fetching data of all alien civilisations
+
+
+
+        database.collection("users").document("User path")
+            .collection("Saved aliens data")
+
+            .addSnapshotListener { snapshot, e ->
+                if (snapshot != null) {
+                    for (document in snapshot.documents) {
+
+                        savedDataOfAliens = document.toObject()!!
+
+
+
+
+                        // Fetches the data of first civilisation in galaxy
+
+                        AlienCiv1Name = savedDataOfAliens.nameAlienRace1
+                        AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
+                        AlienCiv1Soldiers = savedDataOfAliens.soldiersAlienRace1
+                        AlienCiv1SpacePlanes = savedDataOfAliens.spacePlanesAlienRace1
+                        AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
+                        AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
+                        AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
+                        AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
+
+                        isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
+                        alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of second civilisation in galaxy
+
+                        AlienCiv2Name = savedDataOfAliens.nameAlienRace2
+                        AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
+                        AlienCiv2Soldiers = savedDataOfAliens.soldiersAlienRace2
+                        AlienCiv2SpacePlanes = savedDataOfAliens.spacePlanesAlienRace2
+                        AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
+                        AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
+                        AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
+                        AlienCiv2MilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
+
+                        isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
+                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         soldierRecruitArrow.setOnClickListener {
 
             if (money >= 10 && resourses >= 25) {
@@ -326,6 +476,7 @@ class RecruitArmy : AppCompatActivity() {
                 soldierQuantity += 100
                 soldierQuantityTxt.text = "$soldierQuantity"
             }
+
 
         }
 
@@ -406,6 +557,20 @@ class RecruitArmy : AppCompatActivity() {
 
         recruitBtn.setOnClickListener {
 
+            // Aliens recruit too and their planet repairs
+
+            var ifTheyRecruit = (1..10).shuffled().last()
+
+
+            if (ifTheyRecruit == 5) {
+
+                aliensRecruit()
+                saveDataOfAliens()
+
+            }
+
+
+
             savePlayerData()
 
 
@@ -431,6 +596,83 @@ class RecruitArmy : AppCompatActivity() {
         Toast.makeText(this, "This action is not allowed", Toast.LENGTH_SHORT).show()
 
     }
+
+
+
+
+
+
+    fun saveDataOfAliens() {
+
+
+
+        var dataOfAlienCivilisations = aliens(
+
+            // Alien 1
+            nameAlienRace1 = AlienCiv1Name,
+            pictureAlienRace1 = AlienCiv1Picture,
+            militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+
+            // Army Alien 1
+            soldiersAlienRace1 = AlienCiv1Soldiers,
+            spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+            spaceJetsAlienRace1 = AlienCiv1SpaceJets,
+            tanksAlienRace1 = AlienCiv1Tanks,
+            nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+
+            // Level damage alien planet 1 and relations
+            alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+            isAlienRace1Damaged = isAlienCiv1Damaged,
+
+
+            // Alien 2
+            nameAlienRace2 = AlienCiv2Name,
+            pictureAlienRace2 = AlienCiv2Picture,
+            militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+
+            // Army Alien 2
+            soldiersAlienRace2 = AlienCiv2Soldiers,
+            spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+            spaceJetsAlienRace2 = AlienCiv2SpaceJets,
+            tanksAlienRace2 = AlienCiv2Tanks,
+            nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+
+            // Level damage alien planet 1 and relations
+            alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+            isAlienRace2Damaged = isAlienCiv2Damaged
+        )
+
+
+
+        database.collection("users").document("User path").collection("Saved aliens data")
+            .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+            .addOnCompleteListener {
+
+
+            }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -466,6 +708,98 @@ class RecruitArmy : AppCompatActivity() {
 
 
             }
+
+
+
+
+
+
+    }
+
+
+
+
+
+    fun aliensRecruit() {
+
+
+        var soldiersIncrease = (50..100).shuffled().last()
+        var spacePlaneIncrease = (10..20).shuffled().last()
+        var tanksIncrease = (5..10).shuffled().last()
+        var spaceJetsIncrease = (5..10).shuffled().last()
+
+        var repaiPlanet = (1..3).shuffled().last()
+
+
+        // Alien 1
+
+
+        if (AlienCiv1MilitaryBase!! == 1.0) {
+
+            AlienCiv1Soldiers = AlienCiv1Soldiers!! + soldiersIncrease
+            AlienCiv1SpacePlanes = AlienCiv1SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv1MilitaryBase!! == 2.0) {
+
+            AlienCiv1Soldiers = AlienCiv1Soldiers!! + soldiersIncrease
+            AlienCiv1SpacePlanes = AlienCiv1SpacePlanes!! + spacePlaneIncrease
+            AlienCiv1Tanks = AlienCiv1Tanks!! + tanksIncrease
+
+        } else if (AlienCiv1MilitaryBase!! >= 3.0) {
+
+            AlienCiv1Soldiers = AlienCiv1Soldiers!! + soldiersIncrease
+            AlienCiv1SpacePlanes = AlienCiv1SpacePlanes!! + spacePlaneIncrease
+            AlienCiv1Tanks = AlienCiv1Tanks!! + tanksIncrease
+            AlienCiv1SpaceJets = AlienCiv1SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv1Damaged!! > 0) {
+            isAlienCiv1Damaged = 2.0
+        }
+
+
+
+
+
+
+
+        // Alien 2
+
+
+        if (AlienCiv2MilitaryBase!! == 1.0) {
+
+            AlienCiv2Soldiers = AlienCiv2Soldiers!! + soldiersIncrease
+            AlienCiv2SpacePlanes = AlienCiv2SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv2MilitaryBase!! == 2.0) {
+
+            AlienCiv2Soldiers = AlienCiv2Soldiers!! + soldiersIncrease
+            AlienCiv2SpacePlanes = AlienCiv2SpacePlanes!! + spacePlaneIncrease
+            AlienCiv2Tanks = AlienCiv2Tanks!! + tanksIncrease
+
+        } else if (AlienCiv2MilitaryBase!! >= 3.0) {
+
+            AlienCiv2Soldiers = AlienCiv2Soldiers!! + soldiersIncrease
+            AlienCiv2SpacePlanes = AlienCiv2SpacePlanes!! + spacePlaneIncrease
+            AlienCiv2Tanks = AlienCiv2Tanks!! + tanksIncrease
+            AlienCiv2SpaceJets = AlienCiv2SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv2Damaged!! > 0) {
+            isAlienCiv2Damaged = 2.0
+        }
+
+
+
+
+
+
+
+
 
 
 
