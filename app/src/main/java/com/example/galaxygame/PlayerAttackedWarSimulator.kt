@@ -36,6 +36,14 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
+    var colonyId1 : Int = 1000
+    var colonyResourses1 : Int = 0
+
+
+
+
+
+
 // Aliens
 
 
@@ -311,6 +319,9 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
                         levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
                         levelSpionage = savedDataOfUser.savedLevelSpionage
                         damageToPlayerPlanet = savedDataOfUser.isDamagedAlive
+                        colonyId1 = savedDataOfUser.colonyId1
+                        colonyResourses1 = savedDataOfUser.colonyResourses1
+
 
 
 
@@ -1956,7 +1967,8 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
             savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = damageToPlayerPlanet)
+            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = damageToPlayerPlanet, colonyId1 = colonyId1,
+            colonyResourses1 = colonyResourses1)
 
 
 

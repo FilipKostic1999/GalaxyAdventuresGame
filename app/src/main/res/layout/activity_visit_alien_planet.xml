@@ -7,32 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".VisitAlienPlanetActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="54dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.896"
-        app:srcCompat="@drawable/messageicon" />
-
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="115dp"
-        android:layout_height="34dp"
-        android:text="Diplomacy"
+        android:id="@+id/donateText"
+        android:layout_width="141dp"
+        android:layout_height="65dp"
+        android:text="Donate 500 money to improve relationship"
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <ImageView
         android:id="@+id/strikeWithNuclearSatelitesBtn"
@@ -47,7 +35,7 @@
         app:srcCompat="@drawable/aimpng" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nuclearSateliteText"
         android:layout_width="173dp"
         android:layout_height="42dp"
         android:text="Strike with nuclear satelites"
@@ -74,7 +62,7 @@
         app:srcCompat="@drawable/tank" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/attackTxt"
         android:layout_width="105dp"
         android:layout_height="30dp"
         android:text="Attack"
@@ -127,7 +115,7 @@
         app:srcCompat="@drawable/spionage" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/sendASpyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16dp"
@@ -190,5 +178,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.777"
         app:srcCompat="@drawable/explosionpictur" />
+
+    <ImageView
+        android:id="@+id/donateImg"
+        android:layout_width="66dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933"
+        app:srcCompat="@drawable/moneyicon" />
+
+    <ImageView
+        android:id="@+id/coloniseImg"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171"
+        app:srcCompat="@drawable/resoursesicon" />
+
+    <TextView
+        android:id="@+id/coloniseTxt"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:text="Colonise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
+
+    <ImageView
+        android:id="@+id/collectColonyMoney"
+        android:layout_width="82dp"
+        android:layout_height="86dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064"
+        app:srcCompat="@drawable/moneysign" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

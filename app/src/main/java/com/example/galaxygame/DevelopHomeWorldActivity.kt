@@ -58,6 +58,11 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
 
 
+    var colonyId1 : Int = 1000
+    var colonyResourses1 : Int = 0
+
+
+
     lateinit var database : FirebaseFirestore
     lateinit var savedDataOfUser : playerData
 
@@ -131,6 +136,9 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
                         airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
                         tankQuantity = savedDataOfUser.savedTankUnitQuantity
                         sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+
+                        colonyId1 = savedDataOfUser.colonyId1
+                        colonyResourses1 = savedDataOfUser.colonyResourses1
 
 
 
@@ -688,7 +696,8 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
             savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity)
+            savedSateliteUnitQuantity= sateliteQuantity, colonyId1 = colonyId1,
+            colonyResourses1 = colonyResourses1)
 
 
 

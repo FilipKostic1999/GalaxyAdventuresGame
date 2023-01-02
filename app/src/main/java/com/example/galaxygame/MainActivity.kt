@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var collectTaxBtn : ImageView
     lateinit var galaxyView : ImageView
     lateinit var homeWorldExplosion : ImageView
+    lateinit var saveGameIcon : ImageView
 
 
     lateinit var repairWorldBtn : Button
@@ -58,6 +59,9 @@ class MainActivity : AppCompatActivity() {
     var airplane2Quantity : Double = 0.0
     var tankQuantity : Double = 0.0
     var sateliteQuantity : Double = 0.0
+
+    var colonyId1 : Int = 1000
+    var colonyResourses1 : Int = 0
 
 
 
@@ -147,6 +151,7 @@ class MainActivity : AppCompatActivity() {
         redMsgIcon = findViewById(R.id.redMsgIcon)
         homeWorldExplosion = findViewById(R.id.homeWorldExplosion)
         repairWorldBtn = findViewById(R.id.repairWorldBtn)
+        saveGameIcon = findViewById(R.id.saveGameIcon)
 
 
 
@@ -158,6 +163,8 @@ class MainActivity : AppCompatActivity() {
 
         repairWorldBtn.isVisible = false
         repairWorldBtn.isEnabled = false
+        saveGameIcon.isEnabled = false
+        saveGameIcon.isVisible = false
 
 
 
@@ -237,6 +244,9 @@ class MainActivity : AppCompatActivity() {
 
                             isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
 
+                            colonyId1 = savedDataOfUser.colonyId1
+                            colonyResourses1 = savedDataOfUser.colonyResourses1
+
 
 
 
@@ -288,6 +298,8 @@ class MainActivity : AppCompatActivity() {
                                 homeWorldExplosion.isVisible = false
                                 repairWorldBtn.isVisible = false
                                 repairWorldBtn.isEnabled = false
+                                saveGameIcon.isVisible = true
+                                saveGameIcon.isEnabled = true
 
                             } else if (isDamagedAlivePlayer == 1.0) {
 
@@ -389,6 +401,19 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        saveGameIcon.setOnClickListener {
+
+            // Resets all data in case player loses the game
+
+
+            resetGame()
+
+
+
+        }
+
+
+
 
 
 
@@ -405,7 +430,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (moneyTaxAmount < maximumCapacity) {
                         if (levelInfrastructure == 1) {
-                            moneyTaxAmount += 1
+                            moneyTaxAmount += 10000
                         } else if (levelInfrastructure == 2) {
                             moneyTaxAmount += 2
                         } else if (levelInfrastructure == 3) {
@@ -419,7 +444,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (resoursesCollectedAmount < maximumCapacity) {
                         if (levelFactory == 1) {
-                            resoursesCollectedAmount += 1
+                            resoursesCollectedAmount += 10000
                         } else if (levelFactory == 2) {
                             resoursesCollectedAmount += 2
                         } else if (levelFactory == 3) {
@@ -535,6 +560,7 @@ class MainActivity : AppCompatActivity() {
 
             moneyAmount += moneyTaxAmount
             moneyTextView.text = "$moneyAmount Trilion"
+            colonyResourses1 += moneyTaxAmount
             moneyTaxAmount = 0
 
             savePlayerData()
@@ -671,6 +697,66 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    fun resetGame() {
+
+
+
+
+        var dataOfAlienCivilisations = aliens(nameAlienRace1 = null)
+
+
+        database.collection("users").document("User path").collection("Saved aliens data")
+            .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var data = playerData(savedMoneyAmount = 0, savedResoursesAmount = 0,
+            savedLevelInfrastructure = 1, savedLevelFactory = 1, savedLevelMilitaryBase= 1,
+            savedLevelGeneralDevelopment = 1, savedLevelScienficResearch = 1,
+            savedLevelSpionage = 1, savedSoldierUnitQuantity = 100.0, savedAirplaneUnitQuantity = 40.0,
+            savedCargoPlaneQuantity = 10.0, savedAirplane2UnitQuantity= 0.0, savedTankUnitQuantity= 0.0,
+            savedSateliteUnitQuantity= 0.0, isDamagedAlive = 2.0, colonyId1 = 1000,
+            colonyResourses1 = 0)
+
+
+
+        database.collection("users").document("User path").collection("Saved data")
+            .document("hmkogjk").set(data)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+
+
+
+
+
+    }
+
+
+
+
 
 
 
@@ -685,7 +771,8 @@ class MainActivity : AppCompatActivity() {
             savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
             savedLevelSpionage = levelSpionage, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
             savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer)
+            savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer, colonyId1 = colonyId1,
+            colonyResourses1 = colonyResourses1)
 
 
 

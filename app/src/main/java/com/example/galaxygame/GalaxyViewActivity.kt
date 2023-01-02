@@ -157,8 +157,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem3.setOnClickListener {
 
-            val intent = Intent(this, SolSystem3 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 3) {
+
+                val intent = Intent(this, SolSystem3::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 3 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -167,24 +174,45 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem4.setOnClickListener {
 
-            val intent = Intent(this, SolSystem4 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 2) {
+
+                val intent = Intent(this, SolSystem4::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 2 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
 
         signalSolSystem5.setOnClickListener {
 
-            val intent = Intent(this, SolSystem5 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 3) {
+
+                val intent = Intent(this, SolSystem5::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 3 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
 
         signalSolSystem6.setOnClickListener {
 
-            val intent = Intent(this, SolSystem6 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 3) {
+
+                val intent = Intent(this, SolSystem6::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 3 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -192,8 +220,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem7.setOnClickListener {
 
-            val intent = Intent(this, SolSystem7 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 3) {
+
+                val intent = Intent(this, SolSystem7::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 3 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -202,16 +237,30 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem8.setOnClickListener {
 
-            val intent = Intent(this, SolSystem8 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 3) {
+
+                val intent = Intent(this, SolSystem8::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 3 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
 
         signalSolSystem9ZorgonColony.setOnClickListener {
 
-            val intent = Intent(this, solSystem9 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 4) {
+
+                val intent = Intent(this, solSystem9::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 4 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -219,8 +268,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem10ZorgonColony.setOnClickListener {
 
-            val intent = Intent(this, SolSystem10 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 4) {
+
+                val intent = Intent(this, SolSystem10::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 4 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -247,8 +303,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem12.setOnClickListener {
 
-            val intent = Intent(this, SolSystem12 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 2) {
+
+                val intent = Intent(this, SolSystem12::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 2 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 
@@ -256,8 +319,15 @@ class GalaxyViewActivity : AppCompatActivity() {
 
         signalSolSystem13.setOnClickListener {
 
-            val intent = Intent(this, SolSystem13 :: class.java)
-            startActivity(intent)
+            if (scientificDevelopment >= 2) {
+
+                val intent = Intent(this, SolSystem13::class.java)
+                startActivity(intent)
+
+            } else {
+                Toast.makeText(this, "You need scientific research LV 2 or higher to visit this system", Toast.LENGTH_SHORT).show()
+
+            }
 
         }
 

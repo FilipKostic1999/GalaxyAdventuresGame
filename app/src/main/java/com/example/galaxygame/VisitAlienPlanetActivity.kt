@@ -25,6 +25,13 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     lateinit var pictureofAlien : ImageView
     lateinit var attackImg : ImageView
     lateinit var explosionPic : ImageView
+    lateinit var coloniseImg : ImageView
+    lateinit var coloniseTxt : TextView
+    lateinit var sendASpyText : TextView
+    lateinit var attackTxt : TextView
+    lateinit var nuclearSateliteText : TextView
+    lateinit var donateText : TextView
+    lateinit var collectColonyMoney : ImageView
 
 
 
@@ -47,6 +54,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     var airplane2Quantity : Double = 0.0
     var tankQuantity : Double = 0.0
     var sateliteQuantity : Double = 0.0
+
+
+
+
+    var colonyId1 : Int = 1000
+    var colonyResourses1 : Int = 0
 
 
 
@@ -116,6 +129,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     lateinit var strikeWithNuclearSatelitesBtn : ImageView
     lateinit var strikeBtn : Button
     lateinit var nuclearSateliteImg : ImageView
+    lateinit var donateImg : ImageView
 
 
 
@@ -135,6 +149,14 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         nuclearSateliteImg = findViewById(R.id.nuclearSateliteImg)
         strikeBtn = findViewById(R.id.strikeBtn)
         explosionPic = findViewById(R.id.explosionPic)
+        donateImg = findViewById(R.id.donateImg)
+        coloniseImg = findViewById(R.id.coloniseImg)
+        coloniseTxt = findViewById(R.id.coloniseTxt)
+        sendASpyText = findViewById(R.id.sendASpyText)
+        attackTxt = findViewById(R.id.attackTxt)
+        nuclearSateliteText = findViewById(R.id.nuclearSateliteText)
+        donateText = findViewById(R.id.donateText)
+        collectColonyMoney = findViewById(R.id.collectColonyMoney)
 
 
 
@@ -151,6 +173,15 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         explosionPic.isVisible = false
 
+        coloniseImg.isVisible = false
+        coloniseImg.isEnabled = false
+        coloniseTxt.isVisible = false
+
+        collectColonyMoney.isVisible = false
+        collectColonyMoney.isEnabled = false
+
+
+
 
 
         val sharedNewMessageNotify = getSharedPreferences("NewMessageNotify", AppCompatActivity.MODE_PRIVATE)
@@ -159,6 +190,110 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         val sharedSelectedPlanet = getSharedPreferences("SelectedPlanet", AppCompatActivity.MODE_PRIVATE)
         var SelectedPlanet = sharedSelectedPlanet.getInt("SelectedPlanet", 0)
+
+
+
+
+
+        if (SelectedPlanet == 0 && colonyId1 == 1000) {
+
+            coloniseImg.isVisible = true
+            coloniseImg.isEnabled = true
+            coloniseTxt.isVisible = true
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
+
+
+
+        } else if (SelectedPlanet == 111 && colonyId1 == 1000) {
+
+            coloniseImg.isVisible = true
+            coloniseImg.isEnabled = true
+            coloniseTxt.isVisible = true
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
+        } else if (SelectedPlanet == 444 && colonyId1 == 1000) {
+
+            coloniseImg.isVisible = true
+            coloniseImg.isEnabled = true
+            coloniseTxt.isVisible = true
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
+        } else if (SelectedPlanet == 777 && colonyId1 == 1000) {
+
+            coloniseImg.isVisible = true
+            coloniseImg.isEnabled = true
+            coloniseTxt.isVisible = true
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
         SelectedPlanetV = SelectedPlanet
@@ -202,6 +337,120 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
                         isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
+
+
+                        colonyId1 = savedDataOfUser.colonyId1
+                        colonyResourses1 = savedDataOfUser.colonyResourses1
+
+
+
+
+                        if (SelectedPlanet == 0 && colonyId1 == 0) {
+
+                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+
+                            coloniseImg.isVisible = false
+                            coloniseImg.isEnabled = false
+                            coloniseTxt.isVisible = false
+
+                            collectColonyMoney.isVisible = true
+                            collectColonyMoney.isEnabled = true
+
+                            pictureofAlien.isVisible = false
+                            spyArmyTextView.isVisible = false
+                            spyBtn.isVisible = false
+                            spyBtn.isEnabled = false
+                            attackImg.isVisible = false
+                            attackImg.isEnabled = false
+                            strikeWithNuclearSatelitesBtn.isVisible = false
+                            strikeWithNuclearSatelitesBtn.isEnabled = false
+                            donateImg.isVisible = false
+                            donateImg.isEnabled = false
+                            sendASpyText.isVisible = false
+                            attackTxt.isVisible = false
+                            nuclearSateliteText.isVisible = false
+                            donateText.isVisible = false
+
+
+                        } else if (SelectedPlanet == 111 && colonyId1 == 111) {
+
+                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+
+                            coloniseImg.isVisible = false
+                            coloniseImg.isEnabled = false
+                            coloniseTxt.isVisible = false
+
+                            collectColonyMoney.isVisible = true
+                            collectColonyMoney.isEnabled = true
+
+                            pictureofAlien.isVisible = false
+                            spyArmyTextView.isVisible = false
+                            spyBtn.isVisible = false
+                            spyBtn.isEnabled = false
+                            attackImg.isVisible = false
+                            attackImg.isEnabled = false
+                            strikeWithNuclearSatelitesBtn.isVisible = false
+                            strikeWithNuclearSatelitesBtn.isEnabled = false
+                            donateImg.isVisible = false
+                            donateImg.isEnabled = false
+                            sendASpyText.isVisible = false
+                            attackTxt.isVisible = false
+                            nuclearSateliteText.isVisible = false
+                            donateText.isVisible = false
+
+                        } else if (SelectedPlanet == 444 && colonyId1 == 444) {
+
+                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+
+                            coloniseImg.isVisible = false
+                            coloniseImg.isEnabled = false
+                            coloniseTxt.isVisible = false
+
+                            collectColonyMoney.isVisible = true
+                            collectColonyMoney.isEnabled = true
+
+                            pictureofAlien.isVisible = false
+                            spyArmyTextView.isVisible = false
+                            spyBtn.isVisible = false
+                            spyBtn.isEnabled = false
+                            attackImg.isVisible = false
+                            attackImg.isEnabled = false
+                            strikeWithNuclearSatelitesBtn.isVisible = false
+                            strikeWithNuclearSatelitesBtn.isEnabled = false
+                            donateImg.isVisible = false
+                            donateImg.isEnabled = false
+                            sendASpyText.isVisible = false
+                            attackTxt.isVisible = false
+                            nuclearSateliteText.isVisible = false
+                            donateText.isVisible = false
+
+                        } else if (SelectedPlanet == 777 && colonyId1 == 777) {
+
+                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+
+                            coloniseImg.isVisible = false
+                            coloniseImg.isEnabled = false
+                            coloniseTxt.isVisible = false
+
+                            collectColonyMoney.isVisible = true
+                            collectColonyMoney.isEnabled = true
+
+                            pictureofAlien.isVisible = false
+                            spyArmyTextView.isVisible = false
+                            spyBtn.isVisible = false
+                            spyBtn.isEnabled = false
+                            attackImg.isVisible = false
+                            attackImg.isEnabled = false
+                            strikeWithNuclearSatelitesBtn.isVisible = false
+                            strikeWithNuclearSatelitesBtn.isEnabled = false
+                            donateImg.isVisible = false
+                            donateImg.isEnabled = false
+                            sendASpyText.isVisible = false
+                            attackTxt.isVisible = false
+                            nuclearSateliteText.isVisible = false
+                            donateText.isVisible = false
+
+                        }
 
 
 
@@ -342,18 +591,6 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
                         }
 
 
@@ -472,6 +709,161 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+
+
+
+
+        collectColonyMoney.setOnClickListener {
+
+            moneyAmount += colonyResourses1
+            Toast.makeText(this, "You collected $colonyResourses1 money", Toast.LENGTH_SHORT).show()
+
+            colonyResourses1 = 0
+
+            savePlayerData()
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        coloniseImg.setOnClickListener {
+
+            if (colonyId1 == 1000) {
+
+                if (moneyAmount >= 2000 && resoursesAmount >= 2000) {
+
+                    moneyAmount -= 2000
+                    resoursesAmount -= 2000
+
+                    colonyId1 = SelectedPlanet
+
+                    coloniseImg.isVisible = false
+                    coloniseImg.isEnabled = false
+
+                    Toast.makeText(this, "You created a colony here", Toast.LENGTH_SHORT).show()
+
+
+                    savePlayerData()
+
+                } else {
+                    Toast.makeText(this, "Not enough money and resourses to create a colony", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+            } else {
+                Toast.makeText(this, "You already have a colony", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+        donateImg.setOnClickListener {
+
+            if (moneyAmount >= 500) {
+
+
+                // Alien 1
+
+                if (SelectedPlanet == 1 && isAlienCiv1Damaged!! > 0) {
+
+                    alienCiv1RelationWithPlayer = alienCiv1RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 1 && isAlienCiv1Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+                // Alien 2
+
+
+
+                if (SelectedPlanet == 2 && isAlienCiv2Damaged!! > 0) {
+
+                    alienCiv2RelationWithPlayer = alienCiv2RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 2 && isAlienCiv2Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+        }
 
 
 
@@ -848,6 +1240,21 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         if (SelectedPlanet == 0) {
 
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
         } else if (SelectedPlanet == 1) {
@@ -859,6 +1266,25 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             /* Id number of a second visitable planet in the same solar system is the same number of
            the first visitable planet in the system repeated three times
             */
+
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
+
+
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
@@ -876,6 +1302,22 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 444) {
 
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
 
         } else if (SelectedPlanet == 5) {
@@ -891,6 +1333,23 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
 
         } else if (SelectedPlanet == 777) {
+
+
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
 
@@ -942,6 +1401,90 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
     }
 
+
+
+
+
+    fun donationMessage() {
+
+
+        var spionageMessage = (1..4).shuffled().last()
+
+
+
+
+
+        // Alien 1
+
+        if (SelectedPlanetV == 1) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv1Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv1Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv1Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv1Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+        // Alien 2
+
+
+        if (SelectedPlanetV == 2) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv2Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv2Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv2Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv2Name :  I hope that this donation means that we are not enemies"
+            }
+
+        }
+
+
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 
@@ -1066,7 +1609,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
           savedLevelGeneralDevelopment = levelGeneralDevelopment, savedLevelScienficResearch = levelScientificDevelopment,
           savedLevelSpionage = spionageLevelPlayer, savedSoldierUnitQuantity = soldierQuantity, savedAirplaneUnitQuantity = airplaneQuantity,
           savedCargoPlaneQuantity = cargoplaneQuantity, savedAirplane2UnitQuantity= airplane2Quantity, savedTankUnitQuantity= tankQuantity,
-          savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer)
+          savedSateliteUnitQuantity= sateliteQuantity, isDamagedAlive = isDamagedAlivePlayer, colonyId1 = colonyId1,
+          colonyResourses1 = colonyResourses1)
 
 
 
