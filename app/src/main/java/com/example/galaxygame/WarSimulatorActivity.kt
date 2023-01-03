@@ -4292,6 +4292,271 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+        if (selectedPlanetV == 3) { // Alien 3
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv3Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv3Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 4) { // Alien 4
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv4Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv4Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+
+        if (selectedPlanetV == 5) { // Alien 5
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv5Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv5Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 6) { // Alien 6
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv6Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv6Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 7) { // Alien 7
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv7Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv7Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 8) { // Alien 8
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv8Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv8Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 9) { // Alien 9
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv9Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv9Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 10) { // Alien 10
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv10Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv10Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 999) { // Alien 11
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv11Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv11Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 101010) { // Alien 12
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv12Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv12Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 10101010) { // Alien 13
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv13Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv13Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 14) { // Alien 14
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv14Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv14Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+
+
+
+        if (selectedPlanetV == 15) { // Alien 15
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv15Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv15Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+
+
+        if (selectedPlanetV == 16) { // Alien 16
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv16Name :  How did you even think you could win against us?"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  You have no idea how much trouble you just caused yourself"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  We will show your how civilisations get extint "
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv16Name :  The next beating is coming soon"
+            }
+
+        }
+
+
+
+
+
 
 
 
@@ -4388,6 +4653,267 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
+        if (selectedPlanetV == 3) { // Alien 3
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv3Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv3Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 4) { // Alien 4
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv4Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv4Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 5) { // Alien 5
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv5Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv5Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+
+        if (selectedPlanetV == 6) { // Alien 6
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv6Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv6Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+
+
+
+        if (selectedPlanetV == 7) { // Alien 7
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv7Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv7Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 8) { // Alien 8
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv8Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv8Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 9) { // Alien 9
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv9Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv9Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 10) { // Alien 10
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv10Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv10Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 999) { // Alien 11
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv11Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv11Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 101010) { // Alien 12
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv12Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv12Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 10101010) { // Alien 13
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv13Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv13Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 14) { // Alien 14
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv14Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv14Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 15) { // Alien 15
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv15Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv15Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 16) { // Alien 16
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv16Name :  We underestimated you, we would like to have a better relationship with you"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  Please dont destroy our civilisation, we are sorry for angering you"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  We dont want war, please consider peace. We will not bother you anymore"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv16Name :  Our people is in trouble because of this war, can we be friends ?"
+            }
+
+        }
+
+
+
+
+
+
+
+
 
 
         var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
@@ -4461,6 +4987,267 @@ class WarSimulatorActivity : AppCompatActivity() {
                     "$AlienCiv2Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
             } else if (nuclearStrikeMessage == 4) {
                 messageText = "$AlienCiv2Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (selectedPlanetV == 3) { // Alien 3
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv3Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv3Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 4) { // Alien 4
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv4Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv4Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+        if (selectedPlanetV == 5) { // Alien 5
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv5Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv5Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 6) { // Alien 6
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv6Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv6Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 7) { // Alien 7
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv7Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv7Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 8) { // Alien 8
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv8Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv8Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (selectedPlanetV == 9) { // Alien 9
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv9Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv9Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 10) { // Alien 10
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv10Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv10Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (selectedPlanetV == 999) { // Alien 11
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv11Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv11Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 101010) { // Alien 12
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv12Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv12Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 10101010) { // Alien 1
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv13Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv13Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 14) { // Alien 14
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv14Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv14Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (selectedPlanetV == 15) { // Alien 15
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv15Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv15Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (selectedPlanetV == 16) { // Alien 16
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv16Name :  Next time we will annihilate your entire civilisation"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  We will have our revenge in the next war"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  We cant believe that we lost against such a pathetic civilisation such as yours"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv16Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
             }
 
         }
