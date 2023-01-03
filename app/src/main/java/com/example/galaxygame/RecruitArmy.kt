@@ -123,6 +123,240 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
+
+
+    var AlienCiv3Name : String? = null
+    var AlienCiv3Picture : Int? = null
+    var AlienCiv3MilitaryBase : Double? = null
+    var AlienCiv3Soldiers : Double? = null
+    var AlienCiv3SpacePlanes : Double? = null
+    var AlienCiv3SpaceJets : Double? = null
+    var AlienCiv3Tanks : Double? = null
+    var AlienCiv3NuclearSatelites : Double? = null
+    var isAlienCiv3Damaged : Double? = null
+    var alienCiv3RelationWithPlayer : Double? = null
+
+
+
+
+
+    var AlienCiv4Name : String? = null
+    var AlienCiv4Picture : Int? = null
+    var AlienCiv4MilitaryBase : Double? = null
+    var AlienCiv4Soldiers : Double? = null
+    var AlienCiv4SpacePlanes : Double? = null
+    var AlienCiv4SpaceJets : Double? = null
+    var AlienCiv4Tanks : Double? = null
+    var AlienCiv4NuclearSatelites : Double? = null
+    var isAlienCiv4Damaged : Double? = null
+    var alienCiv4RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv5Name : String? = null
+    var AlienCiv5Picture : Int? = null
+    var AlienCiv5MilitaryBase : Double? = null
+    var AlienCiv5Soldiers : Double? = null
+    var AlienCiv5SpacePlanes : Double? = null
+    var AlienCiv5SpaceJets : Double? = null
+    var AlienCiv5Tanks : Double? = null
+    var AlienCiv5NuclearSatelites : Double? = null
+    var isAlienCiv5Damaged : Double? = null
+    var alienCiv5RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv6Name : String? = null
+    var AlienCiv6Picture : Int? = null
+    var AlienCiv6MilitaryBase : Double? = null
+    var AlienCiv6Soldiers : Double? = null
+    var AlienCiv6SpacePlanes : Double? = null
+    var AlienCiv6SpaceJets : Double? = null
+    var AlienCiv6Tanks : Double? = null
+    var AlienCiv6NuclearSatelites : Double? = null
+    var isAlienCiv6Damaged : Double? = null
+    var alienCiv6RelationWithPlayer : Double? = null
+
+
+
+
+    var AlienCiv7Name : String? = null
+    var AlienCiv7Picture : Int? = null
+    var AlienCiv7MilitaryBase : Double? = null
+    var AlienCiv7Soldiers : Double? = null
+    var AlienCiv7SpacePlanes : Double? = null
+    var AlienCiv7SpaceJets : Double? = null
+    var AlienCiv7Tanks : Double? = null
+    var AlienCiv7NuclearSatelites : Double? = null
+    var isAlienCiv7Damaged : Double? = null
+    var alienCiv7RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv8Name : String? = null
+    var AlienCiv8Picture : Int? = null
+    var AlienCiv8MilitaryBase : Double? = null
+    var AlienCiv8Soldiers : Double? = null
+    var AlienCiv8SpacePlanes : Double? = null
+    var AlienCiv8SpaceJets : Double? = null
+    var AlienCiv8Tanks : Double? = null
+    var AlienCiv8NuclearSatelites : Double? = null
+    var isAlienCiv8Damaged : Double? = null
+    var alienCiv8RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv9Name : String? = null
+    var AlienCiv9Picture : Int? = null
+    var AlienCiv9MilitaryBase : Double? = null
+    var AlienCiv9Soldiers : Double? = null
+    var AlienCiv9SpacePlanes : Double? = null
+    var AlienCiv9SpaceJets : Double? = null
+    var AlienCiv9Tanks : Double? = null
+    var AlienCiv9NuclearSatelites : Double? = null
+    var isAlienCiv9Damaged : Double? = null
+    var alienCiv9RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv10Name : String? = null
+    var AlienCiv10Picture : Int? = null
+    var AlienCiv10MilitaryBase : Double? = null
+    var AlienCiv10Soldiers : Double? = null
+    var AlienCiv10SpacePlanes : Double? = null
+    var AlienCiv10SpaceJets : Double? = null
+    var AlienCiv10Tanks : Double? = null
+    var AlienCiv10NuclearSatelites : Double? = null
+    var isAlienCiv10Damaged : Double? = null
+    var alienCiv10RelationWithPlayer : Double? = null
+
+
+
+
+
+    var AlienCiv11Name : String? = null
+    var AlienCiv11Picture : Int? = null
+    var AlienCiv11MilitaryBase : Double? = null
+    var AlienCiv11Soldiers : Double? = null
+    var AlienCiv11SpacePlanes : Double? = null
+    var AlienCiv11SpaceJets : Double? = null
+    var AlienCiv11Tanks : Double? = null
+    var AlienCiv11NuclearSatelites : Double? = null
+    var isAlienCiv11Damaged : Double? = null
+    var alienCiv11RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv12Name : String? = null
+    var AlienCiv12Picture : Int? = null
+    var AlienCiv12MilitaryBase : Double? = null
+    var AlienCiv12Soldiers : Double? = null
+    var AlienCiv12SpacePlanes : Double? = null
+    var AlienCiv12SpaceJets : Double? = null
+    var AlienCiv12Tanks : Double? = null
+    var AlienCiv12NuclearSatelites : Double? = null
+    var isAlienCiv12Damaged : Double? = null
+    var alienCiv12RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv13Name : String? = null
+    var AlienCiv13Picture : Int? = null
+    var AlienCiv13MilitaryBase : Double? = null
+    var AlienCiv13Soldiers : Double? = null
+    var AlienCiv13SpacePlanes : Double? = null
+    var AlienCiv13SpaceJets : Double? = null
+    var AlienCiv13Tanks : Double? = null
+    var AlienCiv13NuclearSatelites : Double? = null
+    var isAlienCiv13Damaged : Double? = null
+    var alienCiv13RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv14Name : String? = null
+    var AlienCiv14Picture : Int? = null
+    var AlienCiv14MilitaryBase : Double? = null
+    var AlienCiv14Soldiers : Double? = null
+    var AlienCiv14SpacePlanes : Double? = null
+    var AlienCiv14SpaceJets : Double? = null
+    var AlienCiv14Tanks : Double? = null
+    var AlienCiv14NuclearSatelites : Double? = null
+    var isAlienCiv14Damaged : Double? = null
+    var alienCiv14RelationWithPlayer : Double? = null
+
+
+
+
+    var AlienCiv15Name : String? = null
+    var AlienCiv15Picture : Int? = null
+    var AlienCiv15MilitaryBase : Double? = null
+    var AlienCiv15Soldiers : Double? = null
+    var AlienCiv15SpacePlanes : Double? = null
+    var AlienCiv15SpaceJets : Double? = null
+    var AlienCiv15Tanks : Double? = null
+    var AlienCiv15NuclearSatelites : Double? = null
+    var isAlienCiv15Damaged : Double? = null
+    var alienCiv15RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv16Name : String? = null
+    var AlienCiv16Picture : Int? = null
+    var AlienCiv16MilitaryBase : Double? = null
+    var AlienCiv16Soldiers : Double? = null
+    var AlienCiv16SpacePlanes : Double? = null
+    var AlienCiv16SpaceJets : Double? = null
+    var AlienCiv16Tanks : Double? = null
+    var AlienCiv16NuclearSatelites : Double? = null
+    var isAlienCiv16Damaged : Double? = null
+    var alienCiv16RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     lateinit var savedDataOfAliens : aliens
 
 
@@ -435,6 +669,299 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
+                        // Fetches the data of 3 civilisation in galaxy
+
+                        AlienCiv3Name = savedDataOfAliens.nameAlienRace3
+                        AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
+                        AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
+                        AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
+                        AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
+                        AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
+                        AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
+                        AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
+                        isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
+                        alienCiv3RelationWithPlayer = savedDataOfAliens.alienRace3RelationWithPlayer
+
+
+
+
+                        // Fetches the data of 4 civilisation in galaxy
+
+                        AlienCiv4Name = savedDataOfAliens.nameAlienRace4
+                        AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
+                        AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
+                        AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
+                        AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
+                        AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
+                        AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
+                        AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
+                        isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
+                        alienCiv4RelationWithPlayer = savedDataOfAliens.alienRace4RelationWithPlayer
+
+
+
+
+
+
+                        // Fetches the data of 5 civilisation in galaxy
+
+                        AlienCiv5Name = savedDataOfAliens.nameAlienRace5
+                        AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
+                        AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
+                        AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
+                        AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
+                        AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
+                        AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
+                        AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
+                        isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
+                        alienCiv5RelationWithPlayer = savedDataOfAliens.alienRace5RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 6 civilisation in galaxy
+
+                        AlienCiv6Name = savedDataOfAliens.nameAlienRace6
+                        AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
+                        AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
+                        AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
+                        AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
+                        AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
+                        AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
+                        AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
+                        isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
+                        alienCiv6RelationWithPlayer = savedDataOfAliens.alienRace6RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 7 civilisation in galaxy
+
+                        AlienCiv7Name = savedDataOfAliens.nameAlienRace7
+                        AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
+                        AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
+                        AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
+                        AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
+                        AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
+                        AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
+                        AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
+                        isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
+                        alienCiv7RelationWithPlayer = savedDataOfAliens.alienRace7RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 8 civilisation in galaxy
+
+                        AlienCiv8Name = savedDataOfAliens.nameAlienRace8
+                        AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
+                        AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
+                        AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
+                        AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
+                        AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
+                        AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
+                        AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
+                        isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
+                        alienCiv8RelationWithPlayer = savedDataOfAliens.alienRace8RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 9 civilisation in galaxy
+
+                        AlienCiv9Name = savedDataOfAliens.nameAlienRace9
+                        AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
+                        AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
+                        AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
+                        AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
+                        AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
+                        AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
+                        AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
+                        isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
+                        alienCiv9RelationWithPlayer = savedDataOfAliens.alienRace9RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 10 civilisation in galaxy
+
+                        AlienCiv10Name = savedDataOfAliens.nameAlienRace10
+                        AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
+                        AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
+                        AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
+                        AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
+                        AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
+                        AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
+                        AlienCiv10NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace10
+                        isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
+                        alienCiv10RelationWithPlayer = savedDataOfAliens.alienRace10RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 11 civilisation in galaxy
+
+                        AlienCiv11Name = savedDataOfAliens.nameAlienRace11
+                        AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
+                        AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
+                        AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
+                        AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
+                        AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
+                        AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
+                        AlienCiv11NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace11
+                        isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
+                        alienCiv11RelationWithPlayer = savedDataOfAliens.alienRace11RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 12 civilisation in galaxy
+
+                        AlienCiv12Name = savedDataOfAliens.nameAlienRace12
+                        AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
+                        AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
+                        AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
+                        AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
+                        AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
+                        AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
+                        AlienCiv12NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace12
+                        isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
+                        alienCiv12RelationWithPlayer = savedDataOfAliens.alienRace12RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 13 civilisation in galaxy
+
+                        AlienCiv13Name = savedDataOfAliens.nameAlienRace13
+                        AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
+                        AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
+                        AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
+                        AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
+                        AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
+                        AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
+                        AlienCiv13NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace13
+                        isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
+                        alienCiv13RelationWithPlayer = savedDataOfAliens.alienRace13RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 14 civilisation in galaxy
+
+                        AlienCiv14Name = savedDataOfAliens.nameAlienRace14
+                        AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
+                        AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
+                        AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
+                        AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
+                        AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
+                        AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
+                        AlienCiv14NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace14
+                        isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
+                        alienCiv14RelationWithPlayer = savedDataOfAliens.alienRace14RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 15 civilisation in galaxy
+
+                        AlienCiv15Name = savedDataOfAliens.nameAlienRace15
+                        AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
+                        AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
+                        AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
+                        AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
+                        AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
+                        AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
+                        AlienCiv15NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace15
+                        isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
+                        alienCiv15RelationWithPlayer = savedDataOfAliens.alienRace15RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 16 civilisation in galaxy
+
+                        AlienCiv16Name = savedDataOfAliens.nameAlienRace16
+                        AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
+                        AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
+                        AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
+                        AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
+                        AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
+                        AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
+                        AlienCiv16NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace16
+                        isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
+                        alienCiv16RelationWithPlayer = savedDataOfAliens.alienRace16RelationWithPlayer
+
+
+
+
+
+
+
+
+
 
 
 
@@ -615,41 +1142,142 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
-        var dataOfAlienCivilisations = aliens(
+        var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+            soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+            spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+            nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+            isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
 
-            // Alien 1
-            nameAlienRace1 = AlienCiv1Name,
-            pictureAlienRace1 = AlienCiv1Picture,
-            militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+            /*Alien civilisation 1 aspects written*/
 
-            // Army Alien 1
-            soldiersAlienRace1 = AlienCiv1Soldiers,
-            spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
-            spaceJetsAlienRace1 = AlienCiv1SpaceJets,
-            tanksAlienRace1 = AlienCiv1Tanks,
-            nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+            nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+            soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+            spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+            nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+            isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
 
-            // Level damage alien planet 1 and relations
-            alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
-            isAlienRace1Damaged = isAlienCiv1Damaged,
+            /*Alien civilisation 2 aspects written*/
 
 
-            // Alien 2
-            nameAlienRace2 = AlienCiv2Name,
-            pictureAlienRace2 = AlienCiv2Picture,
-            militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+            nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+            soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+            spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+            nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+            isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
 
-            // Army Alien 2
-            soldiersAlienRace2 = AlienCiv2Soldiers,
-            spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
-            spaceJetsAlienRace2 = AlienCiv2SpaceJets,
-            tanksAlienRace2 = AlienCiv2Tanks,
-            nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+            /* Alien 3 */
 
-            // Level damage alien planet 1 and relations
-            alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
-            isAlienRace2Damaged = isAlienCiv2Damaged
-        )
+            nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+            soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+            spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+            nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+            isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+            /* Alien 4 */
+
+
+            nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+            soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+            spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+            nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+            isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+            /* Alien 5 */
+
+            nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+            soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+            spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+            nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+            isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+            /* Alien 6 */
+
+            nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+            soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+            spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+            nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+            isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+            /* Alien 7 */
+
+            nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+            soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+            spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+            nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+            isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+            /* Alien 8 */
+
+
+            nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+            soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+            spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+            nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+            isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+            /* Alien 9 */
+
+            nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+            soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+            spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+            nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+            isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+            /* Alien 10 */
+
+            nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+            soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+            spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+            nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+            isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+            /* Alien 11 */
+
+
+
+            nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+            soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+            spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+            nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+            isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+            /* Alien 12 */
+
+            nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+            soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+            spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+            nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+            isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+            /* Alien 13 */
+
+            nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+            soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+            spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+            nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+            isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+            /* Alien 14 */
+
+
+            nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+            soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+            spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+            nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+            isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+            /* Alien 15 */
+
+
+
+
+            nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+            soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+            spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+            nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+            isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+        /* Alien 16 */
 
 
 
@@ -809,6 +1437,439 @@ class RecruitArmy : AppCompatActivity() {
 
 
 
+        // Alien 3
+
+
+        if (AlienCiv3MilitaryBase!! == 1.0) {
+
+            AlienCiv3Soldiers = AlienCiv3Soldiers!! + soldiersIncrease
+            AlienCiv3SpacePlanes = AlienCiv3SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv3MilitaryBase!! == 2.0) {
+
+            AlienCiv3Soldiers = AlienCiv3Soldiers!! + soldiersIncrease
+            AlienCiv3SpacePlanes = AlienCiv3SpacePlanes!! + spacePlaneIncrease
+            AlienCiv3Tanks = AlienCiv3Tanks!! + tanksIncrease
+
+        } else if (AlienCiv3MilitaryBase!! >= 3.0) {
+
+            AlienCiv3Soldiers = AlienCiv3Soldiers!! + soldiersIncrease
+            AlienCiv3SpacePlanes = AlienCiv3SpacePlanes!! + spacePlaneIncrease
+            AlienCiv3Tanks = AlienCiv3Tanks!! + tanksIncrease
+            AlienCiv3SpaceJets = AlienCiv3SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv3Damaged!! > 0) {
+            isAlienCiv3Damaged = 2.0
+        }
+
+
+
+
+
+
+        // Alien 4
+
+
+        if (AlienCiv4MilitaryBase!! == 1.0) {
+
+            AlienCiv4Soldiers = AlienCiv4Soldiers!! + soldiersIncrease
+            AlienCiv4SpacePlanes = AlienCiv4SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv4MilitaryBase!! == 2.0) {
+
+            AlienCiv4Soldiers = AlienCiv4Soldiers!! + soldiersIncrease
+            AlienCiv4SpacePlanes = AlienCiv4SpacePlanes!! + spacePlaneIncrease
+            AlienCiv4Tanks = AlienCiv4Tanks!! + tanksIncrease
+
+        } else if (AlienCiv4MilitaryBase!! >= 3.0) {
+
+            AlienCiv4Soldiers = AlienCiv4Soldiers!! + soldiersIncrease
+            AlienCiv4SpacePlanes = AlienCiv4SpacePlanes!! + spacePlaneIncrease
+            AlienCiv4Tanks = AlienCiv4Tanks!! + tanksIncrease
+            AlienCiv4SpaceJets = AlienCiv4SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv4Damaged!! > 0) {
+            isAlienCiv4Damaged = 2.0
+        }
+
+
+
+
+
+
+// Alien 5
+
+
+        if (AlienCiv5MilitaryBase!! == 1.0) {
+
+            AlienCiv5Soldiers = AlienCiv5Soldiers!! + soldiersIncrease
+            AlienCiv5SpacePlanes = AlienCiv5SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv5MilitaryBase!! == 2.0) {
+
+            AlienCiv5Soldiers = AlienCiv5Soldiers!! + soldiersIncrease
+            AlienCiv5SpacePlanes = AlienCiv5SpacePlanes!! + spacePlaneIncrease
+            AlienCiv5Tanks = AlienCiv5Tanks!! + tanksIncrease
+
+        } else if (AlienCiv5MilitaryBase!! >= 3.0) {
+
+            AlienCiv5Soldiers = AlienCiv5Soldiers!! + soldiersIncrease
+            AlienCiv5SpacePlanes = AlienCiv5SpacePlanes!! + spacePlaneIncrease
+            AlienCiv5Tanks = AlienCiv5Tanks!! + tanksIncrease
+            AlienCiv5SpaceJets = AlienCiv5SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv5Damaged!! > 0) {
+            isAlienCiv5Damaged = 2.0
+        }
+
+
+
+
+
+        // Alien 6
+
+
+        if (AlienCiv6MilitaryBase!! == 1.0) {
+
+            AlienCiv6Soldiers = AlienCiv6Soldiers!! + soldiersIncrease
+            AlienCiv6SpacePlanes = AlienCiv6SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv6MilitaryBase!! == 2.0) {
+
+            AlienCiv6Soldiers = AlienCiv6Soldiers!! + soldiersIncrease
+            AlienCiv6SpacePlanes = AlienCiv6SpacePlanes!! + spacePlaneIncrease
+            AlienCiv6Tanks = AlienCiv6Tanks!! + tanksIncrease
+
+        } else if (AlienCiv6MilitaryBase!! >= 3.0) {
+
+            AlienCiv6Soldiers = AlienCiv6Soldiers!! + soldiersIncrease
+            AlienCiv6SpacePlanes = AlienCiv6SpacePlanes!! + spacePlaneIncrease
+            AlienCiv6Tanks = AlienCiv6Tanks!! + tanksIncrease
+            AlienCiv6SpaceJets = AlienCiv6SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv6Damaged!! > 0) {
+            isAlienCiv6Damaged = 2.0
+        }
+
+
+
+
+        // Alien 7
+
+
+        if (AlienCiv7MilitaryBase!! == 1.0) {
+
+            AlienCiv7Soldiers = AlienCiv7Soldiers!! + soldiersIncrease
+            AlienCiv7SpacePlanes = AlienCiv7SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv7MilitaryBase!! == 2.0) {
+
+            AlienCiv7Soldiers = AlienCiv7Soldiers!! + soldiersIncrease
+            AlienCiv7SpacePlanes = AlienCiv7SpacePlanes!! + spacePlaneIncrease
+            AlienCiv7Tanks = AlienCiv7Tanks!! + tanksIncrease
+
+        } else if (AlienCiv7MilitaryBase!! >= 3.0) {
+
+            AlienCiv7Soldiers = AlienCiv7Soldiers!! + soldiersIncrease
+            AlienCiv7SpacePlanes = AlienCiv7SpacePlanes!! + spacePlaneIncrease
+            AlienCiv7Tanks = AlienCiv7Tanks!! + tanksIncrease
+            AlienCiv7SpaceJets = AlienCiv7SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv7Damaged!! > 0) {
+            isAlienCiv7Damaged = 2.0
+        }
+
+
+
+
+        // Alien 8
+
+
+        if (AlienCiv8MilitaryBase!! == 1.0) {
+
+            AlienCiv8Soldiers = AlienCiv8Soldiers!! + soldiersIncrease
+            AlienCiv8SpacePlanes = AlienCiv8SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv8MilitaryBase!! == 2.0) {
+
+            AlienCiv8Soldiers = AlienCiv8Soldiers!! + soldiersIncrease
+            AlienCiv8SpacePlanes = AlienCiv8SpacePlanes!! + spacePlaneIncrease
+            AlienCiv8Tanks = AlienCiv8Tanks!! + tanksIncrease
+
+        } else if (AlienCiv8MilitaryBase!! >= 3.0) {
+
+            AlienCiv8Soldiers = AlienCiv8Soldiers!! + soldiersIncrease
+            AlienCiv8SpacePlanes = AlienCiv8SpacePlanes!! + spacePlaneIncrease
+            AlienCiv8Tanks = AlienCiv8Tanks!! + tanksIncrease
+            AlienCiv8SpaceJets = AlienCiv8SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv8Damaged!! > 0) {
+            isAlienCiv8Damaged = 2.0
+        }
+
+
+
+        // Alien 9
+
+
+        if (AlienCiv9MilitaryBase!! == 1.0) {
+
+            AlienCiv9Soldiers = AlienCiv9Soldiers!! + soldiersIncrease
+            AlienCiv9SpacePlanes = AlienCiv9SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv9MilitaryBase!! == 2.0) {
+
+            AlienCiv9Soldiers = AlienCiv9Soldiers!! + soldiersIncrease
+            AlienCiv9SpacePlanes = AlienCiv9SpacePlanes!! + spacePlaneIncrease
+            AlienCiv9Tanks = AlienCiv9Tanks!! + tanksIncrease
+
+        } else if (AlienCiv9MilitaryBase!! >= 3.0) {
+
+            AlienCiv9Soldiers = AlienCiv9Soldiers!! + soldiersIncrease
+            AlienCiv9SpacePlanes = AlienCiv9SpacePlanes!! + spacePlaneIncrease
+            AlienCiv9Tanks = AlienCiv9Tanks!! + tanksIncrease
+            AlienCiv9SpaceJets = AlienCiv9SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv9Damaged!! > 0) {
+            isAlienCiv9Damaged = 2.0
+        }
+
+
+
+
+        // Alien 10
+
+
+        if (AlienCiv10MilitaryBase!! == 1.0) {
+
+            AlienCiv10Soldiers = AlienCiv10Soldiers!! + soldiersIncrease
+            AlienCiv10SpacePlanes = AlienCiv10SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv10MilitaryBase!! == 2.0) {
+
+            AlienCiv10Soldiers = AlienCiv10Soldiers!! + soldiersIncrease
+            AlienCiv10SpacePlanes = AlienCiv10SpacePlanes!! + spacePlaneIncrease
+            AlienCiv10Tanks = AlienCiv10Tanks!! + tanksIncrease
+
+        } else if (AlienCiv10MilitaryBase!! >= 3.0) {
+
+            AlienCiv10Soldiers = AlienCiv10Soldiers!! + soldiersIncrease
+            AlienCiv10SpacePlanes = AlienCiv10SpacePlanes!! + spacePlaneIncrease
+            AlienCiv10Tanks = AlienCiv10Tanks!! + tanksIncrease
+            AlienCiv10SpaceJets = AlienCiv10SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv10Damaged!! > 0) {
+            isAlienCiv10Damaged = 2.0
+        }
+
+
+
+        // Alien 11
+
+
+        if (AlienCiv11MilitaryBase!! == 1.0) {
+
+            AlienCiv11Soldiers = AlienCiv11Soldiers!! + soldiersIncrease
+            AlienCiv11SpacePlanes = AlienCiv11SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv11MilitaryBase!! == 2.0) {
+
+            AlienCiv11Soldiers = AlienCiv11Soldiers!! + soldiersIncrease
+            AlienCiv11SpacePlanes = AlienCiv11SpacePlanes!! + spacePlaneIncrease
+            AlienCiv11Tanks = AlienCiv11Tanks!! + tanksIncrease
+
+        } else if (AlienCiv11MilitaryBase!! >= 3.0) {
+
+            AlienCiv11Soldiers = AlienCiv11Soldiers!! + soldiersIncrease
+            AlienCiv11SpacePlanes = AlienCiv11SpacePlanes!! + spacePlaneIncrease
+            AlienCiv11Tanks = AlienCiv11Tanks!! + tanksIncrease
+            AlienCiv11SpaceJets = AlienCiv11SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv11Damaged!! > 0) {
+            isAlienCiv11Damaged = 2.0
+        }
+
+
+
+
+        // Alien 12
+
+
+        if (AlienCiv12MilitaryBase!! == 1.0) {
+
+            AlienCiv12Soldiers = AlienCiv12Soldiers!! + soldiersIncrease
+            AlienCiv12SpacePlanes = AlienCiv12SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv12MilitaryBase!! == 2.0) {
+
+            AlienCiv12Soldiers = AlienCiv12Soldiers!! + soldiersIncrease
+            AlienCiv12SpacePlanes = AlienCiv12SpacePlanes!! + spacePlaneIncrease
+            AlienCiv12Tanks = AlienCiv12Tanks!! + tanksIncrease
+
+        } else if (AlienCiv12MilitaryBase!! >= 3.0) {
+
+            AlienCiv12Soldiers = AlienCiv12Soldiers!! + soldiersIncrease
+            AlienCiv12SpacePlanes = AlienCiv12SpacePlanes!! + spacePlaneIncrease
+            AlienCiv12Tanks = AlienCiv12Tanks!! + tanksIncrease
+            AlienCiv12SpaceJets = AlienCiv12SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv12Damaged!! > 0) {
+            isAlienCiv12Damaged = 2.0
+        }
+
+
+
+
+        // Alien 13
+
+
+
+        if (AlienCiv13MilitaryBase!! == 1.0) {
+
+            AlienCiv13Soldiers = AlienCiv13Soldiers!! + soldiersIncrease
+            AlienCiv13SpacePlanes = AlienCiv13SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv13MilitaryBase!! == 2.0) {
+
+            AlienCiv13Soldiers = AlienCiv13Soldiers!! + soldiersIncrease
+            AlienCiv13SpacePlanes = AlienCiv13SpacePlanes!! + spacePlaneIncrease
+            AlienCiv13Tanks = AlienCiv13Tanks!! + tanksIncrease
+
+        } else if (AlienCiv13MilitaryBase!! >= 3.0) {
+
+            AlienCiv13Soldiers = AlienCiv13Soldiers!! + soldiersIncrease
+            AlienCiv13SpacePlanes = AlienCiv13SpacePlanes!! + spacePlaneIncrease
+            AlienCiv13Tanks = AlienCiv13Tanks!! + tanksIncrease
+            AlienCiv13SpaceJets = AlienCiv13SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv13Damaged!! > 0) {
+            isAlienCiv13Damaged = 2.0
+        }
+
+
+
+        // Alien 14
+
+
+        if (AlienCiv14MilitaryBase!! == 1.0) {
+
+            AlienCiv14Soldiers = AlienCiv14Soldiers!! + soldiersIncrease
+            AlienCiv14SpacePlanes = AlienCiv14SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv14MilitaryBase!! == 2.0) {
+
+            AlienCiv14Soldiers = AlienCiv14Soldiers!! + soldiersIncrease
+            AlienCiv14SpacePlanes = AlienCiv14SpacePlanes!! + spacePlaneIncrease
+            AlienCiv14Tanks = AlienCiv14Tanks!! + tanksIncrease
+
+        } else if (AlienCiv14MilitaryBase!! >= 3.0) {
+
+            AlienCiv14Soldiers = AlienCiv14Soldiers!! + soldiersIncrease
+            AlienCiv14SpacePlanes = AlienCiv14SpacePlanes!! + spacePlaneIncrease
+            AlienCiv14Tanks = AlienCiv14Tanks!! + tanksIncrease
+            AlienCiv14SpaceJets = AlienCiv14SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv14Damaged!! > 0) {
+            isAlienCiv14Damaged = 2.0
+        }
+
+
+
+        // Alien 15
+
+
+        if (AlienCiv15MilitaryBase!! == 1.0) {
+
+            AlienCiv15Soldiers = AlienCiv15Soldiers!! + soldiersIncrease
+            AlienCiv15SpacePlanes = AlienCiv15SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv15MilitaryBase!! == 2.0) {
+
+            AlienCiv15Soldiers = AlienCiv15Soldiers!! + soldiersIncrease
+            AlienCiv15SpacePlanes = AlienCiv15SpacePlanes!! + spacePlaneIncrease
+            AlienCiv15Tanks = AlienCiv15Tanks!! + tanksIncrease
+
+        } else if (AlienCiv15MilitaryBase!! >= 3.0) {
+
+            AlienCiv15Soldiers = AlienCiv15Soldiers!! + soldiersIncrease
+            AlienCiv15SpacePlanes = AlienCiv15SpacePlanes!! + spacePlaneIncrease
+            AlienCiv15Tanks = AlienCiv15Tanks!! + tanksIncrease
+            AlienCiv15SpaceJets = AlienCiv15SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv15Damaged!! > 0) {
+            isAlienCiv15Damaged = 2.0
+        }
+
+
+
+
+
+        // Alien 16
+
+
+        if (AlienCiv16MilitaryBase!! == 1.0) {
+
+            AlienCiv16Soldiers = AlienCiv16Soldiers!! + soldiersIncrease
+            AlienCiv16SpacePlanes = AlienCiv16SpacePlanes!! + spacePlaneIncrease
+
+        } else if (AlienCiv16MilitaryBase!! == 2.0) {
+
+            AlienCiv16Soldiers = AlienCiv16Soldiers!! + soldiersIncrease
+            AlienCiv16SpacePlanes = AlienCiv16SpacePlanes!! + spacePlaneIncrease
+            AlienCiv16Tanks = AlienCiv16Tanks!! + tanksIncrease
+
+        } else if (AlienCiv16MilitaryBase!! >= 3.0) {
+
+            AlienCiv16Soldiers = AlienCiv16Soldiers!! + soldiersIncrease
+            AlienCiv16SpacePlanes = AlienCiv16SpacePlanes!! + spacePlaneIncrease
+            AlienCiv16Tanks = AlienCiv16Tanks!! + tanksIncrease
+            AlienCiv16SpaceJets = AlienCiv16SpaceJets!! + spaceJetsIncrease
+
+
+        }
+
+        if (repaiPlanet == 2 && isAlienCiv16Damaged!! > 0) {
+            isAlienCiv16Damaged = 2.0
+        }
 
 
 
