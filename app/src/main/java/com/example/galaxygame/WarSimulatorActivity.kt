@@ -4562,42 +4562,142 @@ class WarSimulatorActivity : AppCompatActivity() {
 
         if (selectedPlanetV == 1) {
 
-            var dataOfAlienCivilisations = aliens(
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = alienSoldiersLeft, spacePlanesAlienRace1 = alienSpacePlanesLeft,
+                spaceJetsAlienRace1 = alienSpaceJetsLeft, tanksAlienRace1 = alienTanksLeft,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = levelDamageToAlienPlanet, alienRace1RelationWithPlayer = alienRelationship,
 
-                // Alien 1
-                nameAlienRace1 = AlienCiv1Name,
-                pictureAlienRace1 = AlienCiv1Picture,
-                militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                /*Alien civilisation 1 aspects written*/
 
-                // Army Alien 1
-                soldiersAlienRace1 = alienSoldiersLeft,   //
-                spacePlanesAlienRace1 = alienSpacePlanesLeft,  //
-                spaceJetsAlienRace1 = alienSpaceJetsLeft,   //
-                tanksAlienRace1 = alienTanksLeft,   //
-                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
 
-                // Level damage alien planet 1 and relations
-                alienRace1RelationWithPlayer = alienRelationship,  //
-                isAlienRace1Damaged = levelDamageToAlienPlanet,  //
+                /*Alien civilisation 2 aspects written*/
 
 
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
 
 
-                // Alien 2
-                nameAlienRace2 = AlienCiv2Name,
-                pictureAlienRace2 = AlienCiv2Picture,
-                militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
 
-                // Army Alien 2
-                soldiersAlienRace2 = AlienCiv2Soldiers,
-                spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
-                spaceJetsAlienRace2 = AlienCiv2SpaceJets,
-                tanksAlienRace2 = AlienCiv2Tanks,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+                /* Alien 5 */
 
-                // Level damage alien planet 1 and relations
-                alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
-                isAlienRace2Damaged = isAlienCiv2Damaged)
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
 
 
 
@@ -4619,42 +4719,2371 @@ class WarSimulatorActivity : AppCompatActivity() {
 
         if (selectedPlanetV == 2) {
 
-            var dataOfAlienCivilisations = aliens(
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
 
-                // Alien 1
-                nameAlienRace1 = AlienCiv1Name,
-                pictureAlienRace1 = AlienCiv1Picture,
-                militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                /*Alien civilisation 1 aspects written*/
 
-                // Army Alien 1
-                soldiersAlienRace1 = AlienCiv1Soldiers,
-                spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
-                spaceJetsAlienRace1 = AlienCiv1SpaceJets,
-                tanksAlienRace1 = AlienCiv1Tanks,
-                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = alienSoldiersLeft, spacePlanesAlienRace2 = alienSpacePlanesLeft,
+                spaceJetsAlienRace2 = alienSpaceJetsLeft, tanksAlienRace2 = alienTanksLeft,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = levelDamageToAlienPlanet, alienRace2RelationWithPlayer = alienRelationship,
 
-                // Level damage alien 1 planet
-                alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
-                isAlienRace1Damaged = isAlienCiv1Damaged,
+                /*Alien civilisation 2 aspects written*/
 
 
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
 
-                // Alien 2
-                nameAlienRace2 = AlienCiv2Name,
-                pictureAlienRace2 = AlienCiv2Picture,
-                militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                /* Alien 3 */
 
-                // Army Alien 2
-                soldiersAlienRace2 = alienSoldiersLeft,
-                spacePlanesAlienRace2 = alienSpacePlanesLeft,
-                spaceJetsAlienRace2 = alienSpaceJetsLeft,
-                tanksAlienRace2 = alienTanksLeft,
-                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
 
 
-                // Level damage alien 2 planet
-                alienRace2RelationWithPlayer = alienRelationship,
-                isAlienRace2Damaged = levelDamageToAlienPlanet)
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+        // War with alien 3
+
+
+        if (selectedPlanetV == 3) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = alienSoldiersLeft, spacePlanesAlienRace3 = alienSpacePlanesLeft,
+                spaceJetsAlienRace3 = alienSpaceJetsLeft, tanksAlienRace3 = alienTanksLeft,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = levelDamageToAlienPlanet, alienRace3RelationWithPlayer = alienRelationship,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+// War with alien 4
+
+
+        if (selectedPlanetV == 4) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = alienSoldiersLeft, spacePlanesAlienRace4 = alienSpacePlanesLeft,
+                spaceJetsAlienRace4 = alienSpaceJetsLeft, tanksAlienRace4 = alienTanksLeft,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = levelDamageToAlienPlanet, alienRace4RelationWithPlayer = alienRelationship,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+        // War with alien 5
+
+
+
+        if (selectedPlanetV == 5) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = alienSoldiersLeft, spacePlanesAlienRace5 = alienTanksLeft,
+                spaceJetsAlienRace5 = alienSpaceJetsLeft, tanksAlienRace5 = alienTanksLeft,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = levelDamageToAlienPlanet, alienRace5RelationWithPlayer = alienRelationship,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+// War with alien 6
+
+
+
+        if (selectedPlanetV == 6) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = alienSoldiersLeft, spacePlanesAlienRace6 = alienSpacePlanesLeft,
+                spaceJetsAlienRace6 = alienSpaceJetsLeft, tanksAlienRace6 = alienTanksLeft,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = levelDamageToAlienPlanet, alienRace6RelationWithPlayer = alienRelationship,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+// War with alien 7
+
+
+
+        if (selectedPlanetV == 7) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = alienSoldiersLeft, spacePlanesAlienRace7 = alienSpacePlanesLeft,
+                spaceJetsAlienRace7 = alienSpaceJetsLeft, tanksAlienRace7 = alienTanksLeft,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = levelDamageToAlienPlanet, alienRace7RelationWithPlayer = alienRelationship,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+// War with alien 8
+
+
+
+        if (selectedPlanetV == 8) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = alienSoldiersLeft, spacePlanesAlienRace8 = alienSpacePlanesLeft,
+                spaceJetsAlienRace8 = alienSpaceJetsLeft, tanksAlienRace8 = alienTanksLeft,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = levelDamageToAlienPlanet, alienRace8RelationWithPlayer = alienRelationship,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+        // War with alien 9
+
+
+
+        if (selectedPlanetV == 9) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = alienSoldiersLeft, spacePlanesAlienRace9 = alienSpacePlanesLeft,
+                spaceJetsAlienRace9 = alienSpaceJetsLeft, tanksAlienRace9 = alienTanksLeft,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = levelDamageToAlienPlanet, alienRace9RelationWithPlayer = alienRelationship,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+
+
+// War with alien 10
+
+
+
+        if (selectedPlanetV == 10) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = alienSoldiersLeft, spacePlanesAlienRace10 = alienSpacePlanesLeft,
+                spaceJetsAlienRace10 = alienSpaceJetsLeft, tanksAlienRace10 = alienTanksLeft,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = levelDamageToAlienPlanet, alienRace10RelationWithPlayer = alienRelationship,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+// War with alien 11
+
+
+
+        if (selectedPlanetV == 999) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = alienSoldiersLeft, spacePlanesAlienRace11 = alienSpacePlanesLeft,
+                spaceJetsAlienRace11 = alienSpaceJetsLeft, tanksAlienRace11 = alienTanksLeft,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = levelDamageToAlienPlanet, alienRace11RelationWithPlayer = alienRelationship,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+// War with alien 12
+
+
+
+        if (selectedPlanetV == 101010) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = alienSoldiersLeft, spacePlanesAlienRace12 = alienSpacePlanesLeft,
+                spaceJetsAlienRace12 = alienSpaceJetsLeft, tanksAlienRace12 = alienTanksLeft,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = levelDamageToAlienPlanet, alienRace12RelationWithPlayer = alienRelationship,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+
+// War with alien 13
+
+
+
+        if (selectedPlanetV == 10101010) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = alienSoldiersLeft, spacePlanesAlienRace13 = alienSpacePlanesLeft,
+                spaceJetsAlienRace13 = alienSpaceJetsLeft, tanksAlienRace13 = alienTanksLeft,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = levelDamageToAlienPlanet, alienRace13RelationWithPlayer = alienRelationship,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+        // War with alien 14
+
+
+
+        if (selectedPlanetV == 14) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = alienSoldiersLeft, spacePlanesAlienRace14 = alienSpacePlanesLeft,
+                spaceJetsAlienRace14 = alienSpaceJetsLeft, tanksAlienRace14 = alienTanksLeft,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = levelDamageToAlienPlanet, alienRace14RelationWithPlayer = alienRelationship,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+// War with alien 15
+
+
+
+        if (selectedPlanetV == 15) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = alienSoldiersLeft, spacePlanesAlienRace15 = alienSpacePlanesLeft,
+                spaceJetsAlienRace15 = alienSpaceJetsLeft, tanksAlienRace15 = alienTanksLeft,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = levelDamageToAlienPlanet, alienRace15RelationWithPlayer = alienRelationship,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+                spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+            /* Alien 16 */
+
+
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
+// War with alien 16
+
+
+
+        if (selectedPlanetV == 16) {
+
+            var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+                soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+                spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+                nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+                isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
+
+                /*Alien civilisation 1 aspects written*/
+
+                nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+                soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+                spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+                nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+                isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
+
+                /*Alien civilisation 2 aspects written*/
+
+
+                nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+                soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+                spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+                nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+                isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
+
+                /* Alien 3 */
+
+                nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+                soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+                spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+                nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+                isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
+
+                /* Alien 4 */
+
+
+                nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+                soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+                spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+                nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+                isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+                /* Alien 5 */
+
+                nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+                soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+                spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+                nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+                isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = isAlienCiv6Damaged,
+
+                /* Alien 6 */
+
+                nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+                soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+                spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+                nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+                isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+                /* Alien 7 */
+
+                nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+                soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+                spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+                nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+                isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+                /* Alien 8 */
+
+
+                nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+                soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+                spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+                nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+                isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+                /* Alien 9 */
+
+                nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+                soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+                spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+                nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+                isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+                /* Alien 10 */
+
+                nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+                soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+                spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+                nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+                isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+                /* Alien 11 */
+
+
+
+                nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+                soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+                spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+                nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+                isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+                /* Alien 12 */
+
+                nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+                soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+                spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+                nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+                isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+                /* Alien 13 */
+
+                nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+                soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+                spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+                nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+                isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+                /* Alien 14 */
+
+
+                nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+                soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+                spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+                nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+                isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+                /* Alien 15 */
+
+
+
+
+                nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+                soldiersAlienRace16 = alienSoldiersLeft, spacePlanesAlienRace16 = alienSpacePlanesLeft,
+                spaceJetsAlienRace16 = alienSpaceJetsLeft, tanksAlienRace16 = alienTanksLeft,
+                nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+                isAlienRace16Damaged = levelDamageToAlienPlanet, alienRace16RelationWithPlayer = alienRelationship)
+
+            /* Alien 16 */
 
 
 
@@ -4680,7 +7109,15 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-    }
+
+
+
+
+
+
+
+
+    } // alien data
 
 
 
