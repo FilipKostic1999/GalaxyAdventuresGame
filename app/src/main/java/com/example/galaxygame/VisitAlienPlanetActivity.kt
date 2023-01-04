@@ -335,7 +335,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
     var alienMilitaryBase : Double? = null
-    var civilisationSpies = (1..2).shuffled().last()
+    var civilisationSpies = (1..11).shuffled().last()
     lateinit var savedDataOfUser : playerData
 
 
@@ -1733,6 +1733,374 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                         editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
                         editNewMessageNotify.commit()
                     }
+
+
+
+
+                    // Alien 3
+
+
+                    if (isAlienCiv3Damaged!! > 0 && civilisationSpies == 3) {
+
+
+                        if (alienCiv3RelationWithPlayer!! > 0) {
+                            alienCiv3RelationWithPlayer = alienCiv3RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 4
+
+
+                    if (isAlienCiv4Damaged!! > 0 && civilisationSpies == 4) {
+
+
+                        if (alienCiv4RelationWithPlayer!! > 0) {
+                            alienCiv4RelationWithPlayer = alienCiv4RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 5
+
+
+                    if (isAlienCiv5Damaged!! > 0 && civilisationSpies == 5) {
+
+
+                        if (alienCiv5RelationWithPlayer!! > 0) {
+                            alienCiv5RelationWithPlayer = alienCiv5RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 6
+
+
+                    if (isAlienCiv6Damaged!! > 0 && civilisationSpies == 6) {
+
+
+                        if (alienCiv6RelationWithPlayer!! > 0) {
+                            alienCiv6RelationWithPlayer = alienCiv6RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+                    // Alien 7
+
+
+                    if (isAlienCiv7Damaged!! > 0 && civilisationSpies == 7) {
+
+
+                        if (alienCiv7RelationWithPlayer!! > 0) {
+                            alienCiv7RelationWithPlayer = alienCiv7RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+                    // Alien 8
+
+
+                    if (isAlienCiv8Damaged!! > 0 && civilisationSpies == 8) {
+
+
+                        if (alienCiv8RelationWithPlayer!! > 0) {
+                            alienCiv8RelationWithPlayer = alienCiv8RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                    /*
+
+                    // Alien 9
+
+
+                    if (isAlienCiv9Damaged!! > 0 && civilisationSpies == 9) {
+
+
+                        if (alienCiv9RelationWithPlayer!! > 0) {
+                            alienCiv9RelationWithPlayer = alienCiv9RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+                    // Alien 10
+
+
+                    if (isAlienCiv10Damaged!! > 0 && civilisationSpies == 10) {
+
+
+                        if (alienCiv10RelationWithPlayer!! > 0) {
+                            alienCiv10RelationWithPlayer = alienCiv10RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 11
+
+
+                    if (isAlienCiv11Damaged!! > 0 && civilisationSpies == 11) {
+
+
+                        if (alienCiv11RelationWithPlayer!! > 0) {
+                            alienCiv11RelationWithPlayer = alienCiv11RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+                    // Alien 12
+
+
+                    if (isAlienCiv12Damaged!! > 0 && civilisationSpies == 12) {
+
+
+                        if (alienCiv12RelationWithPlayer!! > 0) {
+                            alienCiv12RelationWithPlayer = alienCiv12RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 13
+
+
+                    if (isAlienCiv13Damaged!! > 0 && civilisationSpies == 13) {
+
+
+                        if (alienCiv13RelationWithPlayer!! > 0) {
+                            alienCiv13RelationWithPlayer = alienCiv13RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+                     */
+
+
+
+
+                    // Alien 14
+
+
+                    if (isAlienCiv14Damaged!! > 0 && civilisationSpies == 9) {
+
+
+                        if (alienCiv14RelationWithPlayer!! > 0) {
+                            alienCiv14RelationWithPlayer = alienCiv14RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+                    // Alien 15
+
+
+                    if (isAlienCiv15Damaged!! > 0 && civilisationSpies == 10) {
+
+
+                        if (alienCiv15RelationWithPlayer!! > 0) {
+                            alienCiv15RelationWithPlayer = alienCiv15RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+
+// Alien 16
+
+
+                    if (isAlienCiv16Damaged!! > 0 && civilisationSpies == 11) {
+
+
+                        if (alienCiv16RelationWithPlayer!! > 0) {
+                            alienCiv16RelationWithPlayer = alienCiv16RelationWithPlayer!! - 1.0
+                        }
+
+                        alienSpiesPlayerMessage()
+                        saveAlienData()
+
+
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+
+
+
+
+
 
 
 
