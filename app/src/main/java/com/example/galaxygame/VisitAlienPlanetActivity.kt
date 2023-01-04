@@ -4777,7 +4777,16 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 1) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv1MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv1MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv1MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv1MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
+
 
         } else if (SelectedPlanet == 111) {
 
@@ -4808,15 +4817,39 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 2) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            if (AlienCiv2MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv2MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv2MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv2MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 3) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv3MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv3MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv3MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv3MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 4) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv4MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv4MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv4MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv4MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 444) {
 
@@ -4840,15 +4873,39 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 5) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv5MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv5MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv5MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv5MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 6) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv6MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv6MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv6MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv6MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 7) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv7MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv7MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv7MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv7MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 777) {
 
@@ -4873,31 +4930,87 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 8) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv8MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv8MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv8MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv8MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 9) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv9MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv9MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv9MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv9MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 999) {
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            if (AlienCiv11MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv11MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv11MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv11MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 10) {
 
-
+            if (AlienCiv10MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv10MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv10MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv10MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet== 101010) {
 
-
+            if (AlienCiv12MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv12MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv12MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv12MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet==10101010) {
 
-
+            if (AlienCiv13MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv13MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv13MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv13MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 11) {
 
-
+            if (AlienCiv14MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv14MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv14MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv14MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 111111) {
 
@@ -4905,11 +5018,27 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if(SelectedPlanet==12) {
 
-
+            if (AlienCiv15MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv15MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv15MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv15MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         } else if (SelectedPlanet == 13) {
 
-
+            if (AlienCiv16MilitaryBase!! <= 2.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            } else if (AlienCiv16MilitaryBase!! == 3.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv16MilitaryBase!! == 4.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+            } else if (AlienCiv16MilitaryBase!! == 5.0) {
+                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            }
 
         }
 
@@ -4972,6 +5101,302 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+
+        // Alien 3
+
+        if (SelectedPlanetV == 3) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv3Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv3Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+        // Alien 4
+
+        if (SelectedPlanetV == 4) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv4Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv4Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+
+        // Alien 5
+
+        if (SelectedPlanetV == 5) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv5Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv5Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+
+        // Alien 6
+
+        if (SelectedPlanetV == 6) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv6Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv6Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+
+        // Alien 7
+
+        if (SelectedPlanetV == 7) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv7Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv7Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 8
+
+        if (SelectedPlanetV == 8) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv8Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv8Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 9
+
+        if (SelectedPlanetV == 9) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv9Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv9Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 10
+
+        if (SelectedPlanetV == 10) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv10Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv10Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 11
+
+        if (SelectedPlanetV == 999) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv11Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv11Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+        // Alien 12
+
+        if (SelectedPlanetV == 101010) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv12Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv12Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 13
+
+        if (SelectedPlanetV == 10101010) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv13Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv13Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+        // Alien 14
+
+        if (SelectedPlanetV == 11) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv14Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv14Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 15
+
+        if (SelectedPlanetV == 12) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv15Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv15Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+        // Alien 16
+
+        if (SelectedPlanetV == 13) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "$AlienCiv16Name :  Thank you for the donation, we will update our relationship status"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  We are grateful for your donation"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  We changed our mind about you, thank you for your donation"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv16Name :  I hope that this donation means that we are not enemies"
+            }
+        }
+
+
+
+
+
+
 
 
 
@@ -5071,6 +5496,302 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+
+
+        // Alien 3
+
+        if (civilisationSpies == 3) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv3Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv3Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv3Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv3Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+        // Alien 4
+
+        if (civilisationSpies == 4) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv4Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv4Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv4Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv4Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 5
+
+        if (civilisationSpies == 5) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv5Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv5Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv5Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv5Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 6
+
+        if (civilisationSpies == 6) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv6Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv6Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv6Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv6Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 7
+
+        if (civilisationSpies == 7) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv7Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv7Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv7Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv7Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+        // Alien 8
+
+        if (civilisationSpies == 8) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv8Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv8Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv8Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv8Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 9
+
+        if (civilisationSpies == 9) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv9Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv9Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv9Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv9Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+        // Alien 10
+
+        if (civilisationSpies == 10) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv10Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv10Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv10Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv10Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+        // Alien 11
+
+        if (civilisationSpies == 999) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv11Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv11Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv11Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv11Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+        // Alien 12
+
+        if (civilisationSpies == 101010) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv12Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv12Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv12Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv12Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+        // Alien 13
+
+        if (civilisationSpies == 10101010) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv13Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv13Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv13Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv13Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+        // Alien 14
+
+        if (civilisationSpies == 11) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv14Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv14Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv14Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv14Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 15
+
+        if (civilisationSpies == 12) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv15Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv15Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv15Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv15Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+        // Alien 16
+
+        if (civilisationSpies == 13) {
+
+            if (spionageMessage == 1) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv16Name :  Sorry for sending that spy, we were only curious"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv16Name :  Your planet is very attractive, and we have many more spies who can confirm that"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "A spy has been captured in your planet. $AlienCiv16Name :  We could react for killing our spy"
+            } else if (spionageMessage == 4) {
+                messageText = "A spy has been captured in your planet. $AlienCiv16Name :  We are not planning anything bad for you, we sent that spy for prevention"
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5194,6 +5915,288 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        if (SelectedPlanetV == 3) { // Alien 3
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv3Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv3Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 4) { // Alien 4
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv4Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv4Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 5) { // Alien 5
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv5Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv5Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 6) { // Alien 6
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv6Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv6Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 7) { // Alien 7
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv7Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv7Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 8) { // Alien 8
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv8Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv8Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 9) { // Alien 9
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv9Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv9Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 10) { // Alien 10
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv10Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv10Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 999) { // Alien 11
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv11Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv11Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 101010) { // Alien 12
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv12Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv12Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 10101010) { // Alien 13
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv13Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv13Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 11) { // Alien 14
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv14Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv14Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+
+        if (SelectedPlanetV == 12) { // Alien 15
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv15Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv15Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+        if (SelectedPlanetV == 13) { // Alien 16
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv16Name :  You are lucky we dont have nuclear satelites, we will turn your planet to ash with conventional means you coward"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv16Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5270,6 +6273,300 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+
+        if (SelectedPlanetV == 3) { // Alien 3
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv3Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv3Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 4) { // Alien 4
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv4Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv4Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 5) { // Alien 5
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv5Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv5Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+
+        if (SelectedPlanetV == 6) { // Alien 6
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv6Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv6Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+
+        if (SelectedPlanetV == 7) { // Alien 7
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv7Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv7Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 8) { // Alien 8
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv8Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv8Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 9) { // Alien 9
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv9Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv9Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 10) { // Alien 10
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv10Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv10Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 999) { // Alien 11
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv11Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv11Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 101010) { // Alien 12
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv12Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv12Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 10101010) { // Alien 13
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv13Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv13Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+
+        if (SelectedPlanetV == 11) { // Alien 14
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv14Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv14Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 12) { // Alien 15
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv15Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv15Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 13) { // Alien 16
+
+            if (spionageMessage == 1) {
+                messageText = "$AlienCiv16Name :  We captured one of your spies, what are you planing?"
+            } else if (spionageMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  We had a lot of fun torturing your spy, please send another one"
+            } else if (spionageMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  Never dare to try to spy on us again"
+            } else if (spionageMessage == 4) {
+                messageText = "$AlienCiv16Name :  A few more spies and we end up both in a war"
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5359,6 +6656,284 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             }
 
         }
+
+
+
+
+
+
+        if (SelectedPlanetV == 3) { // Alien 3
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv3Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv3Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv3Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv3Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 4) { // Alien 4
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv4Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv4Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv4Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv4Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 5) { // Alien 5
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv5Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv5Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv5Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv5Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 6) { // Alien 6
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv6Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv6Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv6Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv6Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+        if (SelectedPlanetV == 7) { // Alien 7
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv7Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv7Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv7Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv7Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 8) { // Alien 8
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv8Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv8Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv8Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv8Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 9) { // Alien 9
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv9Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv9Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv9Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv9Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 10) { // Alien 10
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv10Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv10Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv10Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv10Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+        if (SelectedPlanetV == 999) { // Alien 11
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv11Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv11Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv11Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv11Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 101010) { // Alien 12
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv12Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv12Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv12Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv12Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 10101010) { // Alien 13
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv13Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv13Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv13Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv13Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 11) { // Alien 14
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv14Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv14Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv14Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv14Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+        if (SelectedPlanetV == 12) { // Alien 15
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv15Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv15Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv15Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv15Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+        if (SelectedPlanetV == 13) { // Alien 16
+
+            if (nuclearStrikeMessage == 1) {
+                messageText = "$AlienCiv16Name :  If you nuke us, we nuke you right back!"
+            } else if (nuclearStrikeMessage == 2) {
+                messageText =
+                    "$AlienCiv16Name :  We will make you pay for every single palace of ours that you destroyed with that nuclear strike"
+            } else if (nuclearStrikeMessage == 3) {
+                messageText =
+                    "$AlienCiv16Name :  This is a declaration of war, your nuking random civilisations without a reason must be addressed with the right punishment"
+            } else if (nuclearStrikeMessage == 4) {
+                messageText = "$AlienCiv16Name :  You will payyyyyy for thiiissss buuuaaaaggaaaaaa"
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
