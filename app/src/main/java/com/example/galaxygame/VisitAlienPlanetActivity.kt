@@ -3647,6 +3647,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         spyBtn.setOnClickListener {
 
+            // Alien 1
+
 
             if (SelectedPlanet == 1 && isAlienCiv1Damaged!! > 0) {
 
@@ -3708,13 +3710,14 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
 
 
-            } // Alien 1
+            }
 
 
 
 
 
 
+            // Alien 2
 
 
             if (SelectedPlanet == 2 && isAlienCiv2Damaged!! > 0) {
@@ -3777,7 +3780,963 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
 
 
-            } // Alien 2
+            }
+
+
+
+
+
+            // Alien 3
+
+
+            if (SelectedPlanet == 3 && isAlienCiv3Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv3MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv3Soldiers,  Space planes LV1: $AlienCiv3SpacePlanes,  Tanks LV1: $AlienCiv3Tanks,  Space Jets LV1: $AlienCiv3SpaceJets,  Nuclear satelites LV1: $AlienCiv3NuclearSatelites"
+
+                    } else if (AlienCiv3MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv3Soldiers,  Space planes LV1: $AlienCiv3SpacePlanes,  Tanks LV1: $AlienCiv3Tanks,  Space Jets LV1: $AlienCiv3SpaceJets,  Nuclear satelites LV1: $AlienCiv3NuclearSatelites"
+
+                    } else if (AlienCiv3MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv3Soldiers,  Space planes LV1: $AlienCiv3SpacePlanes,  Tanks LV1: $AlienCiv3Tanks,  Space Jets LV1: $AlienCiv3SpaceJets,  Nuclear satelites LV1: $AlienCiv3NuclearSatelites"
+
+                    } else if (AlienCiv3MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv3Soldiers,  Space planes LV1: $AlienCiv3SpacePlanes,  Tanks LV2: $AlienCiv3Tanks,  Space Jets LV1: $AlienCiv3SpaceJets,  Nuclear satelites LV1: $AlienCiv3NuclearSatelites"
+
+
+                    } else if (AlienCiv3MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv3Soldiers,  Space planes LV1: $AlienCiv3SpacePlanes,  Tanks LV2: $AlienCiv3Tanks,  Space Jets LV1: $AlienCiv3SpaceJets,  Nuclear satelites LV2: $AlienCiv3NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv3RelationWithPlayer!! > 0) {
+                        alienCiv3RelationWithPlayer = alienCiv3RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 3 && isAlienCiv3Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+
+            // Alien 4
+
+
+            if (SelectedPlanet == 4 && isAlienCiv4Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv4MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv4Soldiers,  Space planes LV1: $AlienCiv4SpacePlanes,  Tanks LV1: $AlienCiv4Tanks,  Space Jets LV1: $AlienCiv4SpaceJets,  Nuclear satelites LV1: $AlienCiv4NuclearSatelites"
+
+                    } else if (AlienCiv4MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv4Soldiers,  Space planes LV1: $AlienCiv4SpacePlanes,  Tanks LV1: $AlienCiv4Tanks,  Space Jets LV1: $AlienCiv4SpaceJets,  Nuclear satelites LV1: $AlienCiv4NuclearSatelites"
+
+                    } else if (AlienCiv4MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv4Soldiers,  Space planes LV1: $AlienCiv4SpacePlanes,  Tanks LV1: $AlienCiv4Tanks,  Space Jets LV1: $AlienCiv4SpaceJets,  Nuclear satelites LV1: $AlienCiv4NuclearSatelites"
+
+                    } else if (AlienCiv4MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv4Soldiers,  Space planes LV1: $AlienCiv4SpacePlanes,  Tanks LV2: $AlienCiv4Tanks,  Space Jets LV1: $AlienCiv4SpaceJets,  Nuclear satelites LV1: $AlienCiv4NuclearSatelites"
+
+
+                    } else if (AlienCiv4MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv4Soldiers,  Space planes LV1: $AlienCiv4SpacePlanes,  Tanks LV2: $AlienCiv4Tanks,  Space Jets LV1: $AlienCiv4SpaceJets,  Nuclear satelites LV2: $AlienCiv4NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv4RelationWithPlayer!! > 0) {
+                        alienCiv4RelationWithPlayer = alienCiv4RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 4 && isAlienCiv4Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+            // Alien 5
+
+
+            if (SelectedPlanet == 5 && isAlienCiv5Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv5MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv5Soldiers,  Space planes LV1: $AlienCiv5SpacePlanes,  Tanks LV1: $AlienCiv5Tanks,  Space Jets LV1: $AlienCiv5SpaceJets,  Nuclear satelites LV1: $AlienCiv5NuclearSatelites"
+
+                    } else if (AlienCiv5MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv5Soldiers,  Space planes LV1: $AlienCiv5SpacePlanes,  Tanks LV1: $AlienCiv5Tanks,  Space Jets LV1: $AlienCiv5SpaceJets,  Nuclear satelites LV1: $AlienCiv5NuclearSatelites"
+
+                    } else if (AlienCiv5MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv5Soldiers,  Space planes LV1: $AlienCiv5SpacePlanes,  Tanks LV1: $AlienCiv5Tanks,  Space Jets LV1: $AlienCiv5SpaceJets,  Nuclear satelites LV1: $AlienCiv5NuclearSatelites"
+
+                    } else if (AlienCiv5MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv5Soldiers,  Space planes LV1: $AlienCiv5SpacePlanes,  Tanks LV2: $AlienCiv5Tanks,  Space Jets LV1: $AlienCiv5SpaceJets,  Nuclear satelites LV1: $AlienCiv5NuclearSatelites"
+
+
+                    } else if (AlienCiv5MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv5Soldiers,  Space planes LV1: $AlienCiv5SpacePlanes,  Tanks LV2: $AlienCiv5Tanks,  Space Jets LV1: $AlienCiv5SpaceJets,  Nuclear satelites LV2: $AlienCiv5NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv5RelationWithPlayer!! > 0) {
+                        alienCiv5RelationWithPlayer = alienCiv5RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 5 && isAlienCiv5Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+            // Alien 6
+
+
+            if (SelectedPlanet == 6 && isAlienCiv6Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv6MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv6Soldiers,  Space planes LV1: $AlienCiv6SpacePlanes,  Tanks LV1: $AlienCiv6Tanks,  Space Jets LV1: $AlienCiv6SpaceJets,  Nuclear satelites LV1: $AlienCiv6NuclearSatelites"
+
+                    } else if (AlienCiv6MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv6Soldiers,  Space planes LV1: $AlienCiv6SpacePlanes,  Tanks LV1: $AlienCiv6Tanks,  Space Jets LV1: $AlienCiv6SpaceJets,  Nuclear satelites LV1: $AlienCiv6NuclearSatelites"
+
+                    } else if (AlienCiv6MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv6Soldiers,  Space planes LV1: $AlienCiv6SpacePlanes,  Tanks LV1: $AlienCiv6Tanks,  Space Jets LV1: $AlienCiv6SpaceJets,  Nuclear satelites LV1: $AlienCiv6NuclearSatelites"
+
+                    } else if (AlienCiv6MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv6Soldiers,  Space planes LV1: $AlienCiv6SpacePlanes,  Tanks LV2: $AlienCiv6Tanks,  Space Jets LV1: $AlienCiv6SpaceJets,  Nuclear satelites LV1: $AlienCiv6NuclearSatelites"
+
+
+                    } else if (AlienCiv6MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv6Soldiers,  Space planes LV1: $AlienCiv6SpacePlanes,  Tanks LV2: $AlienCiv6Tanks,  Space Jets LV1: $AlienCiv6SpaceJets,  Nuclear satelites LV2: $AlienCiv6NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv6RelationWithPlayer!! > 0) {
+                        alienCiv6RelationWithPlayer = alienCiv6RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 6 && isAlienCiv6Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+            // Alien 7
+
+
+            if (SelectedPlanet == 7 && isAlienCiv7Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv7MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv7Soldiers,  Space planes LV1: $AlienCiv7SpacePlanes,  Tanks LV1: $AlienCiv7Tanks,  Space Jets LV1: $AlienCiv7SpaceJets,  Nuclear satelites LV1: $AlienCiv7NuclearSatelites"
+
+                    } else if (AlienCiv7MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv7Soldiers,  Space planes LV1: $AlienCiv7SpacePlanes,  Tanks LV1: $AlienCiv7Tanks,  Space Jets LV1: $AlienCiv7SpaceJets,  Nuclear satelites LV1: $AlienCiv7NuclearSatelites"
+
+                    } else if (AlienCiv7MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv7Soldiers,  Space planes LV1: $AlienCiv7SpacePlanes,  Tanks LV1: $AlienCiv7Tanks,  Space Jets LV1: $AlienCiv7SpaceJets,  Nuclear satelites LV1: $AlienCiv7NuclearSatelites"
+
+                    } else if (AlienCiv7MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv7Soldiers,  Space planes LV1: $AlienCiv7SpacePlanes,  Tanks LV2: $AlienCiv7Tanks,  Space Jets LV1: $AlienCiv7SpaceJets,  Nuclear satelites LV1: $AlienCiv7NuclearSatelites"
+
+
+                    } else if (AlienCiv7MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv7Soldiers,  Space planes LV1: $AlienCiv7SpacePlanes,  Tanks LV2: $AlienCiv7Tanks,  Space Jets LV1: $AlienCiv7SpaceJets,  Nuclear satelites LV2: $AlienCiv7NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv7RelationWithPlayer!! > 0) {
+                        alienCiv7RelationWithPlayer = alienCiv7RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 7 && isAlienCiv7Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+            // Alien 8
+
+
+            if (SelectedPlanet == 8 && isAlienCiv8Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv8MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv8Soldiers,  Space planes LV1: $AlienCiv8SpacePlanes,  Tanks LV1: $AlienCiv8Tanks,  Space Jets LV1: $AlienCiv8SpaceJets,  Nuclear satelites LV1: $AlienCiv8NuclearSatelites"
+
+                    } else if (AlienCiv8MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv8Soldiers,  Space planes LV1: $AlienCiv8SpacePlanes,  Tanks LV1: $AlienCiv8Tanks,  Space Jets LV1: $AlienCiv8SpaceJets,  Nuclear satelites LV1: $AlienCiv8NuclearSatelites"
+
+                    } else if (AlienCiv8MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv8Soldiers,  Space planes LV1: $AlienCiv8SpacePlanes,  Tanks LV1: $AlienCiv8Tanks,  Space Jets LV1: $AlienCiv8SpaceJets,  Nuclear satelites LV1: $AlienCiv8NuclearSatelites"
+
+                    } else if (AlienCiv8MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv8Soldiers,  Space planes LV1: $AlienCiv8SpacePlanes,  Tanks LV2: $AlienCiv8Tanks,  Space Jets LV1: $AlienCiv8SpaceJets,  Nuclear satelites LV1: $AlienCiv8NuclearSatelites"
+
+
+                    } else if (AlienCiv8MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv8Soldiers,  Space planes LV1: $AlienCiv8SpacePlanes,  Tanks LV2: $AlienCiv8Tanks,  Space Jets LV1: $AlienCiv8SpaceJets,  Nuclear satelites LV2: $AlienCiv8NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv8RelationWithPlayer!! > 0) {
+                        alienCiv8RelationWithPlayer = alienCiv8RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 8 && isAlienCiv8Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+
+            // Alien 9
+
+
+            if (SelectedPlanet == 9 && isAlienCiv9Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv9MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv9Soldiers,  Space planes LV1: $AlienCiv9SpacePlanes,  Tanks LV1: $AlienCiv9Tanks,  Space Jets LV1: $AlienCiv9SpaceJets,  Nuclear satelites LV1: $AlienCiv9NuclearSatelites"
+
+                    } else if (AlienCiv9MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv9Soldiers,  Space planes LV1: $AlienCiv9SpacePlanes,  Tanks LV1: $AlienCiv9Tanks,  Space Jets LV1: $AlienCiv9SpaceJets,  Nuclear satelites LV1: $AlienCiv9NuclearSatelites"
+
+                    } else if (AlienCiv9MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv9Soldiers,  Space planes LV1: $AlienCiv9SpacePlanes,  Tanks LV1: $AlienCiv9Tanks,  Space Jets LV1: $AlienCiv9SpaceJets,  Nuclear satelites LV1: $AlienCiv9NuclearSatelites"
+
+                    } else if (AlienCiv9MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv9Soldiers,  Space planes LV1: $AlienCiv9SpacePlanes,  Tanks LV2: $AlienCiv9Tanks,  Space Jets LV1: $AlienCiv9SpaceJets,  Nuclear satelites LV1: $AlienCiv9NuclearSatelites"
+
+
+                    } else if (AlienCiv9MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv9Soldiers,  Space planes LV1: $AlienCiv9SpacePlanes,  Tanks LV2: $AlienCiv9Tanks,  Space Jets LV1: $AlienCiv9SpaceJets,  Nuclear satelites LV2: $AlienCiv9NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv9RelationWithPlayer!! > 0) {
+                        alienCiv9RelationWithPlayer = alienCiv9RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 9 && isAlienCiv9Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+            // Alien 10
+
+
+            if (SelectedPlanet == 10 && isAlienCiv10Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv10MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv10Soldiers,  Space planes LV1: $AlienCiv10SpacePlanes,  Tanks LV1: $AlienCiv10Tanks,  Space Jets LV1: $AlienCiv10SpaceJets,  Nuclear satelites LV1: $AlienCiv10NuclearSatelites"
+
+                    } else if (AlienCiv10MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv10Soldiers,  Space planes LV1: $AlienCiv10SpacePlanes,  Tanks LV1: $AlienCiv10Tanks,  Space Jets LV1: $AlienCiv10SpaceJets,  Nuclear satelites LV1: $AlienCiv10NuclearSatelites"
+
+                    } else if (AlienCiv10MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv10Soldiers,  Space planes LV1: $AlienCiv10SpacePlanes,  Tanks LV1: $AlienCiv10Tanks,  Space Jets LV1: $AlienCiv10SpaceJets,  Nuclear satelites LV1: $AlienCiv10NuclearSatelites"
+
+                    } else if (AlienCiv10MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv10Soldiers,  Space planes LV1: $AlienCiv10SpacePlanes,  Tanks LV2: $AlienCiv10Tanks,  Space Jets LV1: $AlienCiv10SpaceJets,  Nuclear satelites LV1: $AlienCiv10NuclearSatelites"
+
+
+                    } else if (AlienCiv10MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv10Soldiers,  Space planes LV1: $AlienCiv10SpacePlanes,  Tanks LV2: $AlienCiv10Tanks,  Space Jets LV1: $AlienCiv10SpaceJets,  Nuclear satelites LV2: $AlienCiv10NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv10RelationWithPlayer!! > 0) {
+                        alienCiv10RelationWithPlayer = alienCiv10RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 10 && isAlienCiv10Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+            // Alien 11
+
+
+            if (SelectedPlanet == 999 && isAlienCiv11Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv11MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv1Soldiers,  Space planes LV1: $AlienCiv1SpacePlanes,  Tanks LV1: $AlienCiv1Tanks,  Space Jets LV1: $AlienCiv1SpaceJets,  Nuclear satelites LV1: $AlienCiv1NuclearSatelites"
+
+                    } else if (AlienCiv11MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv11Soldiers,  Space planes LV1: $AlienCiv11SpacePlanes,  Tanks LV1: $AlienCiv11Tanks,  Space Jets LV1: $AlienCiv11SpaceJets,  Nuclear satelites LV1: $AlienCiv11NuclearSatelites"
+
+                    } else if (AlienCiv11MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv11Soldiers,  Space planes LV1: $AlienCiv11SpacePlanes,  Tanks LV1: $AlienCiv11Tanks,  Space Jets LV1: $AlienCiv11SpaceJets,  Nuclear satelites LV1: $AlienCiv11NuclearSatelites"
+
+                    } else if (AlienCiv11MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv11Soldiers,  Space planes LV1: $AlienCiv11SpacePlanes,  Tanks LV2: $AlienCiv11Tanks,  Space Jets LV1: $AlienCiv11SpaceJets,  Nuclear satelites LV1: $AlienCiv11NuclearSatelites"
+
+
+                    } else if (AlienCiv11MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv11Soldiers,  Space planes LV1: $AlienCiv11SpacePlanes,  Tanks LV2: $AlienCiv11Tanks,  Space Jets LV1: $AlienCiv11SpaceJets,  Nuclear satelites LV2: $AlienCiv11NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv11RelationWithPlayer!! > 0) {
+                        alienCiv11RelationWithPlayer = alienCiv11RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 999 && isAlienCiv11Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+            // Alien 12
+
+
+            if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv12MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv12Soldiers,  Space planes LV1: $AlienCiv12SpacePlanes,  Tanks LV1: $AlienCiv12Tanks,  Space Jets LV1: $AlienCiv12SpaceJets,  Nuclear satelites LV1: $AlienCiv12NuclearSatelites"
+
+                    } else if (AlienCiv12MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv12Soldiers,  Space planes LV1: $AlienCiv12SpacePlanes,  Tanks LV1: $AlienCiv12Tanks,  Space Jets LV1: $AlienCiv12SpaceJets,  Nuclear satelites LV1: $AlienCiv12NuclearSatelites"
+
+                    } else if (AlienCiv12MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv12Soldiers,  Space planes LV1: $AlienCiv12SpacePlanes,  Tanks LV1: $AlienCiv12Tanks,  Space Jets LV1: $AlienCiv12SpaceJets,  Nuclear satelites LV1: $AlienCiv12NuclearSatelites"
+
+                    } else if (AlienCiv12MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv12Soldiers,  Space planes LV1: $AlienCiv12SpacePlanes,  Tanks LV2: $AlienCiv12Tanks,  Space Jets LV1: $AlienCiv12SpaceJets,  Nuclear satelites LV1: $AlienCiv12NuclearSatelites"
+
+
+                    } else if (AlienCiv12MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv12Soldiers,  Space planes LV1: $AlienCiv12SpacePlanes,  Tanks LV2: $AlienCiv12Tanks,  Space Jets LV1: $AlienCiv12SpaceJets,  Nuclear satelites LV2: $AlienCiv12NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv12RelationWithPlayer!! > 0) {
+                        alienCiv12RelationWithPlayer = alienCiv12RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+            // Alien 13
+
+
+            if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv13MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv13Soldiers,  Space planes LV1: $AlienCiv13SpacePlanes,  Tanks LV1: $AlienCiv13Tanks,  Space Jets LV1: $AlienCiv13SpaceJets,  Nuclear satelites LV1: $AlienCiv13NuclearSatelites"
+
+                    } else if (AlienCiv13MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv13Soldiers,  Space planes LV1: $AlienCiv13SpacePlanes,  Tanks LV1: $AlienCiv13Tanks,  Space Jets LV1: $AlienCiv13SpaceJets,  Nuclear satelites LV1: $AlienCiv13NuclearSatelites"
+
+                    } else if (AlienCiv13MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv13Soldiers,  Space planes LV1: $AlienCiv13SpacePlanes,  Tanks LV1: $AlienCiv13Tanks,  Space Jets LV1: $AlienCiv13SpaceJets,  Nuclear satelites LV1: $AlienCiv13NuclearSatelites"
+
+                    } else if (AlienCiv13MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv13Soldiers,  Space planes LV1: $AlienCiv13SpacePlanes,  Tanks LV2: $AlienCiv13Tanks,  Space Jets LV1: $AlienCiv13SpaceJets,  Nuclear satelites LV1: $AlienCiv13NuclearSatelites"
+
+
+                    } else if (AlienCiv13MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv13Soldiers,  Space planes LV1: $AlienCiv13SpacePlanes,  Tanks LV2: $AlienCiv13Tanks,  Space Jets LV1: $AlienCiv13SpaceJets,  Nuclear satelites LV2: $AlienCiv13NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv13RelationWithPlayer!! > 0) {
+                        alienCiv13RelationWithPlayer = alienCiv13RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+            // Alien 14
+
+
+            if (SelectedPlanet == 11 && isAlienCiv14Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv14MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv14Soldiers,  Space planes LV1: $AlienCiv14SpacePlanes,  Tanks LV1: $AlienCiv14Tanks,  Space Jets LV1: $AlienCiv14SpaceJets,  Nuclear satelites LV1: $AlienCiv14NuclearSatelites"
+
+                    } else if (AlienCiv14MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv14Soldiers,  Space planes LV1: $AlienCiv14SpacePlanes,  Tanks LV1: $AlienCiv14Tanks,  Space Jets LV1: $AlienCiv14SpaceJets,  Nuclear satelites LV1: $AlienCiv14NuclearSatelites"
+
+                    } else if (AlienCiv14MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv14Soldiers,  Space planes LV1: $AlienCiv14SpacePlanes,  Tanks LV1: $AlienCiv14Tanks,  Space Jets LV1: $AlienCiv14SpaceJets,  Nuclear satelites LV1: $AlienCiv14NuclearSatelites"
+
+                    } else if (AlienCiv14MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv14Soldiers,  Space planes LV1: $AlienCiv14SpacePlanes,  Tanks LV2: $AlienCiv14Tanks,  Space Jets LV1: $AlienCiv14SpaceJets,  Nuclear satelites LV1: $AlienCiv14NuclearSatelites"
+
+
+                    } else if (AlienCiv14MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv14Soldiers,  Space planes LV1: $AlienCiv14SpacePlanes,  Tanks LV2: $AlienCiv14Tanks,  Space Jets LV1: $AlienCiv14SpaceJets,  Nuclear satelites LV2: $AlienCiv14NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv14RelationWithPlayer!! > 0) {
+                        alienCiv14RelationWithPlayer = alienCiv14RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 11 && isAlienCiv14Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+
+
+            // Alien 15
+
+
+            if (SelectedPlanet == 12 && isAlienCiv15Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv15MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv15Soldiers,  Space planes LV1: $AlienCiv15SpacePlanes,  Tanks LV1: $AlienCiv15Tanks,  Space Jets LV1: $AlienCiv15SpaceJets,  Nuclear satelites LV1: $AlienCiv15NuclearSatelites"
+
+                    } else if (AlienCiv15MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv15Soldiers,  Space planes LV1: $AlienCiv15SpacePlanes,  Tanks LV1: $AlienCiv15Tanks,  Space Jets LV1: $AlienCiv15SpaceJets,  Nuclear satelites LV1: $AlienCiv15NuclearSatelites"
+
+                    } else if (AlienCiv15MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv15Soldiers,  Space planes LV1: $AlienCiv15SpacePlanes,  Tanks LV1: $AlienCiv15Tanks,  Space Jets LV1: $AlienCiv15SpaceJets,  Nuclear satelites LV1: $AlienCiv15NuclearSatelites"
+
+                    } else if (AlienCiv15MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv15Soldiers,  Space planes LV1: $AlienCiv15SpacePlanes,  Tanks LV2: $AlienCiv15Tanks,  Space Jets LV1: $AlienCiv15SpaceJets,  Nuclear satelites LV1: $AlienCiv15NuclearSatelites"
+
+
+                    } else if (AlienCiv15MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv15Soldiers,  Space planes LV1: $AlienCiv15SpacePlanes,  Tanks LV2: $AlienCiv15Tanks,  Space Jets LV1: $AlienCiv15SpaceJets,  Nuclear satelites LV2: $AlienCiv15NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv15RelationWithPlayer!! > 0) {
+                        alienCiv15RelationWithPlayer = alienCiv15RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 12 && isAlienCiv15Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+
+            // Alien 16
+
+
+            if (SelectedPlanet == 13 && isAlienCiv16Damaged!! > 0) {
+
+                var spied = (1..5).shuffled().last()
+
+                if(spied <= spionageLevelPlayer) {
+
+                    if (AlienCiv16MilitaryBase == 1.0) {
+
+                        spyArmyTextView.text = "Soldiers LV1: $AlienCiv16Soldiers,  Space planes LV1: $AlienCiv16SpacePlanes,  Tanks LV1: $AlienCiv16Tanks,  Space Jets LV1: $AlienCiv16SpaceJets,  Nuclear satelites LV1: $AlienCiv16NuclearSatelites"
+
+                    } else if (AlienCiv16MilitaryBase == 2.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv16Soldiers,  Space planes LV1: $AlienCiv16SpacePlanes,  Tanks LV1: $AlienCiv16Tanks,  Space Jets LV1: $AlienCiv16SpaceJets,  Nuclear satelites LV1: $AlienCiv16NuclearSatelites"
+
+                    } else if (AlienCiv16MilitaryBase == 3.0) {
+
+                        spyArmyTextView.text = "Soldiers LV2: $AlienCiv16Soldiers,  Space planes LV1: $AlienCiv16SpacePlanes,  Tanks LV1: $AlienCiv16Tanks,  Space Jets LV1: $AlienCiv16SpaceJets,  Nuclear satelites LV1: $AlienCiv16NuclearSatelites"
+
+                    } else if (AlienCiv16MilitaryBase == 4.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv16Soldiers,  Space planes LV1: $AlienCiv16SpacePlanes,  Tanks LV2: $AlienCiv16Tanks,  Space Jets LV1: $AlienCiv16SpaceJets,  Nuclear satelites LV1: $AlienCiv16NuclearSatelites"
+
+
+                    } else if (AlienCiv16MilitaryBase == 5.0) {
+
+                        spyArmyTextView.text = "Soldiers LV3: $AlienCiv16Soldiers,  Space planes LV1: $AlienCiv16SpacePlanes,  Tanks LV2: $AlienCiv16Tanks,  Space Jets LV1: $AlienCiv16SpaceJets,  Nuclear satelites LV2: $AlienCiv16NuclearSatelites"
+
+                    }
+
+
+                    Toast.makeText(this, "Your spy reported the numbers in alien army", Toast.LENGTH_SHORT).show()
+
+
+
+
+                } else {
+
+                    Toast.makeText(this, "Your spy has been captured, this will have consequences", Toast.LENGTH_SHORT).show()
+
+                    if (alienCiv16RelationWithPlayer!! > 0) {
+                        alienCiv16RelationWithPlayer = alienCiv16RelationWithPlayer!! - 1.0
+                    }
+
+                    spionageDiscoveredMessage()
+                    saveAlienData()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                }
+
+
+            } else if (SelectedPlanet == 13 && isAlienCiv16Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+
+            }
+
+
+
+
+
 
 
 
