@@ -247,7 +247,7 @@
         android:layout_width="202dp"
         android:layout_height="65dp"
         android:text="Make illegal experiments on this primitive civilisation ? :)"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

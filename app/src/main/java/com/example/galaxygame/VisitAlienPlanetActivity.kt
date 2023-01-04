@@ -533,7 +533,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        var isPlayerSpied = (1..5).shuffled().last()
+        var isPlayerSpied = (1..10).shuffled().last()
 
         var skipFirs : Int = 0
 
@@ -1050,6 +1050,215 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+                        // Displays specific alien world based on what planet was selected and recorded by shared pref
+
+
+                        if (SelectedPlanet == 1) {
+
+                            if (AlienCiv1MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv1MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv1MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv1MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+
+                        } else if (SelectedPlanet == 2) {
+
+                            if (AlienCiv2MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv2MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv2MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv2MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 3) {
+
+                            if (AlienCiv3MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv3MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv3MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv3MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 4) {
+
+                            if (AlienCiv4MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv4MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv4MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv4MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 5) {
+
+                            if (AlienCiv5MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv5MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv5MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv5MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 6) {
+
+                            if (AlienCiv6MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv6MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv6MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv6MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 7) {
+
+                            if (AlienCiv7MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv7MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv7MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv7MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 8) {
+
+                            if (AlienCiv8MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv8MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv8MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv8MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 9) {
+
+                            if (AlienCiv9MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv9MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv9MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv9MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 999) {
+
+                            if (AlienCiv11MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv11MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv11MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv11MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 10) {
+
+                            if (AlienCiv10MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv10MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv10MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv10MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet== 101010) {
+
+                            if (AlienCiv12MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv12MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv12MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv12MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet==10101010) {
+
+                            if (AlienCiv13MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv13MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv13MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv13MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 11) {
+
+                            if (AlienCiv14MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv14MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv14MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv14MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if(SelectedPlanet==12) {
+
+                            if (AlienCiv15MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv15MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv15MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv15MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        } else if (SelectedPlanet == 13) {
+
+                            if (AlienCiv16MilitaryBase!! <= 2.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+                            } else if (AlienCiv16MilitaryBase!! == 3.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv16MilitaryBase!! == 4.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
+                            } else if (AlienCiv16MilitaryBase!! == 5.0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+                            }
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1086,7 +1295,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                            if (isAlienCiv1Damaged!! <= 0) {
+                            if (isAlienCiv1Damaged!! <= 0.0) {
                                 visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
                             } else if (isAlienCiv1Damaged!! == 1.0) {
                                 explosionPic.isVisible = true
@@ -1643,7 +1852,6 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-
                     }
                 }
             }
@@ -2107,11 +2315,6 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
                 }
 
 
@@ -2158,6 +2361,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 alienCiv14RelationWithPlayer = 0.0
 
                 angryForExperimentsMessage()
+
+                NewMessageNotify = true
+
+                val editNewMessageNotify = sharedNewMessageNotify.edit()
+                editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                editNewMessageNotify.commit()
 
                 saveAlienData()
             }
@@ -3533,12 +3742,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                    if (AlienCiv9NuclearSatelites!! > 0.0) {
+                    if (AlienCiv9NuclearSatelites!! > 0.0 && isAlienCiv9Damaged!! > 0) { //
 
                         AlienCiv9NuclearSatelites = AlienCiv9NuclearSatelites!! - 1.0
-                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 2.0  //
 
-                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "The Zorgon have extinted your civilisation with a nuclear strike", Toast.LENGTH_SHORT).show()
 
                         nuclearAttackMessage()
 
@@ -3595,12 +3804,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                    if (AlienCiv10NuclearSatelites!! > 0.0) {
+                    if (AlienCiv10NuclearSatelites!! > 0.0 && isAlienCiv10Damaged!! > 0) {
 
                         AlienCiv10NuclearSatelites = AlienCiv10NuclearSatelites!! - 1.0
-                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 2.0
 
-                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "The Zorgon have extinted your civilisation with a nuclear strike", Toast.LENGTH_SHORT).show()
 
                         nuclearAttackMessage()
 
@@ -3658,12 +3867,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                    if (AlienCiv11NuclearSatelites!! > 0.0) {
+                    if (AlienCiv11NuclearSatelites!! > 0.0 && isAlienCiv11Damaged!! > 0) {
 
                         AlienCiv11NuclearSatelites = AlienCiv11NuclearSatelites!! - 1.0
-                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 2.0
 
-                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "The Zorgon have extinted your civilisation with a nuclear strike", Toast.LENGTH_SHORT).show()
 
                         nuclearAttackMessage()
 
@@ -3722,12 +3931,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                    if (AlienCiv12NuclearSatelites!! > 0.0) {
+                    if (AlienCiv12NuclearSatelites!! > 0.0  && isAlienCiv12Damaged!! > 0) {
 
                         AlienCiv12NuclearSatelites = AlienCiv12NuclearSatelites!! - 1.0
-                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 2.0
 
-                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "The Zorgon have extinted your civilisation with a nuclear strike", Toast.LENGTH_SHORT).show()
 
                         nuclearAttackMessage()
 
@@ -3786,12 +3995,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                    if (AlienCiv13NuclearSatelites!! > 0.0) {
+                    if (AlienCiv13NuclearSatelites!! > 0.0 && isAlienCiv13Damaged!! > 0) {
 
                         AlienCiv13NuclearSatelites = AlienCiv13NuclearSatelites!! - 1.0
-                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 2.0
 
-                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "The Zorgon have extinted your civilisation with a nuclear strike", Toast.LENGTH_SHORT).show()
 
                         nuclearAttackMessage()
 
@@ -5138,16 +5347,6 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-        // Displays specific alien world based on what planet was selected and recorded by shared pref
-
-
         if (SelectedPlanet == 0) {
 
             pictureofAlien.isVisible = false
@@ -5167,20 +5366,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
-        } else if (SelectedPlanet == 1) {
-
-            if (AlienCiv1MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv1MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv1MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv1MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
+        }
 
 
-        } else if (SelectedPlanet == 111) {
+
+
+        if (SelectedPlanet == 111) {
 
             /* Id number of a second visitable planet in the same solar system is the same number of
            the first visitable planet in the system repeated three times
@@ -5207,43 +5398,12 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
             visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
-        } else if (SelectedPlanet == 2) {
+        }
 
-            if (AlienCiv2MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv2MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv2MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv2MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
 
-        } else if (SelectedPlanet == 3) {
 
-            if (AlienCiv3MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv3MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv3MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv3MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
 
-        } else if (SelectedPlanet == 4) {
-
-            if (AlienCiv4MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv4MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv4MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv4MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 444) {
+        if (SelectedPlanet == 444) {
 
 
             pictureofAlien.isVisible = false
@@ -5261,45 +5421,14 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             nuclearSateliteText.isVisible = false
             donateText.isVisible = false
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
-        } else if (SelectedPlanet == 5) {
+        }
 
-            if (AlienCiv5MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv5MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv5MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv5MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
 
-        } else if (SelectedPlanet == 6) {
 
-            if (AlienCiv6MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv6MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv6MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv6MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
 
-        } else if (SelectedPlanet == 7) {
-
-            if (AlienCiv7MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv7MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv7MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv7MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 777) {
+        if (SelectedPlanet == 777) {
 
 
 
@@ -5318,95 +5447,15 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             nuclearSateliteText.isVisible = false
             donateText.isVisible = false
 
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.world0)
 
-        } else if (SelectedPlanet == 8) {
+        }
 
-            if (AlienCiv8MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv8MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv8MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv8MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
 
-        } else if (SelectedPlanet == 9) {
 
-            if (AlienCiv9MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv9MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv9MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv9MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
+           if (SelectedPlanet == 111111) {
 
-        } else if (SelectedPlanet == 999) {
-
-            if (AlienCiv11MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv11MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv11MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv11MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 10) {
-
-            if (AlienCiv10MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv10MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv10MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv10MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet== 101010) {
-
-            if (AlienCiv12MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv12MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv12MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv12MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet==10101010) {
-
-            if (AlienCiv13MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv13MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv13MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv13MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 11) {
-
-            if (AlienCiv14MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv14MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv14MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv14MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 111111) {
-
-            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.primitivecivilisation)
 
             pictureofAlien.isVisible = false
             spyArmyTextView.isVisible = false
@@ -5430,31 +5479,21 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
             illegalExperimentsTxt.isVisible = true
 
 
-        } else if(SelectedPlanet==12) {
-
-            if (AlienCiv15MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv15MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv15MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv15MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
-        } else if (SelectedPlanet == 13) {
-
-            if (AlienCiv16MilitaryBase!! <= 2.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-            } else if (AlienCiv16MilitaryBase!! == 3.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv16MilitaryBase!! == 4.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-            } else if (AlienCiv16MilitaryBase!! == 5.0) {
-                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
-            }
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6073,107 +6112,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        // Alien 9
-
-        if (civilisationSpies == 9) {
-
-            if (spionageMessage == 1) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv9Name :  Sorry for sending that spy, we were only curious"
-            } else if (spionageMessage == 2) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv9Name :  Your planet is very attractive, and we have many more spies who can confirm that"
-            } else if (spionageMessage == 3) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv9Name :  We could react for killing our spy"
-            } else if (spionageMessage == 4) {
-                messageText = "A spy has been captured in your planet. $AlienCiv9Name :  We are not planning anything bad for you, we sent that spy for prevention"
-            }
-        }
-
-
-
-        // Alien 10
-
-        if (civilisationSpies == 10) {
-
-            if (spionageMessage == 1) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv10Name :  Sorry for sending that spy, we were only curious"
-            } else if (spionageMessage == 2) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv10Name :  Your planet is very attractive, and we have many more spies who can confirm that"
-            } else if (spionageMessage == 3) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv10Name :  We could react for killing our spy"
-            } else if (spionageMessage == 4) {
-                messageText = "A spy has been captured in your planet. $AlienCiv10Name :  We are not planning anything bad for you, we sent that spy for prevention"
-            }
-        }
-
-
-
-        // Alien 11
-
-        if (civilisationSpies == 999) {
-
-            if (spionageMessage == 1) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv11Name :  Sorry for sending that spy, we were only curious"
-            } else if (spionageMessage == 2) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv11Name :  Your planet is very attractive, and we have many more spies who can confirm that"
-            } else if (spionageMessage == 3) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv11Name :  We could react for killing our spy"
-            } else if (spionageMessage == 4) {
-                messageText = "A spy has been captured in your planet. $AlienCiv11Name :  We are not planning anything bad for you, we sent that spy for prevention"
-            }
-        }
-
-
-        // Alien 12
-
-        if (civilisationSpies == 101010) {
-
-            if (spionageMessage == 1) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv12Name :  Sorry for sending that spy, we were only curious"
-            } else if (spionageMessage == 2) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv12Name :  Your planet is very attractive, and we have many more spies who can confirm that"
-            } else if (spionageMessage == 3) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv12Name :  We could react for killing our spy"
-            } else if (spionageMessage == 4) {
-                messageText = "A spy has been captured in your planet. $AlienCiv12Name :  We are not planning anything bad for you, we sent that spy for prevention"
-            }
-        }
-
-
-        // Alien 13
-
-        if (civilisationSpies == 10101010) {
-
-            if (spionageMessage == 1) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv13Name :  Sorry for sending that spy, we were only curious"
-            } else if (spionageMessage == 2) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv13Name :  Your planet is very attractive, and we have many more spies who can confirm that"
-            } else if (spionageMessage == 3) {
-                messageText =
-                    "A spy has been captured in your planet. $AlienCiv13Name :  We could react for killing our spy"
-            } else if (spionageMessage == 4) {
-                messageText = "A spy has been captured in your planet. $AlienCiv13Name :  We are not planning anything bad for you, we sent that spy for prevention"
-            }
-        }
-
-
 
         // Alien 14
 
-        if (civilisationSpies == 11) {
+        if (civilisationSpies == 9) {
 
             if (spionageMessage == 1) {
                 messageText =
@@ -6194,7 +6136,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         // Alien 15
 
-        if (civilisationSpies == 12) {
+        if (civilisationSpies == 10) {
 
             if (spionageMessage == 1) {
                 messageText =
@@ -6215,7 +6157,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         // Alien 16
 
-        if (civilisationSpies == 13) {
+        if (civilisationSpies == 11) {
 
             if (spionageMessage == 1) {
                 messageText =
