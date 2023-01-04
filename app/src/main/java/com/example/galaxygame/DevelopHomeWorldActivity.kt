@@ -152,17 +152,17 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelInfrastructure == 2) {
 
-                            infrastructureTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            infrastructureTextView.text = "Infrastructure (LV2), + 2 money per s. Next upgrade + 5 money per s. Cost: 1000 money, 1000 resourses."
 
 
                         } else if (levelInfrastructure == 3) {
 
-                            infrastructureTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
+                            infrastructureTextView.text = "Infrastructure (LV3), + 5 money per s. Next upgrade + 10 money per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
 
 
                         } else if (levelInfrastructure == 4) {
 
-                            infrastructureTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:5000 and money: 9000 required to upgrade)"
+                            infrastructureTextView.text = "Infrastructure (LV4), + 10 money per s. Next upgrade + 50 money per s. Cost: 20000 money, 20000 resourses (general dev. LV 3 required)"
 
 
                         } else if (levelInfrastructure == 5) {
@@ -176,22 +176,21 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelFactory == 2) {
 
-                            factoryTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            factoryTextView.text = "Factory LV2, + 2 resourses per s. Next upgrade + 5 resourses per s. Cost: 1000 money, 1000 resourses"
 
 
                         } else if (levelFactory == 3) {
 
-                            factoryTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-
+                            factoryTextView.text = "Factory LV3, + 5 resourses per s. Next upgrade + 10 resourses per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
 
                         } else if (levelFactory == 4) {
 
-                            factoryTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:5000 and money: 9000 required to upgrade)"
+                            factoryTextView.text = "Factory LV4, + 10 resourses per s. Next upgrade + 50 resourses per s. Cost: 20000 money, 15000 resourses (general dev. LV 3 required)"
 
 
                         } else if (levelFactory == 5) {
 
-                            factoryTextView.text = "Infrastructure LV 5"
+                            factoryTextView.text = "Factory LV 5"
 
                         }
 
@@ -204,22 +203,22 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelMilitaryBase == 2) {
 
-                            militaryBaseTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            militaryBaseTextView.text = "Military base LV2. Unlocks new troops and levels up old ones. Next level cost: 3000 money, 2000 resourses (general dev. LV 2 required)"
 
 
                         } else if (levelMilitaryBase == 3) {
 
-                            militaryBaseTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
+                            militaryBaseTextView.text = "Military base LV3. Unlocks new troops and levels up old ones. Next level cost: 20000 money, 15000 resourses"
 
 
                         } else if (levelMilitaryBase == 4) {
 
-                            militaryBaseTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:5000 and money: 9000 required to upgrade)"
+                            militaryBaseTextView.text = "Military base LV4. Unlocks new troops and levels up old ones. Next level cost: 40000 money, 40000 resourses (general dev. LV 3 required)"
 
 
                         } else if (levelMilitaryBase == 5) {
 
-                            militaryBaseTextView.text = "Infrastructure LV 5"
+                            militaryBaseTextView.text = "Military base LV 5"
 
                         }
 
@@ -234,12 +233,12 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelGeneralDevelopment == 2) {
 
-                            generalDevelopmentTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            generalDevelopmentTextView.text = "General Development of world LV2. Unlocks new structures and modernises the worlds design. Cost: 80000 money, 60000 resourses (science LV 5 required)"
 
 
                         } else if (levelGeneralDevelopment == 3) {
 
-                            generalDevelopmentTextView.text = "Infrastructure LV3"
+                            generalDevelopmentTextView.text = "General development LV3"
 
                         }
 
@@ -250,22 +249,22 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelScientificDevelopment == 2) {
 
-                            scientificDevelopmentTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            scientificDevelopmentTextView.text = "Scientific research LV2. Allow to travel further in space. Cost: money 800, reourses 450 (general dev. LV 2 required)"
 
 
                         } else if (levelScientificDevelopment == 3) {
 
-                            scientificDevelopmentTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
+                            scientificDevelopmentTextView.text = "Scientific research LV3. Allow to travel further in space. Cost: money 10000, reourses 10000"
 
 
                         } else if (levelScientificDevelopment == 4) {
 
-                            scientificDevelopmentTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:5000 and money: 9000 required to upgrade)"
+                            scientificDevelopmentTextView.text = "Scientific research LV4. Allow to travel further in space. Cost: money 15000, reourses 15000"
 
 
                         } else if (levelScientificDevelopment == 5) {
 
-                            scientificDevelopmentTextView.text = "Infrastructure LV 5"
+                            scientificDevelopmentTextView.text = "Scientific research LV 5"
 
                         }
 
@@ -280,22 +279,22 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
                         if (levelSpionage == 2) {
 
-                            spionageTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                            spionageTextView.text = "Spionage LV2. Improves chance of spying without being detected. Cost: money 4000, resourses 4000 (general dev. LV 2 required)"
 
 
                         } else if (levelSpionage == 3) {
 
-                            spionageTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
+                            spionageTextView.text = "Spionage LV3. Improves chance of spying without being detected. Cost: money 10000, resourses 10000"
 
 
                         } else if (levelSpionage == 4) {
 
-                            spionageTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:5000 and money: 9000 required to upgrade)"
+                            spionageTextView.text = "Spionage LV4. Improves chance of spying without being detected. Cost: money 40000, resourses 40000"
 
 
                         } else if (levelSpionage == 5) {
 
-                            spionageTextView.text = "Infrastructure LV 5"
+                            spionageTextView.text = "Spionage LV 5"
 
                         }
 
@@ -331,38 +330,38 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeInfArrow.setOnClickListener {
 
-            if (levelInfrastructure == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelInfrastructure == 1 && moneyAmmount >= 200 && resoursces >= 200) {
 
-                infrastructureTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
-                moneyAmmount -= 150
+                infrastructureTextView.text = "Infrastructure (LV2), + 2 money per s. Next upgrade + 5 money per s. Cost: 1000 money, 1000 resourses"
+                moneyAmmount -= 200
                 resoursces -= 200
                 levelInfrastructure += 1
 
                 savePlayerData()
 
-            } else if (levelInfrastructure == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelInfrastructure == 2 && moneyAmmount >= 1000 && resoursces >= 1000) {
 
-                infrastructureTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-                moneyAmmount -= 800
-                resoursces -= 450
+                infrastructureTextView.text = "Infrastructure (LV3), + 5 money per s. Next upgrade + 10 money per s. Cost: 4500 money, 4500 resourses"
+                moneyAmmount -= 1000
+                resoursces -= 1000
                 levelInfrastructure += 1
 
                 savePlayerData()
 
-            } else if (levelInfrastructure == 3 && moneyAmmount >= 2400 && resoursces >= 1200) {
+            } else if (levelInfrastructure == 3 && moneyAmmount >= 4500 && resoursces >= 4500 && levelGeneralDevelopment >= 2) {
 
-                infrastructureTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:4000 and money: 6000 required to upgrade)"
-                moneyAmmount -= 2400
-                resoursces -= 1200
+                infrastructureTextView.text = "Infrastructure (LV4), + 10 money per s. Next upgrade + 50 money per s. Cost: 20000 money, 20000 resourses"
+                moneyAmmount -= 4500
+                resoursces -= 4500
                 levelInfrastructure += 1
 
                 savePlayerData()
 
-            } else if (levelInfrastructure == 4 && moneyAmmount >= 6000 && resoursces >= 4000) {
+            } else if (levelInfrastructure == 4 && moneyAmmount >= 20000 && resoursces >= 20000 && levelGeneralDevelopment >= 3) {
 
                 infrastructureTextView.text = "Infrastructure LV5"
-                moneyAmmount -= 6000
-                resoursces -= 4000
+                moneyAmmount -= 20000
+                resoursces -= 20000
                 levelInfrastructure += 1
 
                 savePlayerData()
@@ -387,36 +386,36 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeFactoryArrow.setOnClickListener {
 
-            if (levelFactory == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelFactory == 1 && moneyAmmount >= 200 && resoursces >= 200) {
 
-                factoryTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
-                moneyAmmount -= 150
+                factoryTextView.text = "Factory LV2, + 2 resourses per s. Next upgrade + 5 resourses per s. Cost: 1000 money, 1000 resourses"
+                moneyAmmount -= 200
                 resoursces -= 200
                 levelFactory += 1
 
                 savePlayerData()
 
-            } else if (levelFactory == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelFactory == 2 && moneyAmmount >= 1000 && resoursces >= 1000) {
 
-                factoryTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-                moneyAmmount -= 800
-                resoursces -= 450
+                factoryTextView.text = "Factory LV3, + 5 resourses per s. Next upgrade + 10 resourses per s. Cost: 4500 money, 4500 resourses"
+                moneyAmmount -= 1000
+                resoursces -= 1000
                 levelFactory += 1
 
                 savePlayerData()
 
-            } else if (levelFactory == 3 && moneyAmmount >= 2400 && resoursces >= 1200) {
+            } else if (levelFactory == 3 && moneyAmmount >= 4500 && resoursces >= 4500 && levelGeneralDevelopment >= 2) {
 
-                factoryTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:4000 and money: 6000 required to upgrade)"
-                moneyAmmount -= 2400
-                resoursces -= 1200
+                factoryTextView.text = "Factory LV4, + 10 resourses per s. Next upgrade + 50 resourses per s. Cost: 20000 money, 15000 resourses"
+                moneyAmmount -= 4500
+                resoursces -= 4500
                 levelFactory += 1
 
                 savePlayerData()
 
-            } else if (levelFactory == 4 && moneyAmmount >= 6000 && resoursces >= 4000) {
+            } else if (levelFactory == 4 && moneyAmmount >= 20000 && resoursces >= 15000 && levelGeneralDevelopment >= 3) {
 
-                factoryTextView.text = "Infrastructure LV5"
+                factoryTextView.text = "Factory LV5"
                 moneyAmmount -= 6000
                 resoursces -= 4000
                 levelFactory += 1
@@ -441,38 +440,38 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeMilitaryBaseArrow.setOnClickListener {
 
-            if (levelMilitaryBase == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelMilitaryBase == 1 && moneyAmmount >= 300 && resoursces >= 200) {
 
-                militaryBaseTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
-                moneyAmmount -= 150
+                militaryBaseTextView.text = "Military base LV2. Unlocks new troops and levels up old ones. Next level cost: 3000 money, 2000 resourses (general dev. LV 2 required)"
+                moneyAmmount -= 300
                 resoursces -= 200
                 levelMilitaryBase += 1
 
                 savePlayerData()
 
-            } else if (levelMilitaryBase == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelMilitaryBase == 2 && moneyAmmount >= 3000 && resoursces >= 2000 && levelGeneralDevelopment >= 2) {
 
-                militaryBaseTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-                moneyAmmount -= 800
-                resoursces -= 450
+                militaryBaseTextView.text = "Military base LV3. Unlocks new troops and levels up old ones. Next level cost: 20000 money, 15000 resourses"
+                moneyAmmount -= 3000
+                resoursces -= 2000
                 levelMilitaryBase += 1
 
                 savePlayerData()
 
-            } else if (levelMilitaryBase == 3 && moneyAmmount >= 2400 && resoursces >= 1200) {
+            } else if (levelMilitaryBase == 3 && moneyAmmount >= 20000 && resoursces >= 15000) {
 
-                militaryBaseTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:4000 and money: 6000 required to upgrade)"
-                moneyAmmount -= 2400
-                resoursces -= 1200
+                militaryBaseTextView.text = "Military base LV4. Unlocks new troops and levels up old ones. Next level cost: 40000 money, 40000 resourses (general dev. LV 3 required)"
+                moneyAmmount -= 20000
+                resoursces -= 15000
                 levelMilitaryBase += 1
 
                 savePlayerData()
 
-            } else if (levelMilitaryBase == 4 && moneyAmmount >= 6000 && resoursces >= 4000) {
+            } else if (levelMilitaryBase == 4 && moneyAmmount >= 40000 && resoursces >= 40000 && levelGeneralDevelopment >= 3) {
 
-                militaryBaseTextView.text = "Infrastructure LV5"
-                moneyAmmount -= 6000
-                resoursces -= 4000
+                militaryBaseTextView.text = "Military base LV 5"
+                moneyAmmount -= 40000
+                resoursces -= 40000
                 levelMilitaryBase += 1
 
                 savePlayerData()
@@ -499,20 +498,21 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeGeneralDevelopmentArrow.setOnClickListener {
 
-            if (levelGeneralDevelopment == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelGeneralDevelopment == 1 && moneyAmmount >= 3000 && resoursces >= 3000) {
 
-                generalDevelopmentTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
-                moneyAmmount -= 150
-                resoursces -= 200
+                generalDevelopmentTextView.text = "General Development of world LV2. Unlocks new structures and modernises the worlds design. Cost: 80000 money, 60000 resourses (science LV 5 required)"
+                moneyAmmount -= 3000
+                resoursces -= 3000
                 levelGeneralDevelopment += 1
 
                 savePlayerData()
 
-            } else if (levelGeneralDevelopment == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelGeneralDevelopment == 2 && moneyAmmount >= 80000 && resoursces >= 60000
+                && levelScientificDevelopment == 5) {
 
-                generalDevelopmentTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-                moneyAmmount -= 800
-                resoursces -= 450
+                generalDevelopmentTextView.text = "General Development of world LV3"
+                moneyAmmount -= 80000
+                resoursces -= 60000
                 levelGeneralDevelopment += 1
 
                 savePlayerData()
@@ -534,38 +534,38 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeScientificDevelopmentArrow.setOnClickListener {
 
-            if (levelScientificDevelopment == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelScientificDevelopment == 1 && moneyAmmount >= 150 && resoursces >= 150) {
 
-                scientificDevelopmentTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
+                scientificDevelopmentTextView.text = "Scientific research LV2. Allow to travel further in space. Cost: money 800, reourses 450 (general dev. LV 2 required)"
                 moneyAmmount -= 150
-                resoursces -= 200
+                resoursces -= 150
                 levelScientificDevelopment += 1
 
                 savePlayerData()
 
-            } else if (levelScientificDevelopment == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelScientificDevelopment == 2 && moneyAmmount >= 800 && resoursces >= 450 && levelGeneralDevelopment >= 2) {
 
-                scientificDevelopmentTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
+                scientificDevelopmentTextView.text = "Scientific research LV3. Allow to travel further in space. Cost: money 10000, reourses 10000"
                 moneyAmmount -= 800
                 resoursces -= 450
                 levelScientificDevelopment += 1
 
                 savePlayerData()
 
-            } else if (levelScientificDevelopment == 3 && moneyAmmount >= 2400 && resoursces >= 1200) {
+            } else if (levelScientificDevelopment == 3 && moneyAmmount >= 10000 && resoursces >= 10000) {
 
-                scientificDevelopmentTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:4000 and money: 6000 required to upgrade)"
-                moneyAmmount -= 2400
-                resoursces -= 1200
+                scientificDevelopmentTextView.text = "Scientific research LV4. Allow to travel further in space. Cost: money 15000, reourses 15000"
+                moneyAmmount -= 10000
+                resoursces -= 10000
                 levelScientificDevelopment += 1
 
                 savePlayerData()
 
-            } else if (levelScientificDevelopment == 4 && moneyAmmount >= 6000 && resoursces >= 4000) {
+            } else if (levelScientificDevelopment == 4 && moneyAmmount >= 15000 && resoursces >= 15000) {
 
-                scientificDevelopmentTextView.text = "Infrastructure LV5"
-                moneyAmmount -= 6000
-                resoursces -= 4000
+                scientificDevelopmentTextView.text = "Scientific research LV5"
+                moneyAmmount -= 15000
+                resoursces -= 15000
                 levelScientificDevelopment += 1
 
                 savePlayerData()
@@ -592,38 +592,38 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
         upgradeSpionageArrow.setOnClickListener {
 
-            if (levelSpionage == 1 && moneyAmmount >= 150 && resoursces >= 200) {
+            if (levelSpionage == 1 && moneyAmmount >= 100 && resoursces >= 100) {
 
-                spionageTextView.text = "Infrastructure (currently LV2). Icreases ammount of money collected by taxes. (Resourses:450 and money: 800 required to upgrade)"
-                moneyAmmount -= 150
-                resoursces -= 200
+                spionageTextView.text = "Spionage LV2. Improves chance of spying without being detected. Cost: money 4000, resourses 4000 (general dev. LV 2 required)"
+                moneyAmmount -= 100
+                resoursces -= 100
                 levelSpionage += 1
 
                 savePlayerData()
 
-            } else if (levelSpionage == 2 && moneyAmmount >= 800 && resoursces >= 450) {
+            } else if (levelSpionage == 2 && moneyAmmount >= 4000 && resoursces >= 4000 && levelGeneralDevelopment >= 2) {
 
-                spionageTextView.text = "Infrastructure (currently LV3). Icreases ammount of money collected by taxes. (Resourses:1200 and money: 1600 required to upgrade)"
-                moneyAmmount -= 800
-                resoursces -= 450
-                levelSpionage += 1
-
-                savePlayerData()
-
-            } else if (levelSpionage == 3 && moneyAmmount >= 2400 && resoursces >= 1200) {
-
-                spionageTextView.text = "Infrastructure (currently LV4). Icreases ammount of money collected by taxes. (Resourses:4000 and money: 6000 required to upgrade)"
-                moneyAmmount -= 2400
-                resoursces -= 1200
-                levelSpionage += 1
-
-                savePlayerData()
-
-            } else if (levelSpionage == 4 && moneyAmmount >= 6000 && resoursces >= 4000) {
-
-                spionageTextView.text = "Infrastructure LV5"
-                moneyAmmount -= 6000
+                spionageTextView.text = "Spionage LV3. Improves chance of spying without being detected. Cost: money 10000, resourses 10000"
+                moneyAmmount -= 4000
                 resoursces -= 4000
+                levelSpionage += 1
+
+                savePlayerData()
+
+            } else if (levelSpionage == 3 && moneyAmmount >= 10000 && resoursces >= 10000) {
+
+                spionageTextView.text = "Spionage LV4. Improves chance of spying without being detected. Cost: money 40000, resourses 40000"
+                moneyAmmount -= 10000
+                resoursces -= 10000
+                levelSpionage += 1
+
+                savePlayerData()
+
+            } else if (levelSpionage == 4 && moneyAmmount >= 40000 && resoursces >= 40000) {
+
+                spionageTextView.text = "Spionage LV5"
+                moneyAmmount -= 40000
+                resoursces -= 40000
                 levelSpionage += 1
 
                 savePlayerData()

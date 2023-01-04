@@ -1098,7 +1098,7 @@ class RecruitArmy : AppCompatActivity() {
             var ifTheyRecruit = (1..10).shuffled().last()
 
 
-            if (ifTheyRecruit == 5) {
+            if (ifTheyRecruit == 5 && AlienCiv1Name != null) {
 
                 aliensRecruit()
                 saveDataOfAliens()

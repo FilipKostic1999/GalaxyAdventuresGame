@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var comandCenterPicture : TextView
     lateinit var factory : TextView
     lateinit var resoursesAmountText : TextView
+    lateinit var winGameTxt : TextView
 
 
     lateinit var collectTaxBtn : ImageView
@@ -306,6 +307,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     var calculator : Int = 0
 
 
@@ -356,6 +358,7 @@ class MainActivity : AppCompatActivity() {
         homeWorldExplosion = findViewById(R.id.homeWorldExplosion)
         repairWorldBtn = findViewById(R.id.repairWorldBtn)
         saveGameIcon = findViewById(R.id.saveGameIcon)
+        winGameTxt = findViewById(R.id.winGameTxt)
 
 
 
@@ -370,7 +373,7 @@ class MainActivity : AppCompatActivity() {
         saveGameIcon.isEnabled = false
         saveGameIcon.isVisible = false
 
-
+        winGameTxt.isVisible = false
 
         // The message icon knows if to turn green or red based on new messages and viewed messages
 
@@ -683,6 +686,29 @@ class MainActivity : AppCompatActivity() {
 
 
 
+                        if (isAlienCiv9Damaged!! <= 0 && isAlienCiv10Damaged!! <= 0 && isAlienCiv11Damaged!! <= 0 &&
+                            isAlienCiv12Damaged!! <= 0 && isAlienCiv13Damaged!! <= 0 && isDamagedAlivePlayer > 0) {
+
+                            comandCenterPicture.isEnabled = false
+                            factory.isEnabled = false
+                            militaryBase.isEnabled = false
+                            galaxyView.isEnabled = false
+                            collectTaxBtn.isEnabled = false
+                            homeWorldExplosion.isVisible = false
+                            repairWorldBtn.isVisible = false
+                            repairWorldBtn.isEnabled = false
+                            saveGameIcon.isVisible = true
+                            saveGameIcon.isEnabled = true
+                            winGameTxt.isVisible = true
+
+
+
+                        }
+
+
+
+
+
                     }
                 }
             }
@@ -757,7 +783,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (moneyTaxAmount < maximumCapacity) {
                         if (levelInfrastructure == 1) {
-                            moneyTaxAmount += 10000
+                            moneyTaxAmount += 1
                         } else if (levelInfrastructure == 2) {
                             moneyTaxAmount += 2
                         } else if (levelInfrastructure == 3) {
@@ -771,7 +797,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (resoursesCollectedAmount < maximumCapacity) {
                         if (levelFactory == 1) {
-                            resoursesCollectedAmount += 10000
+                            resoursesCollectedAmount += 1
                         } else if (levelFactory == 2) {
                             resoursesCollectedAmount += 2
                         } else if (levelFactory == 3) {
