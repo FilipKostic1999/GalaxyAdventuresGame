@@ -349,11 +349,13 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var soldierLv2 = warUnits(15.0, 25.0, 20.0, 15.0)
     var soldierLv3 = warUnits(40.0, 40.0, 35.0, 20.0)
 
-    var spacePlane = warUnits(120.0, 240.0, 30.0, 5.0)
-    var spaceJet = warUnits(480.0, 800.0, 50.0, 8.0)
+    var spacePlane = warUnits(120.0, 40.0, 30.0, 5.0)
+    var spaceJet = warUnits(480.0, 100.0, 50.0, 8.0)
 
-    var tankLv1 = warUnits(2000.0, 100.0, 5.0, 10.0)
-    var tankLv2 = warUnits(8000.0, 400.0, 10.0, 15.0)
+    var tankLv1 = warUnits(1000.0, 50.0, 5.0, 10.0)
+    var tankLv2 = warUnits(2000.0, 100.0, 10.0, 15.0)
+
+
 
 
     var soldierUnits = warUnits(5.0, 10.0, 20.0, 10.0)
@@ -364,15 +366,18 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
+
+
     var alienSoldierLv1 = warUnits(5.0, 10.0, 20.0, 10.0)
     var alienSoldierLv2 = warUnits(15.0, 25.0, 20.0, 15.0)
     var alienSoldierLv3 = warUnits(40.0, 40.0, 35.0, 20.0)
 
-    var alienSpacePlane = warUnits(120.0, 240.0, 30.0, 5.0)
-    var alienSpaceJet = warUnits(480.0, 800.0, 50.0, 8.0)
+    var alienSpacePlane = warUnits(120.0, 40.0, 30.0, 5.0)
+    var alienSpaceJet = warUnits(480.0, 100.0, 50.0, 8.0)
 
-    var alienTankLv1 = warUnits(2000.0, 100.0, 5.0, 10.0)
-    var alienTankLv2 = warUnits(8000.0, 400.0, 10.0, 15.0)
+    var alienTankLv1 = warUnits(1000.0, 50.0, 5.0, 10.0)
+    var alienTankLv2 = warUnits(2000.0, 100.0, 10.0, 15.0)
+
 
 
     var alienSoldierUnits = warUnits(5.0, 10.0, 20.0, 10.0)

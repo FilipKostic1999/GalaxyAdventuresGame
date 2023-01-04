@@ -508,7 +508,7 @@ class RecruitArmy : AppCompatActivity() {
                         if (levelMilitaryBase == 2) {
 
                             soldierUnitImg.setImageResource(R.drawable.trooptwo)
-                            soldierTxt.text = "Soldier (currently LV2). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            soldierTxt.text = "Soldier (currently LV2). HP= 15, damage= 25, speed = 20, critical probability= 15%. Money: 30, resourses: 30 for 100 units "
 
                             tankUnitImg.isVisible = true
                             tankRecruitArrow.isVisible = true
@@ -521,7 +521,7 @@ class RecruitArmy : AppCompatActivity() {
                         } else if (levelMilitaryBase == 3) {
 
                             soldierUnitImg.setImageResource(R.drawable.trooptwo)
-                            soldierTxt.text = "Soldier (currently LV2). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            soldierTxt.text = "Soldier (currently LV2). HP= 15, damage= 25, speed = 20, critical probability= 15%. Money: 30, resourses: 30 for 100 units "
 
                             tankUnitImg.isVisible = true
                             airUnit2Img.isVisible = true
@@ -542,10 +542,10 @@ class RecruitArmy : AppCompatActivity() {
                         } else if (levelMilitaryBase == 4) {
 
                             soldierUnitImg.setImageResource(R.drawable.troopthree)
-                            soldierTxt.text = "Soldier (currently LV3). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            soldierTxt.text = "Soldier (currently LV3). HP= 40, damage= 40, speed = 35, critical probability= 20%. Money: 300, resourses: 300 for 100 units "
 
                             tankUnitImg.setImageResource(R.drawable.tanktwo)
-                            tankTxt.text = "Tank (currently LV2). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            tankTxt.text = "Tank (currently LV2). HP= 2000, damage= 100, speed = 10, critical probability= 15%. Money: 1000, resourses: 1000 for 10 units "
 
                             tankUnitImg.isVisible = true
                             airUnit2Img.isVisible = true
@@ -566,14 +566,14 @@ class RecruitArmy : AppCompatActivity() {
                         } else if (levelMilitaryBase == 5) {
 
                             soldierUnitImg.setImageResource(R.drawable.troopthree)
-                            soldierTxt.text = "Soldier (currently LV3). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            soldierTxt.text = "Soldier (currently LV3). HP= 40, damage= 40, speed = 35, critical probability= 20%. Money: 300, resourses: 300 for 100 units "
 
 
                             tankUnitImg.setImageResource(R.drawable.tanktwo)
-                            tankTxt.text = "Tank (currently LV2). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            tankTxt.text = "Tank (currently LV2). HP= 2000, damage= 100, speed = 10, critical probability= 15%. Money: 1000, resourses: 1000 for 10 units "
 
                             sateliteUnitImg.setImageResource(R.drawable.ufo)
-                            sateliteTxt.text = "Nuclear satelite (currently LV2). HP= 20, damage= 10, speed = 20, critical probability= 10%. Money: 10, resourses: 25 for 1 unit "
+                            sateliteTxt.text = "Nuclear satelite (currently LV2). Ends a civilisation in one strike (applies only to player and Zorgon). Cost 4000 money, 4000 resourses for 1 unit"
 
                             tankUnitImg.isVisible = true
                             airUnit2Img.isVisible = true
@@ -1006,22 +1006,50 @@ class RecruitArmy : AppCompatActivity() {
 
         soldierRecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 4 && resourses >= 4 && levelMilitaryBase == 1) {
+                money -= 4
+                resourses -= 4
                 soldierQuantity += 100
                 soldierQuantityTxt.text = "$soldierQuantity"
+
+            } else if (money >= 30 && resourses >= 30 && levelMilitaryBase == 2) {
+
+                money -= 30
+                resourses -= 30
+                soldierQuantity += 100
+                soldierQuantityTxt.text = "$soldierQuantity"
+
+            } else if (money >= 30 && resourses >= 30 && levelMilitaryBase == 3) {
+                money -= 30
+                resourses -= 30
+                soldierQuantity += 100
+                soldierQuantityTxt.text = "$soldierQuantity"
+
+            } else if (money >= 300 && resourses >= 300 && levelMilitaryBase >= 4) {
+
+                money -= 300
+                resourses -= 300
+                soldierQuantity += 100
+                soldierQuantityTxt.text = "$soldierQuantity"
+
             }
 
 
         }
 
 
+
+
+
+
+
+
+
         airplaneRecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 40 && resourses >= 40) {
+                money -= 40
+                resourses -= 40
                 airplaneQuantity += 10
                 airplanequantityTxt.text = "$airplaneQuantity"
             }
@@ -1034,9 +1062,9 @@ class RecruitArmy : AppCompatActivity() {
 
         cargoplaneRecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 100 && resourses >= 100) {
+                money -= 100
+                resourses -= 100
                 cargoplaneQuantity ++
                 cargoplaneQuantityTxt.text = "$cargoplaneQuantity"
             }
@@ -1048,9 +1076,9 @@ class RecruitArmy : AppCompatActivity() {
 
         airplane2RecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 500 && resourses >= 500) {
+                money -= 500
+                resourses -= 500
                 airplane2Quantity += 10
                 airplane2QuantityTxt.text = "$airplane2Quantity"
             }
@@ -1063,11 +1091,20 @@ class RecruitArmy : AppCompatActivity() {
 
         tankRecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 250 && resourses >= 250 && levelMilitaryBase < 4) {
+                money -= 250
+                resourses -= 250
                 tankQuantity += 10
                 tankQuantityTxt.text = "$tankQuantity"
+
+            } else if (money >= 1000 && resourses >= 1000 && levelMilitaryBase >= 4) {
+
+                money -= 1000
+                resourses -= 1000
+                tankQuantity += 10
+                tankQuantityTxt.text = "$tankQuantity"
+
+
             }
 
         }
@@ -1076,11 +1113,19 @@ class RecruitArmy : AppCompatActivity() {
 
         sateliteRecruitArrow.setOnClickListener {
 
-            if (money >= 10 && resourses >= 25) {
-                money -= 10
-                resourses -= 25
+            if (money >= 1000 && resourses >= 1000 && levelMilitaryBase < 5) {
+                money -= 1000
+                resourses -= 1000
                 sateliteQuantity ++
                 sateliteQuantityTxt.text = "$sateliteQuantity"
+
+            } else if (money >= 4000 && resourses >= 4000 && levelMilitaryBase == 5) {
+
+                money -= 4000
+                resourses -= 4000
+                sateliteQuantity ++
+                sateliteQuantityTxt.text = "$sateliteQuantity"
+
             }
 
         }
