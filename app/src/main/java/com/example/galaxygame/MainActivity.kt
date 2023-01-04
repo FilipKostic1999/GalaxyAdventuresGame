@@ -1210,7 +1210,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (isAlienAttacking == 14) {
                             // Saves which alien attacks so that the simulator knows which army to use as the attacker
-                            SelectedPlanet = 14
+                            SelectedPlanet = 11
                             val editSelectedPlanet = sharedSelectedPlanet.edit()
                             editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
                             editSelectedPlanet.commit()
@@ -1234,7 +1234,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (isAlienAttacking == 15) {
                             // Saves which alien attacks so that the simulator knows which army to use as the attacker
-                            SelectedPlanet = 15
+                            SelectedPlanet = 12
                             val editSelectedPlanet = sharedSelectedPlanet.edit()
                             editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
                             editSelectedPlanet.commit()
@@ -1258,7 +1258,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (isAlienAttacking == 16) {
                             // Saves which alien attacks so that the simulator knows which army to use as the attacker
-                            SelectedPlanet = 16
+                            SelectedPlanet = 13
                             val editSelectedPlanet = sharedSelectedPlanet.edit()
                             editSelectedPlanet.putInt("SelectedPlanet", SelectedPlanet)
                             editSelectedPlanet.commit()

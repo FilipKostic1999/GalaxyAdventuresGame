@@ -2898,7 +2898,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 14) { //
+        if (selectedPlanetV == 11) { //
 
             // Chosen alien civilisations army is selected by shared pref
 
@@ -3038,7 +3038,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 15) { //
+        if (selectedPlanetV == 12) { //
 
             // Chosen alien civilisations army is selected by shared pref
 
@@ -3175,7 +3175,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 16) { //
+        if (selectedPlanetV == 13) { //
 
             // Chosen alien civilisations army is selected by shared pref
 
@@ -4494,7 +4494,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 14) { // Alien 14
+        if (selectedPlanetV == 11) { // Alien 14
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv14Name :  How did you even think you could win against us?"
@@ -4516,7 +4516,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 15) { // Alien 15
+        if (selectedPlanetV == 12) { // Alien 15
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv15Name :  How did you even think you could win against us?"
@@ -4537,7 +4537,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 16) { // Alien 16
+        if (selectedPlanetV == 13) { // Alien 16
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv16Name :  How did you even think you could win against us?"
@@ -4853,7 +4853,7 @@ class WarSimulatorActivity : AppCompatActivity() {
         }
 
 
-        if (selectedPlanetV == 14) { // Alien 14
+        if (selectedPlanetV == 11) { // Alien 14
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv14Name :  We underestimated you, we would like to have a better relationship with you"
@@ -4872,7 +4872,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 15) { // Alien 15
+        if (selectedPlanetV == 12) { // Alien 15
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv15Name :  We underestimated you, we would like to have a better relationship with you"
@@ -4891,7 +4891,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 16) { // Alien 16
+        if (selectedPlanetV == 13) { // Alien 16
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv16Name :  We underestimated you, we would like to have a better relationship with you"
@@ -5199,7 +5199,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 14) { // Alien 14
+        if (selectedPlanetV == 11) { // Alien 14
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv14Name :  Next time we will annihilate your entire civilisation"
@@ -5217,7 +5217,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 15) { // Alien 15
+        if (selectedPlanetV == 12) { // Alien 15
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv15Name :  Next time we will annihilate your entire civilisation"
@@ -5236,7 +5236,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 16) { // Alien 16
+        if (selectedPlanetV == 13) { // Alien 16
 
             if (nuclearStrikeMessage == 1) {
                 messageText = "$AlienCiv16Name :  Next time we will annihilate your entire civilisation"
@@ -7413,7 +7413,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 14) {
+        if (selectedPlanetV == 11) {
 
             var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
                 soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
@@ -7573,7 +7573,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 15) {
+        if (selectedPlanetV == 12) {
 
             var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
                 soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
@@ -7733,7 +7733,7 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
 
-        if (selectedPlanetV == 16) {
+        if (selectedPlanetV == 13) {
 
             var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
                 soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,

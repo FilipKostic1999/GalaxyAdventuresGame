@@ -108,6 +108,230 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+    var AlienCiv3Name : String? = null
+    var AlienCiv3Picture : Int? = null
+    var AlienCiv3MilitaryBase : Double? = null
+    var AlienCiv3Soldiers : Double? = null
+    var AlienCiv3SpacePlanes : Double? = null
+    var AlienCiv3SpaceJets : Double? = null
+    var AlienCiv3Tanks : Double? = null
+    var AlienCiv3NuclearSatelites : Double? = null
+    var isAlienCiv3Damaged : Double? = null
+    var alienCiv3RelationWithPlayer : Double? = null
+
+
+
+
+
+    var AlienCiv4Name : String? = null
+    var AlienCiv4Picture : Int? = null
+    var AlienCiv4MilitaryBase : Double? = null
+    var AlienCiv4Soldiers : Double? = null
+    var AlienCiv4SpacePlanes : Double? = null
+    var AlienCiv4SpaceJets : Double? = null
+    var AlienCiv4Tanks : Double? = null
+    var AlienCiv4NuclearSatelites : Double? = null
+    var isAlienCiv4Damaged : Double? = null
+    var alienCiv4RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv5Name : String? = null
+    var AlienCiv5Picture : Int? = null
+    var AlienCiv5MilitaryBase : Double? = null
+    var AlienCiv5Soldiers : Double? = null
+    var AlienCiv5SpacePlanes : Double? = null
+    var AlienCiv5SpaceJets : Double? = null
+    var AlienCiv5Tanks : Double? = null
+    var AlienCiv5NuclearSatelites : Double? = null
+    var isAlienCiv5Damaged : Double? = null
+    var alienCiv5RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv6Name : String? = null
+    var AlienCiv6Picture : Int? = null
+    var AlienCiv6MilitaryBase : Double? = null
+    var AlienCiv6Soldiers : Double? = null
+    var AlienCiv6SpacePlanes : Double? = null
+    var AlienCiv6SpaceJets : Double? = null
+    var AlienCiv6Tanks : Double? = null
+    var AlienCiv6NuclearSatelites : Double? = null
+    var isAlienCiv6Damaged : Double? = null
+    var alienCiv6RelationWithPlayer : Double? = null
+
+
+
+
+    var AlienCiv7Name : String? = null
+    var AlienCiv7Picture : Int? = null
+    var AlienCiv7MilitaryBase : Double? = null
+    var AlienCiv7Soldiers : Double? = null
+    var AlienCiv7SpacePlanes : Double? = null
+    var AlienCiv7SpaceJets : Double? = null
+    var AlienCiv7Tanks : Double? = null
+    var AlienCiv7NuclearSatelites : Double? = null
+    var isAlienCiv7Damaged : Double? = null
+    var alienCiv7RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv8Name : String? = null
+    var AlienCiv8Picture : Int? = null
+    var AlienCiv8MilitaryBase : Double? = null
+    var AlienCiv8Soldiers : Double? = null
+    var AlienCiv8SpacePlanes : Double? = null
+    var AlienCiv8SpaceJets : Double? = null
+    var AlienCiv8Tanks : Double? = null
+    var AlienCiv8NuclearSatelites : Double? = null
+    var isAlienCiv8Damaged : Double? = null
+    var alienCiv8RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv9Name : String? = null
+    var AlienCiv9Picture : Int? = null
+    var AlienCiv9MilitaryBase : Double? = null
+    var AlienCiv9Soldiers : Double? = null
+    var AlienCiv9SpacePlanes : Double? = null
+    var AlienCiv9SpaceJets : Double? = null
+    var AlienCiv9Tanks : Double? = null
+    var AlienCiv9NuclearSatelites : Double? = null
+    var isAlienCiv9Damaged : Double? = null
+    var alienCiv9RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv10Name : String? = null
+    var AlienCiv10Picture : Int? = null
+    var AlienCiv10MilitaryBase : Double? = null
+    var AlienCiv10Soldiers : Double? = null
+    var AlienCiv10SpacePlanes : Double? = null
+    var AlienCiv10SpaceJets : Double? = null
+    var AlienCiv10Tanks : Double? = null
+    var AlienCiv10NuclearSatelites : Double? = null
+    var isAlienCiv10Damaged : Double? = null
+    var alienCiv10RelationWithPlayer : Double? = null
+
+
+
+
+
+    var AlienCiv11Name : String? = null
+    var AlienCiv11Picture : Int? = null
+    var AlienCiv11MilitaryBase : Double? = null
+    var AlienCiv11Soldiers : Double? = null
+    var AlienCiv11SpacePlanes : Double? = null
+    var AlienCiv11SpaceJets : Double? = null
+    var AlienCiv11Tanks : Double? = null
+    var AlienCiv11NuclearSatelites : Double? = null
+    var isAlienCiv11Damaged : Double? = null
+    var alienCiv11RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv12Name : String? = null
+    var AlienCiv12Picture : Int? = null
+    var AlienCiv12MilitaryBase : Double? = null
+    var AlienCiv12Soldiers : Double? = null
+    var AlienCiv12SpacePlanes : Double? = null
+    var AlienCiv12SpaceJets : Double? = null
+    var AlienCiv12Tanks : Double? = null
+    var AlienCiv12NuclearSatelites : Double? = null
+    var isAlienCiv12Damaged : Double? = null
+    var alienCiv12RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv13Name : String? = null
+    var AlienCiv13Picture : Int? = null
+    var AlienCiv13MilitaryBase : Double? = null
+    var AlienCiv13Soldiers : Double? = null
+    var AlienCiv13SpacePlanes : Double? = null
+    var AlienCiv13SpaceJets : Double? = null
+    var AlienCiv13Tanks : Double? = null
+    var AlienCiv13NuclearSatelites : Double? = null
+    var isAlienCiv13Damaged : Double? = null
+    var alienCiv13RelationWithPlayer : Double? = null
+
+
+
+
+
+
+    var AlienCiv14Name : String? = null
+    var AlienCiv14Picture : Int? = null
+    var AlienCiv14MilitaryBase : Double? = null
+    var AlienCiv14Soldiers : Double? = null
+    var AlienCiv14SpacePlanes : Double? = null
+    var AlienCiv14SpaceJets : Double? = null
+    var AlienCiv14Tanks : Double? = null
+    var AlienCiv14NuclearSatelites : Double? = null
+    var isAlienCiv14Damaged : Double? = null
+    var alienCiv14RelationWithPlayer : Double? = null
+
+
+
+
+    var AlienCiv15Name : String? = null
+    var AlienCiv15Picture : Int? = null
+    var AlienCiv15MilitaryBase : Double? = null
+    var AlienCiv15Soldiers : Double? = null
+    var AlienCiv15SpacePlanes : Double? = null
+    var AlienCiv15SpaceJets : Double? = null
+    var AlienCiv15Tanks : Double? = null
+    var AlienCiv15NuclearSatelites : Double? = null
+    var isAlienCiv15Damaged : Double? = null
+    var alienCiv15RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+    var AlienCiv16Name : String? = null
+    var AlienCiv16Picture : Int? = null
+    var AlienCiv16MilitaryBase : Double? = null
+    var AlienCiv16Soldiers : Double? = null
+    var AlienCiv16SpacePlanes : Double? = null
+    var AlienCiv16SpaceJets : Double? = null
+    var AlienCiv16Tanks : Double? = null
+    var AlienCiv16NuclearSatelites : Double? = null
+    var isAlienCiv16Damaged : Double? = null
+    var alienCiv16RelationWithPlayer : Double? = null
+
+
+
+
+
+
+
+
+
 
 
     var alienMilitaryBase : Double? = null
@@ -503,34 +727,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-                        if (SelectedPlanet == 1) {
 
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv1Name"
-
-
-                            if (AlienCiv1Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv1Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
-                            } else if (AlienCiv1Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv1Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            }
-
-
-                            if (isAlienCiv1Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv1Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-
-
-
-                        }
 
 
 
@@ -555,13 +752,348 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+                        // Fetches the data of 3 civilisation in galaxy
+
+                        AlienCiv3Name = savedDataOfAliens.nameAlienRace3
+                        AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
+                        AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
+                        AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
+                        AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
+                        AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
+                        AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
+                        AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
+                        isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
+                        alienCiv3RelationWithPlayer = savedDataOfAliens.alienRace3RelationWithPlayer
+
+
+
+
+                        // Fetches the data of 4 civilisation in galaxy
+
+                        AlienCiv4Name = savedDataOfAliens.nameAlienRace4
+                        AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
+                        AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
+                        AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
+                        AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
+                        AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
+                        AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
+                        AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
+                        isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
+                        alienCiv4RelationWithPlayer = savedDataOfAliens.alienRace4RelationWithPlayer
+
+
+
+
+
+
+                        // Fetches the data of 5 civilisation in galaxy
+
+                        AlienCiv5Name = savedDataOfAliens.nameAlienRace5
+                        AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
+                        AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
+                        AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
+                        AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
+                        AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
+                        AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
+                        AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
+                        isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
+                        alienCiv5RelationWithPlayer = savedDataOfAliens.alienRace5RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 6 civilisation in galaxy
+
+                        AlienCiv6Name = savedDataOfAliens.nameAlienRace6
+                        AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
+                        AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
+                        AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
+                        AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
+                        AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
+                        AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
+                        AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
+                        isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
+                        alienCiv6RelationWithPlayer = savedDataOfAliens.alienRace6RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 7 civilisation in galaxy
+
+                        AlienCiv7Name = savedDataOfAliens.nameAlienRace7
+                        AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
+                        AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
+                        AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
+                        AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
+                        AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
+                        AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
+                        AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
+                        isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
+                        alienCiv7RelationWithPlayer = savedDataOfAliens.alienRace7RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 8 civilisation in galaxy
+
+                        AlienCiv8Name = savedDataOfAliens.nameAlienRace8
+                        AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
+                        AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
+                        AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
+                        AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
+                        AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
+                        AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
+                        AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
+                        isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
+                        alienCiv8RelationWithPlayer = savedDataOfAliens.alienRace8RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 9 civilisation in galaxy
+
+                        AlienCiv9Name = savedDataOfAliens.nameAlienRace9
+                        AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
+                        AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
+                        AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
+                        AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
+                        AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
+                        AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
+                        AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
+                        isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
+                        alienCiv9RelationWithPlayer = savedDataOfAliens.alienRace9RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 10 civilisation in galaxy
+
+                        AlienCiv10Name = savedDataOfAliens.nameAlienRace10
+                        AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
+                        AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
+                        AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
+                        AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
+                        AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
+                        AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
+                        AlienCiv10NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace10
+                        isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
+                        alienCiv10RelationWithPlayer = savedDataOfAliens.alienRace10RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 11 civilisation in galaxy
+
+                        AlienCiv11Name = savedDataOfAliens.nameAlienRace11
+                        AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
+                        AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
+                        AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
+                        AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
+                        AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
+                        AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
+                        AlienCiv11NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace11
+                        isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
+                        alienCiv11RelationWithPlayer = savedDataOfAliens.alienRace11RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 12 civilisation in galaxy
+
+                        AlienCiv12Name = savedDataOfAliens.nameAlienRace12
+                        AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
+                        AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
+                        AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
+                        AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
+                        AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
+                        AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
+                        AlienCiv12NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace12
+                        isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
+                        alienCiv12RelationWithPlayer = savedDataOfAliens.alienRace12RelationWithPlayer
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 13 civilisation in galaxy
+
+                        AlienCiv13Name = savedDataOfAliens.nameAlienRace13
+                        AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
+                        AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
+                        AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
+                        AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
+                        AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
+                        AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
+                        AlienCiv13NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace13
+                        isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
+                        alienCiv13RelationWithPlayer = savedDataOfAliens.alienRace13RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 14 civilisation in galaxy
+
+                        AlienCiv14Name = savedDataOfAliens.nameAlienRace14
+                        AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
+                        AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
+                        AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
+                        AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
+                        AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
+                        AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
+                        AlienCiv14NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace14
+                        isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
+                        alienCiv14RelationWithPlayer = savedDataOfAliens.alienRace14RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+
+                        // Fetches the data of 15 civilisation in galaxy
+
+                        AlienCiv15Name = savedDataOfAliens.nameAlienRace15
+                        AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
+                        AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
+                        AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
+                        AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
+                        AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
+                        AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
+                        AlienCiv15NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace15
+                        isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
+                        alienCiv15RelationWithPlayer = savedDataOfAliens.alienRace15RelationWithPlayer
+
+
+
+
+
+
+
+
+                        // Fetches the data of 16 civilisation in galaxy
+
+                        AlienCiv16Name = savedDataOfAliens.nameAlienRace16
+                        AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
+                        AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
+                        AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
+                        AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
+                        AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
+                        AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
+                        AlienCiv16NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace16
+                        isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
+                        alienCiv16RelationWithPlayer = savedDataOfAliens.alienRace16RelationWithPlayer
+
+
+
+
+
+
+
+
+
+
+                        if (SelectedPlanet == 1) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv1Name"
+
+
+                            if (AlienCiv1Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv1Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv1Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv1Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv1Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv1Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv1Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv1Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv1Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv1Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv1Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv1Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
 
 
 
 
 
                         if (SelectedPlanet == 2) {
-
 
                             // Displays name and picture of alien based on number
 
@@ -571,12 +1103,25 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                             if (AlienCiv2Picture == 1) {
                                 pictureofAlien.setImageResource(R.drawable.alien1)
                             } else if (AlienCiv2Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+                                pictureofAlien.setImageResource(R.drawable.alien2)
                             } else if (AlienCiv2Picture == 3) {
                                 pictureofAlien.setImageResource(R.drawable.alien3)
                             } else if (AlienCiv2Picture == 4) {
                                 pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv2Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv2Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv2Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv2Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv2Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv2Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
                             }
+
 
 
 
@@ -586,12 +1131,508 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                                 explosionPic.isVisible = true
                             }
 
+                        }
 
 
 
 
+                        if (SelectedPlanet == 3) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv3Name"
+
+
+                            if (AlienCiv3Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv3Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv3Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv3Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv3Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv3Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv3Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv3Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv3Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv3Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv3Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv3Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
 
                         }
+
+
+
+
+                        if (SelectedPlanet == 4) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv4Name"
+
+
+                            if (AlienCiv4Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv4Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv4Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv4Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv4Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv4Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv4Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv4Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv4Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv4Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv4Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv4Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+
+                        if (SelectedPlanet == 5) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv5Name"
+
+
+                            if (AlienCiv5Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv5Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv5Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv5Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv5Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv5Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv5Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv5Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv5Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv5Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv5Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv5Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 6) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv6Name"
+
+
+                            if (AlienCiv6Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv6Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv6Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv6Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv6Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv6Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv6Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv6Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv6Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv6Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv6Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv6Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 7) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv7Name"
+
+
+                            if (AlienCiv7Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv7Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv7Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv7Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv7Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv7Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv7Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv7Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv7Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv7Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv7Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv7Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+                        if (SelectedPlanet == 8) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv8Name"
+
+
+                            if (AlienCiv8Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv8Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv8Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv8Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv8Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv8Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv8Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv8Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv8Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv8Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv8Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv8Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 9) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv9Name"
+
+
+                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                            if (isAlienCiv9Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv9Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 10) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv10Name"
+
+
+                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                            if (isAlienCiv10Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv10Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 999) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv11Name"
+
+
+                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+
+                            if (isAlienCiv11Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv11Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 101010) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv12Name"
+
+
+                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+
+                            if (isAlienCiv12Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv12Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 10101010) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv13Name"
+
+
+                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                            if (isAlienCiv13Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv13Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+                        if (SelectedPlanet == 11) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv14Name"
+
+
+                            if (AlienCiv14Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv14Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv14Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv14Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv14Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv14Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv14Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv14Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv14Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv14Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv14Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv14Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 12) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv15Name"
+
+
+                            if (AlienCiv15Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv15Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv15Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv15Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv15Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv15Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv15Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv15Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv15Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv15Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv15Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv15Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
+
+                        if (SelectedPlanet == 13) {
+
+                            // Displays name and picture of alien based on number
+
+                            nameOfAlienTxt.text = "$AlienCiv16Name"
+
+
+                            if (AlienCiv16Picture == 1) {
+                                pictureofAlien.setImageResource(R.drawable.alien1)
+                            } else if (AlienCiv16Picture == 2) {
+                                pictureofAlien.setImageResource(R.drawable.alien2)
+                            } else if (AlienCiv16Picture == 3) {
+                                pictureofAlien.setImageResource(R.drawable.alien3)
+                            } else if (AlienCiv1Picture == 4) {
+                                pictureofAlien.setImageResource(R.drawable.alien4)
+                            } else if (AlienCiv16Picture == 5) {
+                                pictureofAlien.setImageResource(R.drawable.alien5)
+                            } else if (AlienCiv16Picture == 6) {
+                                pictureofAlien.setImageResource(R.drawable.alien6)
+                            } else if (AlienCiv16Picture == 7) {
+                                pictureofAlien.setImageResource(R.drawable.alien7)
+                            } else if (AlienCiv16Picture == 8) {
+                                pictureofAlien.setImageResource(R.drawable.alien8)
+                            } else if (AlienCiv16Picture == 9) {
+                                pictureofAlien.setImageResource(R.drawable.alien9)
+                            }  else if (AlienCiv16Picture == 10) {
+                                pictureofAlien.setImageResource(R.drawable.alien10)
+                            }
+
+
+
+
+                            if (isAlienCiv16Damaged!! <= 0) {
+                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
+                            } else if (isAlienCiv16Damaged!! == 1.0) {
+                                explosionPic.isVisible = true
+                            }
+
+                        }
+
+
+
 
 
 
@@ -853,6 +1894,419 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+                // Alien 3
+
+                if (SelectedPlanet == 3 && isAlienCiv3Damaged!! > 0) {
+
+                    alienCiv3RelationWithPlayer = alienCiv3RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 3 && isAlienCiv3Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+
+                // Alien 4
+
+                if (SelectedPlanet == 4 && isAlienCiv4Damaged!! > 0) {
+
+                    alienCiv4RelationWithPlayer = alienCiv4RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 4 && isAlienCiv4Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+                // Alien 5
+
+                if (SelectedPlanet == 5 && isAlienCiv5Damaged!! > 0) {
+
+                    alienCiv5RelationWithPlayer = alienCiv5RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 5 && isAlienCiv5Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+                // Alien 6
+
+                if (SelectedPlanet == 6 && isAlienCiv6Damaged!! > 0) {
+
+                    alienCiv6RelationWithPlayer = alienCiv6RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 6 && isAlienCiv6Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+
+
+                // Alien 7
+
+                if (SelectedPlanet == 7 && isAlienCiv7Damaged!! > 0) {
+
+                    alienCiv7RelationWithPlayer = alienCiv7RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 7 && isAlienCiv7Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+                // Alien 8
+
+                if (SelectedPlanet == 8 && isAlienCiv8Damaged!! > 0) {
+
+                    alienCiv8RelationWithPlayer = alienCiv8RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 8 && isAlienCiv8Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+                // Alien 9
+
+                if (SelectedPlanet == 9 && isAlienCiv9Damaged!! > 0) {
+
+                    alienCiv9RelationWithPlayer = alienCiv9RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 9 && isAlienCiv9Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+                // Alien 10
+
+                if (SelectedPlanet == 10 && isAlienCiv10Damaged!! > 0) {
+
+                    alienCiv10RelationWithPlayer = alienCiv10RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 10 && isAlienCiv10Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+                // Alien 11
+
+                if (SelectedPlanet == 999 && isAlienCiv11Damaged!! > 0) {
+
+                    alienCiv11RelationWithPlayer = alienCiv11RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 999 && isAlienCiv11Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+
+
+                // Alien 12
+
+                if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! > 0) {
+
+                    alienCiv12RelationWithPlayer = alienCiv12RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+                // Alien 13
+
+                if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! > 0) {
+
+                    alienCiv13RelationWithPlayer = alienCiv13RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+                // Alien 14
+
+                if (SelectedPlanet == 11 && isAlienCiv14Damaged!! > 0) {
+
+                    alienCiv14RelationWithPlayer = alienCiv14RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 11 && isAlienCiv14Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+
+                // Alien 15
+
+                if (SelectedPlanet == 12 && isAlienCiv15Damaged!! > 0) {
+
+                    alienCiv15RelationWithPlayer = alienCiv15RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 12 && isAlienCiv15Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
+
+
+
+                // Alien 16
+
+                if (SelectedPlanet == 13 && isAlienCiv16Damaged!! > 0) {
+
+                    alienCiv16RelationWithPlayer = alienCiv16RelationWithPlayer!! + 1.0
+
+                    moneyAmount -= 500
+
+                    donationMessage()
+
+                    NewMessageNotify = true
+
+                    val editNewMessageNotify = sharedNewMessageNotify.edit()
+                    editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                    editNewMessageNotify.commit()
+
+                    saveAlienData()
+                    savePlayerData()
+
+                    Toast.makeText(this, "You just sent a donation", Toast.LENGTH_SHORT).show()
+
+                } else if (SelectedPlanet == 13 && isAlienCiv16Damaged!! <= 0) {
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+                }
+
+
 
 
 
@@ -899,6 +2353,225 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                 startActivity(intent)
 
             } else if (SelectedPlanet == 2 && isAlienCiv2Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+
+
+            // Alien 3
+
+            if (SelectedPlanet == 3 && isAlienCiv3Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 3 && isAlienCiv3Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 4
+
+            if (SelectedPlanet == 4 && isAlienCiv4Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 4 && isAlienCiv4Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+
+
+            // Alien 5
+
+            if (SelectedPlanet == 5 && isAlienCiv5Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 5 && isAlienCiv5Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+
+
+
+
+            // Alien 6
+
+            if (SelectedPlanet == 6 && isAlienCiv6Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 6 && isAlienCiv6Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+            // Alien 7
+
+            if (SelectedPlanet == 7 && isAlienCiv7Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 7 && isAlienCiv7Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 8
+
+            if (SelectedPlanet == 8 && isAlienCiv8Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 8 && isAlienCiv8Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 9
+
+            if (SelectedPlanet == 9 && isAlienCiv9Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 9 && isAlienCiv9Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 10
+
+            if (SelectedPlanet == 10 && isAlienCiv10Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 10 && isAlienCiv10Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+
+            // Alien 11
+
+            if (SelectedPlanet == 999 && isAlienCiv11Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 999 && isAlienCiv11Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 12
+
+            if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 13
+
+            if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 14
+
+            if (SelectedPlanet == 11 && isAlienCiv14Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 11 && isAlienCiv14Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+            // Alien 15
+
+            if (SelectedPlanet == 12 && isAlienCiv15Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 12 && isAlienCiv15Damaged!! <= 0) {
+
+                Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+
+            // Alien 16
+
+            if (SelectedPlanet == 13 && isAlienCiv16Damaged!! > 0) {
+
+                val intent = Intent(this, WarSimulatorActivity :: class.java)
+                startActivity(intent)
+
+            } else if (SelectedPlanet == 13 && isAlienCiv16Damaged!! <= 0) {
 
                 Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
 
@@ -1059,6 +2732,892 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                     Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
 
                 }
+
+
+
+
+
+                // Alien civilisation 3
+
+
+                if (SelectedPlanet == 3 && isAlienCiv3Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv3Damaged = isAlienCiv3Damaged!! - 1.0
+                        alienCiv3RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv3Damaged = isAlienCiv3Damaged!! - 2.0
+                        alienCiv3RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv3NuclearSatelites!! > 0.0) {
+
+                        AlienCiv3NuclearSatelites = AlienCiv3NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv3NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 3 && isAlienCiv3Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+                // Alien civilisation 4
+
+
+                if (SelectedPlanet == 4 && isAlienCiv4Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv4Damaged = isAlienCiv4Damaged!! - 1.0
+                        alienCiv4RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv4Damaged = isAlienCiv4Damaged!! - 2.0
+                        alienCiv4RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv4NuclearSatelites!! > 0.0) {
+
+                        AlienCiv4NuclearSatelites = AlienCiv4NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv4NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 4 && isAlienCiv4Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 5
+
+
+                if (SelectedPlanet == 5 && isAlienCiv5Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv5Damaged = isAlienCiv5Damaged!! - 1.0
+                        alienCiv5RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv5Damaged = isAlienCiv5Damaged!! - 2.0
+                        alienCiv5RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv5NuclearSatelites!! > 0.0) {
+
+                        AlienCiv5NuclearSatelites = AlienCiv5NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv5NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 5 && isAlienCiv5Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+                // Alien civilisation 6
+
+
+                if (SelectedPlanet == 6 && isAlienCiv6Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv6Damaged = isAlienCiv6Damaged!! - 1.0
+                        alienCiv6RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv6Damaged = isAlienCiv6Damaged!! - 2.0
+                        alienCiv6RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv6NuclearSatelites!! > 0.0) {
+
+                        AlienCiv6NuclearSatelites = AlienCiv6NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv6NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 6 && isAlienCiv6Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 7
+
+
+                if (SelectedPlanet == 7 && isAlienCiv7Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv7Damaged = isAlienCiv7Damaged!! - 1.0
+                        alienCiv7RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv7Damaged = isAlienCiv7Damaged!! - 2.0
+                        alienCiv7RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv7NuclearSatelites!! > 0.0) {
+
+                        AlienCiv7NuclearSatelites = AlienCiv7NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv7NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 7 && isAlienCiv7Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+
+                // Alien civilisation 8
+
+
+                if (SelectedPlanet == 8 && isAlienCiv8Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv8Damaged = isAlienCiv8Damaged!! - 1.0
+                        alienCiv8RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv8Damaged = isAlienCiv8Damaged!! - 2.0
+                        alienCiv8RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv8NuclearSatelites!! > 0.0) {
+
+                        AlienCiv8NuclearSatelites = AlienCiv8NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv8NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 8 && isAlienCiv8Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+                // Alien civilisation 9
+
+
+                if (SelectedPlanet == 9 && isAlienCiv9Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv9Damaged = isAlienCiv9Damaged!! - 1.0
+                        alienCiv9RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv9Damaged = isAlienCiv9Damaged!! - 2.0
+                        alienCiv9RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv9NuclearSatelites!! > 0.0) {
+
+                        AlienCiv9NuclearSatelites = AlienCiv9NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv9NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 9 && isAlienCiv9Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 10
+
+
+                if (SelectedPlanet == 10 && isAlienCiv10Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv10Damaged = isAlienCiv10Damaged!! - 1.0
+                        alienCiv10RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv10Damaged = isAlienCiv10Damaged!! - 2.0
+                        alienCiv10RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv10NuclearSatelites!! > 0.0) {
+
+                        AlienCiv10NuclearSatelites = AlienCiv10NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv10NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 10 && isAlienCiv10Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+                // Alien civilisation 11
+
+
+                if (SelectedPlanet == 999 && isAlienCiv11Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv11Damaged = isAlienCiv11Damaged!! - 1.0
+                        alienCiv11RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv11Damaged = isAlienCiv11Damaged!! - 2.0
+                        alienCiv11RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv11NuclearSatelites!! > 0.0) {
+
+                        AlienCiv11NuclearSatelites = AlienCiv11NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv11NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 999 && isAlienCiv11Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+
+                // Alien civilisation 12
+
+
+                if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv12Damaged = isAlienCiv12Damaged!! - 1.0
+                        alienCiv12RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv12Damaged = isAlienCiv12Damaged!! - 2.0
+                        alienCiv12RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv12NuclearSatelites!! > 0.0) {
+
+                        AlienCiv12NuclearSatelites = AlienCiv12NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv12NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 101010 && isAlienCiv12Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+
+                // Alien civilisation 13
+
+
+                if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv13Damaged = isAlienCiv13Damaged!! - 1.0
+                        alienCiv13RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv13Damaged = isAlienCiv13Damaged!! - 2.0
+                        alienCiv13RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv13NuclearSatelites!! > 0.0) {
+
+                        AlienCiv13NuclearSatelites = AlienCiv13NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv13NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 10101010 && isAlienCiv13Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 14
+
+
+                if (SelectedPlanet == 11 && isAlienCiv14Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv14Damaged = isAlienCiv14Damaged!! - 1.0
+                        alienCiv14RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv14Damaged = isAlienCiv14Damaged!! - 2.0
+                        alienCiv14RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv14NuclearSatelites!! > 0.0) {
+
+                        AlienCiv14NuclearSatelites = AlienCiv14NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv14NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 11 && isAlienCiv14Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+                // Alien civilisation 15
+
+
+                if (SelectedPlanet == 12 && isAlienCiv15Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv15Damaged = isAlienCiv15Damaged!! - 1.0
+                        alienCiv15RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv15Damaged = isAlienCiv15Damaged!! - 2.0
+                        alienCiv15RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv15NuclearSatelites!! > 0.0) {
+
+                        AlienCiv15NuclearSatelites = AlienCiv15NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv15NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 12 && isAlienCiv15Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
+
+
+
+                // Alien civilisation 16
+
+
+                if (SelectedPlanet == 13 && isAlienCiv16Damaged!! > 0) { // Alien 1
+
+                    if(levelMilitaryBase < 5) {
+
+                        isAlienCiv16Damaged = isAlienCiv16Damaged!! - 1.0
+                        alienCiv16RelationWithPlayer = 0.0
+
+                    } else if (levelMilitaryBase == 5) {
+
+                        isAlienCiv16Damaged = isAlienCiv16Damaged!! - 2.0
+                        alienCiv16RelationWithPlayer = 0.0
+
+                    }
+
+
+
+                    sateliteQuantity -= 1
+
+                    Toast.makeText(this, "You struck this civilisation with a rain of nuclear missiles", Toast.LENGTH_SHORT).show()
+
+
+
+
+
+                    if (AlienCiv16NuclearSatelites!! > 0.0) {
+
+                        AlienCiv16NuclearSatelites = AlienCiv16NuclearSatelites!! - 1.0
+                        isDamagedAlivePlayer = isDamagedAlivePlayer - 1.0
+
+                        Toast.makeText(this, "You were struck back by the aliens nuclear satelites", Toast.LENGTH_SHORT).show()
+
+                        nuclearAttackMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+
+                    } else if (AlienCiv16NuclearSatelites!! <= 0) {
+                        failedNuclearResponseMessage()
+
+                        NewMessageNotify = true
+
+                        val editNewMessageNotify = sharedNewMessageNotify.edit()
+                        editNewMessageNotify.putBoolean("NewMessageNotify", NewMessageNotify)
+                        editNewMessageNotify.commit()
+                    }
+
+
+
+                } else if (SelectedPlanet == 13 && isAlienCiv16Damaged!! <= 0) {
+
+                    Toast.makeText(this, "Action not allowed, this alien race is destroyed", Toast.LENGTH_SHORT).show()
+
+                }
+
+
+
 
 
 
@@ -1895,45 +4454,146 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-          var dataOfAlienCivilisations = aliens(
+      var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
+          soldiersAlienRace1 = AlienCiv1Soldiers, spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
+          spaceJetsAlienRace1 = AlienCiv1SpaceJets, tanksAlienRace1 = AlienCiv1Tanks,
+          nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,  militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+          isAlienRace1Damaged = isAlienCiv1Damaged, alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
 
-              // Alien 1
-              nameAlienRace1 = AlienCiv1Name,
-              pictureAlienRace1 = AlienCiv1Picture,
-              militaryBaseAlienRace1 = AlienCiv1MilitaryBase,
+          /*Alien civilisation 1 aspects written*/
 
-              // Army Alien 1
-              soldiersAlienRace1 = AlienCiv1Soldiers,
-              spacePlanesAlienRace1 = AlienCiv1SpacePlanes,
-              spaceJetsAlienRace1 = AlienCiv1SpaceJets,
-              tanksAlienRace1 = AlienCiv1Tanks,
-              nuclearSatelitesAlienRace1 = AlienCiv1NuclearSatelites,
+          nameAlienRace2 = AlienCiv2Name, pictureAlienRace2 = AlienCiv2Picture,
+          soldiersAlienRace2 = AlienCiv2Soldiers, spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
+          spaceJetsAlienRace2 = AlienCiv2SpaceJets, tanksAlienRace2 = AlienCiv2Tanks,
+          nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites, militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+          isAlienRace2Damaged = isAlienCiv2Damaged, alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
 
-              // Level damage alien planet 1 and relations
-              alienRace1RelationWithPlayer = alienCiv1RelationWithPlayer,
-              isAlienRace1Damaged = isAlienCiv1Damaged,
+          /*Alien civilisation 2 aspects written*/
 
 
-              // Alien 2
-              nameAlienRace2 = AlienCiv2Name,
-              pictureAlienRace2 = AlienCiv2Picture,
-              militaryBaseAlienRace2 = AlienCiv2MilitaryBase,
+          nameAlienRace3 = AlienCiv3Name, pictureAlienRace3 = AlienCiv3Picture,
+          soldiersAlienRace3 = AlienCiv3Soldiers, spacePlanesAlienRace3 = AlienCiv3SpacePlanes,
+          spaceJetsAlienRace3 = AlienCiv3SpaceJets, tanksAlienRace3 = AlienCiv3Tanks,
+          nuclearSatelitesAlienRace3 = AlienCiv3NuclearSatelites, militaryBaseAlienRace3 = AlienCiv3MilitaryBase,
+          isAlienRace3Damaged = isAlienCiv3Damaged, alienRace3RelationWithPlayer = alienCiv3RelationWithPlayer,
 
-              // Army Alien 2
-              soldiersAlienRace2 = AlienCiv2Soldiers,
-              spacePlanesAlienRace2 = AlienCiv2SpacePlanes,
-              spaceJetsAlienRace2 = AlienCiv2SpaceJets,
-              tanksAlienRace2 = AlienCiv2Tanks,
-              nuclearSatelitesAlienRace2 = AlienCiv2NuclearSatelites,
+          /* Alien 3 */
 
-              // Level damage alien planet 1 and relations
-              alienRace2RelationWithPlayer = alienCiv2RelationWithPlayer,
-              isAlienRace2Damaged = isAlienCiv2Damaged
-          )
+          nameAlienRace4 = AlienCiv4Name, pictureAlienRace4 = AlienCiv4Picture,
+          soldiersAlienRace4 = AlienCiv4Soldiers, spacePlanesAlienRace4 = AlienCiv4SpacePlanes,
+          spaceJetsAlienRace4 = AlienCiv4SpaceJets, tanksAlienRace4 = AlienCiv4Tanks,
+          nuclearSatelitesAlienRace4 = AlienCiv4NuclearSatelites, militaryBaseAlienRace4 = AlienCiv4MilitaryBase,
+          isAlienRace4Damaged = isAlienCiv4Damaged, alienRace4RelationWithPlayer = alienCiv4RelationWithPlayer,
 
+          /* Alien 4 */
 
 
-          database.collection("users").document("User path").collection("Saved aliens data")
+          nameAlienRace5 = AlienCiv5Name, pictureAlienRace5 = AlienCiv5Picture,
+          soldiersAlienRace5 = AlienCiv5Soldiers, spacePlanesAlienRace5 = AlienCiv5SpacePlanes,
+          spaceJetsAlienRace5 = AlienCiv5SpaceJets, tanksAlienRace5 = AlienCiv5Tanks,
+          nuclearSatelitesAlienRace5 = AlienCiv5NuclearSatelites, militaryBaseAlienRace5 = AlienCiv5MilitaryBase,
+          isAlienRace5Damaged = isAlienCiv5Damaged, alienRace5RelationWithPlayer = alienCiv5RelationWithPlayer,
+
+          /* Alien 5 */
+
+          nameAlienRace6 = AlienCiv6Name, pictureAlienRace6 = AlienCiv6Picture,
+          soldiersAlienRace6 = AlienCiv6Soldiers, spacePlanesAlienRace6 = AlienCiv6SpacePlanes,
+          spaceJetsAlienRace6 = AlienCiv6SpaceJets, tanksAlienRace6 = AlienCiv6Tanks,
+          nuclearSatelitesAlienRace6 = AlienCiv6NuclearSatelites, militaryBaseAlienRace6 = AlienCiv6MilitaryBase,
+          isAlienRace6Damaged = isAlienCiv6Damaged, alienRace6RelationWithPlayer = alienCiv6RelationWithPlayer,
+
+          /* Alien 6 */
+
+          nameAlienRace7 = AlienCiv7Name, pictureAlienRace7 = AlienCiv7Picture,
+          soldiersAlienRace7 = AlienCiv7Soldiers, spacePlanesAlienRace7 = AlienCiv7SpacePlanes,
+          spaceJetsAlienRace7 = AlienCiv7SpaceJets, tanksAlienRace7 = AlienCiv7Tanks,
+          nuclearSatelitesAlienRace7 = AlienCiv7NuclearSatelites, militaryBaseAlienRace7 = AlienCiv7MilitaryBase,
+          isAlienRace7Damaged = isAlienCiv7Damaged, alienRace7RelationWithPlayer = alienCiv7RelationWithPlayer,
+
+          /* Alien 7 */
+
+          nameAlienRace8 = AlienCiv8Name, pictureAlienRace8 = AlienCiv8Picture,
+          soldiersAlienRace8 = AlienCiv8Soldiers, spacePlanesAlienRace8 = AlienCiv8SpacePlanes,
+          spaceJetsAlienRace8 = AlienCiv8SpaceJets, tanksAlienRace8 = AlienCiv8Tanks,
+          nuclearSatelitesAlienRace8 = AlienCiv8NuclearSatelites, militaryBaseAlienRace8 = AlienCiv8MilitaryBase,
+          isAlienRace8Damaged = isAlienCiv8Damaged, alienRace8RelationWithPlayer = alienCiv8RelationWithPlayer,
+
+          /* Alien 8 */
+
+
+          nameAlienRace9 = AlienCiv9Name, pictureAlienRace9 = AlienCiv9Picture,
+          soldiersAlienRace9 = AlienCiv9Soldiers, spacePlanesAlienRace9 = AlienCiv9SpacePlanes,
+          spaceJetsAlienRace9 = AlienCiv9SpaceJets, tanksAlienRace9 = AlienCiv9Tanks,
+          nuclearSatelitesAlienRace9 = AlienCiv9NuclearSatelites, militaryBaseAlienRace9 = AlienCiv9MilitaryBase,
+          isAlienRace9Damaged = isAlienCiv9Damaged, alienRace9RelationWithPlayer = alienCiv9RelationWithPlayer,
+
+          /* Alien 9 */
+
+          nameAlienRace10 = AlienCiv10Name, pictureAlienRace10 = AlienCiv10Picture,
+          soldiersAlienRace10 = AlienCiv10Soldiers, spacePlanesAlienRace10 = AlienCiv10SpacePlanes,
+          spaceJetsAlienRace10 = AlienCiv10SpaceJets, tanksAlienRace10 = AlienCiv10Tanks,
+          nuclearSatelitesAlienRace10 = AlienCiv10NuclearSatelites, militaryBaseAlienRace10 = AlienCiv10MilitaryBase,
+          isAlienRace10Damaged = isAlienCiv10Damaged, alienRace10RelationWithPlayer = alienCiv10RelationWithPlayer,
+
+          /* Alien 10 */
+
+          nameAlienRace11 = AlienCiv11Name, pictureAlienRace11 = AlienCiv11Picture,
+          soldiersAlienRace11 = AlienCiv11Soldiers, spacePlanesAlienRace11 = AlienCiv11SpacePlanes,
+          spaceJetsAlienRace11 = AlienCiv11SpaceJets, tanksAlienRace11 = AlienCiv11Tanks,
+          nuclearSatelitesAlienRace11 = AlienCiv11NuclearSatelites, militaryBaseAlienRace11 = AlienCiv11MilitaryBase,
+          isAlienRace11Damaged = isAlienCiv11Damaged, alienRace11RelationWithPlayer = alienCiv11RelationWithPlayer,
+
+          /* Alien 11 */
+
+
+
+          nameAlienRace12 = AlienCiv12Name, pictureAlienRace12 = AlienCiv12Picture,
+          soldiersAlienRace12 = AlienCiv12Soldiers, spacePlanesAlienRace12 = AlienCiv12SpacePlanes,
+          spaceJetsAlienRace12 = AlienCiv12SpaceJets, tanksAlienRace12 = AlienCiv12Tanks,
+          nuclearSatelitesAlienRace12 = AlienCiv12NuclearSatelites, militaryBaseAlienRace12 = AlienCiv12MilitaryBase,
+          isAlienRace12Damaged = isAlienCiv12Damaged, alienRace12RelationWithPlayer = alienCiv12RelationWithPlayer,
+
+          /* Alien 12 */
+
+          nameAlienRace13 = AlienCiv13Name, pictureAlienRace13 = AlienCiv13Picture,
+          soldiersAlienRace13 = AlienCiv13Soldiers, spacePlanesAlienRace13 = AlienCiv13SpacePlanes,
+          spaceJetsAlienRace13 = AlienCiv13SpaceJets, tanksAlienRace13 = AlienCiv13Tanks,
+          nuclearSatelitesAlienRace13 = AlienCiv13NuclearSatelites, militaryBaseAlienRace13 = AlienCiv13MilitaryBase,
+          isAlienRace13Damaged = isAlienCiv13Damaged, alienRace13RelationWithPlayer = alienCiv13RelationWithPlayer,
+
+          /* Alien 13 */
+
+          nameAlienRace14 = AlienCiv14Name, pictureAlienRace14 = AlienCiv14Picture,
+          soldiersAlienRace14 = AlienCiv14Soldiers, spacePlanesAlienRace14 = AlienCiv14SpacePlanes,
+          spaceJetsAlienRace14 = AlienCiv14SpaceJets, tanksAlienRace14 = AlienCiv14Tanks,
+          nuclearSatelitesAlienRace14 = AlienCiv14NuclearSatelites, militaryBaseAlienRace14 = AlienCiv14MilitaryBase,
+          isAlienRace14Damaged = isAlienCiv14Damaged, alienRace14RelationWithPlayer = alienCiv14RelationWithPlayer,
+
+          /* Alien 14 */
+
+
+          nameAlienRace15 = AlienCiv15Name, pictureAlienRace15= AlienCiv15Picture,
+          soldiersAlienRace15 = AlienCiv15Soldiers, spacePlanesAlienRace15 = AlienCiv15SpacePlanes,
+          spaceJetsAlienRace15 = AlienCiv15SpaceJets, tanksAlienRace15 = AlienCiv15Tanks,
+          nuclearSatelitesAlienRace15 = AlienCiv15NuclearSatelites, militaryBaseAlienRace15 = AlienCiv15MilitaryBase,
+          isAlienRace15Damaged = isAlienCiv15Damaged, alienRace15RelationWithPlayer = alienCiv15RelationWithPlayer,
+
+          /* Alien 15 */
+
+
+
+
+          nameAlienRace16 = AlienCiv16Name, pictureAlienRace16 = AlienCiv16Picture,
+          soldiersAlienRace16 = AlienCiv16Soldiers, spacePlanesAlienRace16 = AlienCiv16SpacePlanes,
+          spaceJetsAlienRace16 = AlienCiv16SpaceJets, tanksAlienRace16 = AlienCiv16Tanks,
+          nuclearSatelitesAlienRace16 = AlienCiv16NuclearSatelites, militaryBaseAlienRace16 = AlienCiv16MilitaryBase,
+          isAlienRace16Damaged = isAlienCiv16Damaged, alienRace16RelationWithPlayer = alienCiv16RelationWithPlayer)
+
+      /* Alien 16 */
+
+
+
+      database.collection("users").document("User path").collection("Saved aliens data")
               .document("Aliens data").set(dataOfAlienCivilisations)
 
 
