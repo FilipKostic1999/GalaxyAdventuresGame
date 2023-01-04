@@ -200,13 +200,16 @@
         app:layout_constraintHorizontal_bias="0.016"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.171"
+        app:layout_constraintVertical_bias="0.182"
         app:srcCompat="@drawable/resoursesicon" />
 
     <TextView
         android:id="@+id/coloniseTxt"
         android:layout_width="92dp"
         android:layout_height="33dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
         android:text="Colonise"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -226,5 +229,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.064"
         app:srcCompat="@drawable/moneysign" />
+
+    <ImageView
+        android:id="@+id/illegalExperiments"
+        android:layout_width="69dp"
+        android:layout_height="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ufo" />
+
+    <TextView
+        android:id="@+id/illegalExperimentsTxt"
+        android:layout_width="202dp"
+        android:layout_height="65dp"
+        android:text="Make illegal experiments on this primitive civilisation ? :)"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

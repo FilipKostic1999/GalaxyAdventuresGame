@@ -32,6 +32,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     lateinit var nuclearSateliteText : TextView
     lateinit var donateText : TextView
     lateinit var collectColonyMoney : ImageView
+    lateinit var illegalExperiments : ImageView
+    lateinit var illegalExperimentsTxt : TextView
 
 
 
@@ -381,6 +383,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         nuclearSateliteText = findViewById(R.id.nuclearSateliteText)
         donateText = findViewById(R.id.donateText)
         collectColonyMoney = findViewById(R.id.collectColonyMoney)
+        illegalExperiments = findViewById(R.id.illegalExperiments)
+        illegalExperimentsTxt = findViewById(R.id.illegalExperimentsTxt)
 
 
 
@@ -403,6 +407,10 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         collectColonyMoney.isVisible = false
         collectColonyMoney.isEnabled = false
+
+        illegalExperiments.isVisible = false
+        illegalExperiments.isEnabled = false
+        illegalExperimentsTxt.isVisible = false
 
 
 
@@ -2142,6 +2150,22 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        illegalExperiments.setOnClickListener {
+
+
+            if (isAlienCiv14Damaged!! > 0) {
+
+                alienCiv14RelationWithPlayer = 0.0
+
+                angryForExperimentsMessage()
+
+                saveAlienData()
+            }
+
+            Toast.makeText(this, "You made immoral experiments with this tribe", Toast.LENGTH_SHORT).show()
+
+
+        }
 
 
 
@@ -5382,6 +5406,28 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
         } else if (SelectedPlanet == 111111) {
 
+            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+            pictureofAlien.isVisible = false
+            spyArmyTextView.isVisible = false
+            spyBtn.isVisible = false
+            spyBtn.isEnabled = false
+            attackImg.isVisible = false
+            attackImg.isEnabled = false
+            strikeWithNuclearSatelitesBtn.isVisible = false
+            strikeWithNuclearSatelitesBtn.isEnabled = false
+            donateImg.isVisible = false
+            donateImg.isEnabled = false
+            sendASpyText.isVisible = false
+            attackTxt.isVisible = false
+            nuclearSateliteText.isVisible = false
+            donateText.isVisible = false
+            coloniseImg.isVisible = false
+            coloniseImg.isEnabled = false
+            coloniseTxt.isVisible = false
+            illegalExperiments.isVisible = true
+            illegalExperiments.isEnabled = true
+            illegalExperimentsTxt.isVisible = true
 
 
         } else if(SelectedPlanet==12) {
@@ -5415,6 +5461,41 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+    fun angryForExperimentsMessage() {
+
+
+        messageText = "$AlienCiv14Name :  You experimented on a primitive civilisation, this vile act will be met with consequences, we declare you war"
+
+
+        var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
+            docNumber = calculator)
+
+
+
+        database.collection("users").document("User path")
+            .collection("Messages").add(newMessage)
+
+
+            .addOnCompleteListener {
+
+
+
+            }
+
+        calculator = 0
+
+
+
+
+
+    }
+
+
+
 
 
 
