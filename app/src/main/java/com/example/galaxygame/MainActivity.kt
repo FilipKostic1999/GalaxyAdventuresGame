@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
     lateinit var repairWorldBtn : Button
+
 
 
     var moneyTaxAmount : Int = 0
@@ -332,6 +335,7 @@ class MainActivity : AppCompatActivity() {
 
 
     lateinit var database : FirebaseFirestore
+    lateinit var auth : FirebaseAuth
     lateinit var savedDataOfUser : playerData
     lateinit var savedDataOfAliens : aliens
     lateinit var containerRl : ConstraintLayout
@@ -364,6 +368,9 @@ class MainActivity : AppCompatActivity() {
 
 
         database = Firebase.firestore
+        auth = Firebase.auth
+        val user = auth.currentUser
+
 
 
         homeWorldExplosion.isVisible = false
@@ -418,7 +425,9 @@ class MainActivity : AppCompatActivity() {
         // Snapshot of player data
 
 
-            database.collection("users").document("User path")
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
                 .collection("Saved data")
 
                 .addSnapshotListener { snapshot, e ->
@@ -426,7 +435,6 @@ class MainActivity : AppCompatActivity() {
                         for (document in snapshot.documents) {
 
                             savedDataOfUser = document.toObject()!!
-
 
 
                             // Sets the saved values from the database to the variables of the activity
@@ -460,11 +468,6 @@ class MainActivity : AppCompatActivity() {
                             Log.d("!!!", "$moneyAmount")
 
 
-
-
-
-
-
                             // Displays the saved state and values of the views
 
                             moneyTextView.text = "${savedDataOfUser.savedMoneyAmount} Trilion"
@@ -478,25 +481,24 @@ class MainActivity : AppCompatActivity() {
 
                             if (levelGeneralDevelopment == 2) {
 
-                                containerRl.background = resources.getDrawable(R.drawable.evolvedsecond)
+                                containerRl.background =
+                                    resources.getDrawable(R.drawable.evolvedsecond)
 
                             } else if (levelGeneralDevelopment == 3) {
 
-                                containerRl.background = resources.getDrawable(R.drawable.developedthree)
+                                containerRl.background =
+                                    resources.getDrawable(R.drawable.developedthree)
 
                             }
-
-
-
-
 
 
                             // If the homeworld of the player is destroied or damaged
 
 
-                            if(isDamagedAlivePlayer <= 0) {
+                            if (isDamagedAlivePlayer <= 0) {
 
-                                containerRl.background = resources.getDrawable(R.drawable.destoiedplanet)
+                                containerRl.background =
+                                    resources.getDrawable(R.drawable.destoiedplanet)
                                 comandCenterPicture.isEnabled = false
                                 factory.isEnabled = false
                                 militaryBase.isEnabled = false
@@ -523,10 +525,11 @@ class MainActivity : AppCompatActivity() {
                             }
 
 
-
                         }
                     }
                 }
+
+        }
 
 
 
@@ -538,7 +541,10 @@ class MainActivity : AppCompatActivity() {
         // Snapshot of alien civilisations data
 
 
-        database.collection("users").document("User path")
+        if (user != null) {
+
+
+        database.collection("users").document(user.uid)
             .collection("Saved aliens data")
 
             .addSnapshotListener { snapshot, e ->
@@ -713,6 +719,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+        }
+
 
 
 
@@ -727,26 +735,25 @@ class MainActivity : AppCompatActivity() {
 
         // Snapshot of messages
 
+        if (user != null) {
 
-        database.collection("users").document("User path")
-            .collection("Messages")
+            database.collection("users").document("User path")
+                .collection("Messages")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedMessages = document.toObject()!!
+                            savedMessages = document.toObject()!!
 
-                        calculator += savedMessages.constantNumber
-
-
-
+                            calculator += savedMessages.constantNumber
 
 
-
+                        }
                     }
                 }
-            }
+
+        }
 
 
 
@@ -1398,15 +1405,26 @@ class MainActivity : AppCompatActivity() {
         var dataOfAlienCivilisations = aliens(nameAlienRace1 = null)
 
 
-        database.collection("users").document("User path").collection("Saved aliens data")
-            .document("Aliens data").set(dataOfAlienCivilisations)
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
-            .addOnCompleteListener {
+        if (user != null) {
+
+            database.collection("users").document("User path").collection("Saved aliens data")
+                .document("Aliens data").set(dataOfAlienCivilisations)
+
+
+                .addOnCompleteListener {
 
 
 
-            }
+                }
+
+        }
+
+
+
 
 
 
@@ -1430,17 +1448,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path").collection("Saved data")
-            .document("hmkogjk").set(data)
-
-
-            .addOnCompleteListener {
 
 
 
-            }
+        if (user != null) {
+
+            database.collection("users").document(user.uid).collection("Saved data")
+                .document("hmkogjk").set(data)
 
 
+                .addOnCompleteListener {
+
+
+                }
+
+        }
 
 
 
@@ -1469,15 +1491,30 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path").collection("Saved data")
-            .document("hmkogjk").set(data)
-
-
-            .addOnCompleteListener {
 
 
 
-            }
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+
+        if (user != null) {
+
+            database.collection("users").document(user.uid).collection("Saved data")
+                .document("hmkogjk").set(data)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+        }
+
+
+
+
+
     }
 
 
@@ -1518,17 +1555,29 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
 
 
-            .addOnCompleteListener {
+                .addOnCompleteListener {
 
 
 
-            }
+                }
 
-        calculator = 0
+            calculator = 0
+
+
+        }
+
+
+
+
 
 
 
@@ -2454,16 +2503,22 @@ class MainActivity : AppCompatActivity() {
 
            // Saving generated data of alien civilisations
 
+           auth = Firebase.auth
+           val user = auth.currentUser
 
-           database.collection("users").document("User path").collection("Saved aliens data")
-               .document("Aliens data").set(dataOfAlienCivilisations)
-
-
-               .addOnCompleteListener {
+           if (user != null) {
 
 
+               database.collection("users").document(user.uid).collection("Saved aliens data")
+                   .document("Aliens data").set(dataOfAlienCivilisations)
 
-               }
+
+                   .addOnCompleteListener {
+
+
+                   }
+
+           }
 
        }
 

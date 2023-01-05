@@ -12,7 +12,7 @@
         android:layout_width="141dp"
         android:layout_height="65dp"
         android:text="Donate 500 money to improve relationship"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +40,7 @@
         android:layout_height="42dp"
         android:text="Strike with nuclear satelites"
         android:textSize="16dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
         android:text="Attack"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.129"
@@ -78,20 +78,20 @@
 
     <ImageView
         android:id="@+id/pictureOfAlien"
-        android:layout_width="104dp"
-        android:layout_height="82dp"
+        android:layout_width="118dp"
+        android:layout_height="105dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.048"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/alien4" />
 
     <TextView
         android:id="@+id/nameOfAlienTxt"
-        android:layout_width="117dp"
-        android:layout_height="35dp"
+        android:layout_width="120dp"
+        android:layout_height="64dp"
         android:textColor="@color/black"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -100,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.313" />
 
     <ImageView
         android:id="@+id/spyBtn"
@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:text="Send a spy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -205,12 +205,12 @@
 
     <TextView
         android:id="@+id/coloniseTxt"
-        android:layout_width="92dp"
-        android:layout_height="33dp"
+        android:layout_width="130dp"
+        android:layout_height="69dp"
+        android:text="Colonise for 2000 money, 2000 resourses"
+        android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="Colonise"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.134"

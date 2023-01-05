@@ -10,6 +10,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -348,6 +350,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
     lateinit var savedDataOfAliens : aliens
     lateinit var database : FirebaseFirestore
+    lateinit var auth : FirebaseAuth
     lateinit var visitAlienWorldLayout : ConstraintLayout
 
 
@@ -392,6 +395,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
         database = Firebase.firestore
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
         strikeBtn.isVisible = false
@@ -539,156 +544,162 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        if (user != null) {
 
 
-        database.collection("users").document("User path")
-            .collection("Saved data")
+            database.collection("users").document(user.uid)
+                .collection("Saved data")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedDataOfUser = document.toObject()!!
+                            savedDataOfUser = document.toObject()!!
 
-                        moneyAmount = savedDataOfUser.savedMoneyAmount
-                        resoursesAmount = savedDataOfUser.savedResoursesAmount
-                        levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
-                        levelFactory = savedDataOfUser.savedLevelFactory
-                        levelMilitaryBase = savedDataOfUser.savedLevelMilitaryBase
-                        levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
-                        levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
-                        spionageLevelPlayer = savedDataOfUser.savedLevelSpionage
-
-
-                        soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
-                        airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
-                        cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
-                        airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
-                        tankQuantity = savedDataOfUser.savedTankUnitQuantity
-                        sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+                            moneyAmount = savedDataOfUser.savedMoneyAmount
+                            resoursesAmount = savedDataOfUser.savedResoursesAmount
+                            levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
+                            levelFactory = savedDataOfUser.savedLevelFactory
+                            levelMilitaryBase = savedDataOfUser.savedLevelMilitaryBase
+                            levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
+                            levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
+                            spionageLevelPlayer = savedDataOfUser.savedLevelSpionage
 
 
-                        isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
+                            soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
+                            airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
+                            cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
+                            airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
+                            tankQuantity = savedDataOfUser.savedTankUnitQuantity
+                            sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
 
 
-                        colonyId1 = savedDataOfUser.colonyId1
-                        colonyResourses1 = savedDataOfUser.colonyResourses1
+                            isDamagedAlivePlayer = savedDataOfUser.isDamagedAlive
+
+
+                            colonyId1 = savedDataOfUser.colonyId1
+                            colonyResourses1 = savedDataOfUser.colonyResourses1
 
 
 
 
-                        if (SelectedPlanet == 0 && colonyId1 == 0) {
+                            if (SelectedPlanet == 0 && colonyId1 == 0) {
 
-                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+                                visitAlienWorldLayout.background =
+                                    resources.getDrawable(R.drawable.playercolonized)
 
-                            coloniseImg.isVisible = false
-                            coloniseImg.isEnabled = false
-                            coloniseTxt.isVisible = false
+                                coloniseImg.isVisible = false
+                                coloniseImg.isEnabled = false
+                                coloniseTxt.isVisible = false
 
-                            collectColonyMoney.isVisible = true
-                            collectColonyMoney.isEnabled = true
+                                collectColonyMoney.isVisible = true
+                                collectColonyMoney.isEnabled = true
 
-                            pictureofAlien.isVisible = false
-                            spyArmyTextView.isVisible = false
-                            spyBtn.isVisible = false
-                            spyBtn.isEnabled = false
-                            attackImg.isVisible = false
-                            attackImg.isEnabled = false
-                            strikeWithNuclearSatelitesBtn.isVisible = false
-                            strikeWithNuclearSatelitesBtn.isEnabled = false
-                            donateImg.isVisible = false
-                            donateImg.isEnabled = false
-                            sendASpyText.isVisible = false
-                            attackTxt.isVisible = false
-                            nuclearSateliteText.isVisible = false
-                            donateText.isVisible = false
+                                pictureofAlien.isVisible = false
+                                spyArmyTextView.isVisible = false
+                                spyBtn.isVisible = false
+                                spyBtn.isEnabled = false
+                                attackImg.isVisible = false
+                                attackImg.isEnabled = false
+                                strikeWithNuclearSatelitesBtn.isVisible = false
+                                strikeWithNuclearSatelitesBtn.isEnabled = false
+                                donateImg.isVisible = false
+                                donateImg.isEnabled = false
+                                sendASpyText.isVisible = false
+                                attackTxt.isVisible = false
+                                nuclearSateliteText.isVisible = false
+                                donateText.isVisible = false
 
 
-                        } else if (SelectedPlanet == 111 && colonyId1 == 111) {
+                            } else if (SelectedPlanet == 111 && colonyId1 == 111) {
 
-                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+                                visitAlienWorldLayout.background =
+                                    resources.getDrawable(R.drawable.playercolonized)
 
-                            coloniseImg.isVisible = false
-                            coloniseImg.isEnabled = false
-                            coloniseTxt.isVisible = false
+                                coloniseImg.isVisible = false
+                                coloniseImg.isEnabled = false
+                                coloniseTxt.isVisible = false
 
-                            collectColonyMoney.isVisible = true
-                            collectColonyMoney.isEnabled = true
+                                collectColonyMoney.isVisible = true
+                                collectColonyMoney.isEnabled = true
 
-                            pictureofAlien.isVisible = false
-                            spyArmyTextView.isVisible = false
-                            spyBtn.isVisible = false
-                            spyBtn.isEnabled = false
-                            attackImg.isVisible = false
-                            attackImg.isEnabled = false
-                            strikeWithNuclearSatelitesBtn.isVisible = false
-                            strikeWithNuclearSatelitesBtn.isEnabled = false
-                            donateImg.isVisible = false
-                            donateImg.isEnabled = false
-                            sendASpyText.isVisible = false
-                            attackTxt.isVisible = false
-                            nuclearSateliteText.isVisible = false
-                            donateText.isVisible = false
+                                pictureofAlien.isVisible = false
+                                spyArmyTextView.isVisible = false
+                                spyBtn.isVisible = false
+                                spyBtn.isEnabled = false
+                                attackImg.isVisible = false
+                                attackImg.isEnabled = false
+                                strikeWithNuclearSatelitesBtn.isVisible = false
+                                strikeWithNuclearSatelitesBtn.isEnabled = false
+                                donateImg.isVisible = false
+                                donateImg.isEnabled = false
+                                sendASpyText.isVisible = false
+                                attackTxt.isVisible = false
+                                nuclearSateliteText.isVisible = false
+                                donateText.isVisible = false
 
-                        } else if (SelectedPlanet == 444 && colonyId1 == 444) {
+                            } else if (SelectedPlanet == 444 && colonyId1 == 444) {
 
-                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+                                visitAlienWorldLayout.background =
+                                    resources.getDrawable(R.drawable.playercolonized)
 
-                            coloniseImg.isVisible = false
-                            coloniseImg.isEnabled = false
-                            coloniseTxt.isVisible = false
+                                coloniseImg.isVisible = false
+                                coloniseImg.isEnabled = false
+                                coloniseTxt.isVisible = false
 
-                            collectColonyMoney.isVisible = true
-                            collectColonyMoney.isEnabled = true
+                                collectColonyMoney.isVisible = true
+                                collectColonyMoney.isEnabled = true
 
-                            pictureofAlien.isVisible = false
-                            spyArmyTextView.isVisible = false
-                            spyBtn.isVisible = false
-                            spyBtn.isEnabled = false
-                            attackImg.isVisible = false
-                            attackImg.isEnabled = false
-                            strikeWithNuclearSatelitesBtn.isVisible = false
-                            strikeWithNuclearSatelitesBtn.isEnabled = false
-                            donateImg.isVisible = false
-                            donateImg.isEnabled = false
-                            sendASpyText.isVisible = false
-                            attackTxt.isVisible = false
-                            nuclearSateliteText.isVisible = false
-                            donateText.isVisible = false
+                                pictureofAlien.isVisible = false
+                                spyArmyTextView.isVisible = false
+                                spyBtn.isVisible = false
+                                spyBtn.isEnabled = false
+                                attackImg.isVisible = false
+                                attackImg.isEnabled = false
+                                strikeWithNuclearSatelitesBtn.isVisible = false
+                                strikeWithNuclearSatelitesBtn.isEnabled = false
+                                donateImg.isVisible = false
+                                donateImg.isEnabled = false
+                                sendASpyText.isVisible = false
+                                attackTxt.isVisible = false
+                                nuclearSateliteText.isVisible = false
+                                donateText.isVisible = false
 
-                        } else if (SelectedPlanet == 777 && colonyId1 == 777) {
+                            } else if (SelectedPlanet == 777 && colonyId1 == 777) {
 
-                            visitAlienWorldLayout.background = resources.getDrawable(R.drawable.playercolonized)
+                                visitAlienWorldLayout.background =
+                                    resources.getDrawable(R.drawable.playercolonized)
 
-                            coloniseImg.isVisible = false
-                            coloniseImg.isEnabled = false
-                            coloniseTxt.isVisible = false
+                                coloniseImg.isVisible = false
+                                coloniseImg.isEnabled = false
+                                coloniseTxt.isVisible = false
 
-                            collectColonyMoney.isVisible = true
-                            collectColonyMoney.isEnabled = true
+                                collectColonyMoney.isVisible = true
+                                collectColonyMoney.isEnabled = true
 
-                            pictureofAlien.isVisible = false
-                            spyArmyTextView.isVisible = false
-                            spyBtn.isVisible = false
-                            spyBtn.isEnabled = false
-                            attackImg.isVisible = false
-                            attackImg.isEnabled = false
-                            strikeWithNuclearSatelitesBtn.isVisible = false
-                            strikeWithNuclearSatelitesBtn.isEnabled = false
-                            donateImg.isVisible = false
-                            donateImg.isEnabled = false
-                            sendASpyText.isVisible = false
-                            attackTxt.isVisible = false
-                            nuclearSateliteText.isVisible = false
-                            donateText.isVisible = false
+                                pictureofAlien.isVisible = false
+                                spyArmyTextView.isVisible = false
+                                spyBtn.isVisible = false
+                                spyBtn.isEnabled = false
+                                attackImg.isVisible = false
+                                attackImg.isEnabled = false
+                                strikeWithNuclearSatelitesBtn.isVisible = false
+                                strikeWithNuclearSatelitesBtn.isEnabled = false
+                                donateImg.isVisible = false
+                                donateImg.isEnabled = false
+                                sendASpyText.isVisible = false
+                                attackTxt.isVisible = false
+                                nuclearSateliteText.isVisible = false
+                                donateText.isVisible = false
+
+                            }
+
 
                         }
-
-
-
                     }
                 }
-            }
+
+        }
 
 
 
@@ -702,18 +713,17 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        if (user != null) {
 
 
-        database.collection("users").document("User path")
-            .collection("Saved aliens data")
+            database.collection("users").document(user.uid)
+                .collection("Saved aliens data")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedDataOfAliens = document.toObject()!!
-
-
+                            savedDataOfAliens = document.toObject()!!
 
 
                             // Fetches the data of first civilisation in galaxy
@@ -728,17 +738,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                             AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
 
                             isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
-                            alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
+                            alienCiv1RelationWithPlayer =
+                                savedDataOfAliens.alienRace1RelationWithPlayer
 
 
                             // Fetches the data of second civilisation in galaxy
@@ -753,1108 +754,1111 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
                             AlienCiv2MilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
 
                             isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
-                            alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
+                            alienCiv2RelationWithPlayer =
+                                savedDataOfAliens.alienRace2RelationWithPlayer
+
+
+                            // Fetches the data of 3 civilisation in galaxy
+
+                            AlienCiv3Name = savedDataOfAliens.nameAlienRace3
+                            AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
+                            AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
+                            AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
+                            AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
+                            AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
+                            AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
+                            AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
+                            isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
+                            alienCiv3RelationWithPlayer =
+                                savedDataOfAliens.alienRace3RelationWithPlayer
+
+
+                            // Fetches the data of 4 civilisation in galaxy
+
+                            AlienCiv4Name = savedDataOfAliens.nameAlienRace4
+                            AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
+                            AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
+                            AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
+                            AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
+                            AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
+                            AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
+                            AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
+                            isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
+                            alienCiv4RelationWithPlayer =
+                                savedDataOfAliens.alienRace4RelationWithPlayer
+
+
+                            // Fetches the data of 5 civilisation in galaxy
+
+                            AlienCiv5Name = savedDataOfAliens.nameAlienRace5
+                            AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
+                            AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
+                            AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
+                            AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
+                            AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
+                            AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
+                            AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
+                            isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
+                            alienCiv5RelationWithPlayer =
+                                savedDataOfAliens.alienRace5RelationWithPlayer
+
+
+                            // Fetches the data of 6 civilisation in galaxy
+
+                            AlienCiv6Name = savedDataOfAliens.nameAlienRace6
+                            AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
+                            AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
+                            AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
+                            AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
+                            AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
+                            AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
+                            AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
+                            isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
+                            alienCiv6RelationWithPlayer =
+                                savedDataOfAliens.alienRace6RelationWithPlayer
+
+
+                            // Fetches the data of 7 civilisation in galaxy
+
+                            AlienCiv7Name = savedDataOfAliens.nameAlienRace7
+                            AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
+                            AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
+                            AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
+                            AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
+                            AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
+                            AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
+                            AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
+                            isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
+                            alienCiv7RelationWithPlayer =
+                                savedDataOfAliens.alienRace7RelationWithPlayer
+
+
+                            // Fetches the data of 8 civilisation in galaxy
+
+                            AlienCiv8Name = savedDataOfAliens.nameAlienRace8
+                            AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
+                            AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
+                            AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
+                            AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
+                            AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
+                            AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
+                            AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
+                            isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
+                            alienCiv8RelationWithPlayer =
+                                savedDataOfAliens.alienRace8RelationWithPlayer
+
+
+                            // Fetches the data of 9 civilisation in galaxy
+
+                            AlienCiv9Name = savedDataOfAliens.nameAlienRace9
+                            AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
+                            AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
+                            AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
+                            AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
+                            AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
+                            AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
+                            AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
+                            isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
+                            alienCiv9RelationWithPlayer =
+                                savedDataOfAliens.alienRace9RelationWithPlayer
+
+
+                            // Fetches the data of 10 civilisation in galaxy
+
+                            AlienCiv10Name = savedDataOfAliens.nameAlienRace10
+                            AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
+                            AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
+                            AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
+                            AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
+                            AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
+                            AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
+                            AlienCiv10NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace10
+                            isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
+                            alienCiv10RelationWithPlayer =
+                                savedDataOfAliens.alienRace10RelationWithPlayer
+
+
+                            // Fetches the data of 11 civilisation in galaxy
+
+                            AlienCiv11Name = savedDataOfAliens.nameAlienRace11
+                            AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
+                            AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
+                            AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
+                            AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
+                            AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
+                            AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
+                            AlienCiv11NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace11
+                            isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
+                            alienCiv11RelationWithPlayer =
+                                savedDataOfAliens.alienRace11RelationWithPlayer
+
+
+                            // Fetches the data of 12 civilisation in galaxy
+
+                            AlienCiv12Name = savedDataOfAliens.nameAlienRace12
+                            AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
+                            AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
+                            AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
+                            AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
+                            AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
+                            AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
+                            AlienCiv12NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace12
+                            isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
+                            alienCiv12RelationWithPlayer =
+                                savedDataOfAliens.alienRace12RelationWithPlayer
+
+
+                            // Fetches the data of 13 civilisation in galaxy
+
+                            AlienCiv13Name = savedDataOfAliens.nameAlienRace13
+                            AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
+                            AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
+                            AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
+                            AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
+                            AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
+                            AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
+                            AlienCiv13NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace13
+                            isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
+                            alienCiv13RelationWithPlayer =
+                                savedDataOfAliens.alienRace13RelationWithPlayer
+
+
+                            // Fetches the data of 14 civilisation in galaxy
+
+                            AlienCiv14Name = savedDataOfAliens.nameAlienRace14
+                            AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
+                            AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
+                            AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
+                            AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
+                            AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
+                            AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
+                            AlienCiv14NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace14
+                            isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
+                            alienCiv14RelationWithPlayer =
+                                savedDataOfAliens.alienRace14RelationWithPlayer
+
+
+                            // Fetches the data of 15 civilisation in galaxy
+
+                            AlienCiv15Name = savedDataOfAliens.nameAlienRace15
+                            AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
+                            AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
+                            AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
+                            AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
+                            AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
+                            AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
+                            AlienCiv15NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace15
+                            isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
+                            alienCiv15RelationWithPlayer =
+                                savedDataOfAliens.alienRace15RelationWithPlayer
+
+
+                            // Fetches the data of 16 civilisation in galaxy
+
+                            AlienCiv16Name = savedDataOfAliens.nameAlienRace16
+                            AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
+                            AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
+                            AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
+                            AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
+                            AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
+                            AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
+                            AlienCiv16NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace16
+                            isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
+                            alienCiv16RelationWithPlayer =
+                                savedDataOfAliens.alienRace16RelationWithPlayer
+
+
+                            // Displays specific alien world based on what planet was selected and recorded by shared pref
+
+
+                            if (SelectedPlanet == 1) {
+
+                                if (AlienCiv1MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv1MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv1MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv1MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+
+                            } else if (SelectedPlanet == 2) {
+
+                                if (AlienCiv2MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv2MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv2MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv2MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 3) {
+
+                                if (AlienCiv3MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv3MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv3MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv3MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 4) {
+
+                                if (AlienCiv4MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv4MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv4MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv4MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 5) {
+
+                                if (AlienCiv5MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv5MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv5MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv5MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 6) {
+
+                                if (AlienCiv6MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv6MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv6MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv6MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 7) {
+
+                                if (AlienCiv7MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv7MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv7MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv7MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 8) {
+
+                                if (AlienCiv8MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv8MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv8MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv8MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 9) {
+
+                                if (AlienCiv9MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv9MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv9MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv9MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 999) {
+
+                                if (AlienCiv11MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv11MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv11MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv11MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 10) {
+
+                                if (AlienCiv10MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv10MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv10MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv10MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 101010) {
+
+                                if (AlienCiv12MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv12MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv12MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv12MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 10101010) {
+
+                                if (AlienCiv13MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv13MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv13MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv13MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 11) {
+
+                                if (AlienCiv14MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv14MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv14MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv14MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 12) {
+
+                                if (AlienCiv15MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv15MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv15MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv15MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
+
+                            } else if (SelectedPlanet == 13) {
+
+                                if (AlienCiv16MilitaryBase!! <= 2.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvone)
+                                } else if (AlienCiv16MilitaryBase!! == 3.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv16MilitaryBase!! == 4.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlvtwo)
+                                } else if (AlienCiv16MilitaryBase!! == 5.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.alienworldlv3)
+                                }
 
-
-
-
-
-
-                        // Fetches the data of 3 civilisation in galaxy
-
-                        AlienCiv3Name = savedDataOfAliens.nameAlienRace3
-                        AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
-                        AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
-                        AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
-                        AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
-                        AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
-                        AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
-                        AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
-                        isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
-                        alienCiv3RelationWithPlayer = savedDataOfAliens.alienRace3RelationWithPlayer
-
-
-
-
-                        // Fetches the data of 4 civilisation in galaxy
-
-                        AlienCiv4Name = savedDataOfAliens.nameAlienRace4
-                        AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
-                        AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
-                        AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
-                        AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
-                        AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
-                        AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
-                        AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
-                        isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
-                        alienCiv4RelationWithPlayer = savedDataOfAliens.alienRace4RelationWithPlayer
-
-
-
-
-
-
-                        // Fetches the data of 5 civilisation in galaxy
-
-                        AlienCiv5Name = savedDataOfAliens.nameAlienRace5
-                        AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
-                        AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
-                        AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
-                        AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
-                        AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
-                        AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
-                        AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
-                        isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
-                        alienCiv5RelationWithPlayer = savedDataOfAliens.alienRace5RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 6 civilisation in galaxy
-
-                        AlienCiv6Name = savedDataOfAliens.nameAlienRace6
-                        AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
-                        AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
-                        AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
-                        AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
-                        AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
-                        AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
-                        AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
-                        isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
-                        alienCiv6RelationWithPlayer = savedDataOfAliens.alienRace6RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 7 civilisation in galaxy
-
-                        AlienCiv7Name = savedDataOfAliens.nameAlienRace7
-                        AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
-                        AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
-                        AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
-                        AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
-                        AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
-                        AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
-                        AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
-                        isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
-                        alienCiv7RelationWithPlayer = savedDataOfAliens.alienRace7RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 8 civilisation in galaxy
-
-                        AlienCiv8Name = savedDataOfAliens.nameAlienRace8
-                        AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
-                        AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
-                        AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
-                        AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
-                        AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
-                        AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
-                        AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
-                        isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
-                        alienCiv8RelationWithPlayer = savedDataOfAliens.alienRace8RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 9 civilisation in galaxy
-
-                        AlienCiv9Name = savedDataOfAliens.nameAlienRace9
-                        AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
-                        AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
-                        AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
-                        AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
-                        AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
-                        AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
-                        AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
-                        isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
-                        alienCiv9RelationWithPlayer = savedDataOfAliens.alienRace9RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 10 civilisation in galaxy
-
-                        AlienCiv10Name = savedDataOfAliens.nameAlienRace10
-                        AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
-                        AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
-                        AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
-                        AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
-                        AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
-                        AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
-                        AlienCiv10NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace10
-                        isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
-                        alienCiv10RelationWithPlayer = savedDataOfAliens.alienRace10RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 11 civilisation in galaxy
-
-                        AlienCiv11Name = savedDataOfAliens.nameAlienRace11
-                        AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
-                        AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
-                        AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
-                        AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
-                        AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
-                        AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
-                        AlienCiv11NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace11
-                        isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
-                        alienCiv11RelationWithPlayer = savedDataOfAliens.alienRace11RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 12 civilisation in galaxy
-
-                        AlienCiv12Name = savedDataOfAliens.nameAlienRace12
-                        AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
-                        AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
-                        AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
-                        AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
-                        AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
-                        AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
-                        AlienCiv12NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace12
-                        isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
-                        alienCiv12RelationWithPlayer = savedDataOfAliens.alienRace12RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 13 civilisation in galaxy
-
-                        AlienCiv13Name = savedDataOfAliens.nameAlienRace13
-                        AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
-                        AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
-                        AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
-                        AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
-                        AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
-                        AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
-                        AlienCiv13NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace13
-                        isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
-                        alienCiv13RelationWithPlayer = savedDataOfAliens.alienRace13RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 14 civilisation in galaxy
-
-                        AlienCiv14Name = savedDataOfAliens.nameAlienRace14
-                        AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
-                        AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
-                        AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
-                        AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
-                        AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
-                        AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
-                        AlienCiv14NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace14
-                        isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
-                        alienCiv14RelationWithPlayer = savedDataOfAliens.alienRace14RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 15 civilisation in galaxy
-
-                        AlienCiv15Name = savedDataOfAliens.nameAlienRace15
-                        AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
-                        AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
-                        AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
-                        AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
-                        AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
-                        AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
-                        AlienCiv15NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace15
-                        isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
-                        alienCiv15RelationWithPlayer = savedDataOfAliens.alienRace15RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 16 civilisation in galaxy
-
-                        AlienCiv16Name = savedDataOfAliens.nameAlienRace16
-                        AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
-                        AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
-                        AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
-                        AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
-                        AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
-                        AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
-                        AlienCiv16NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace16
-                        isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
-                        alienCiv16RelationWithPlayer = savedDataOfAliens.alienRace16RelationWithPlayer
-
-
-
-
-
-
-                        // Displays specific alien world based on what planet was selected and recorded by shared pref
-
-
-                        if (SelectedPlanet == 1) {
-
-                            if (AlienCiv1MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv1MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv1MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv1MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
                             }
 
 
-                        } else if (SelectedPlanet == 2) {
 
-                            if (AlienCiv2MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv2MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv2MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv2MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            if (SelectedPlanet == 1) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv1Name"
+
+
+                                if (AlienCiv1Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv1Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv1Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv1Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv1Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv1Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv1Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv1Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv1Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv1Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv1Damaged!! <= 0.0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv1Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 3) {
 
-                            if (AlienCiv3MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv3MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv3MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv3MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+
+
+
+
+                            if (SelectedPlanet == 2) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv2Name"
+
+
+                                if (AlienCiv2Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv2Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv2Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv2Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv2Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv2Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv2Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv2Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv2Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv2Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv2Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv2Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 4) {
 
-                            if (AlienCiv4MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv4MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv4MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv4MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 3) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv3Name"
+
+
+                                if (AlienCiv3Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv3Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv3Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv3Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv3Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv3Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv3Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv3Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv3Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv3Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv3Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv3Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 5) {
 
-                            if (AlienCiv5MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv5MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv5MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv5MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 4) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv4Name"
+
+
+                                if (AlienCiv4Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv4Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv4Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv4Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv4Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv4Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv4Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv4Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv4Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv4Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv4Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv4Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 6) {
 
-                            if (AlienCiv6MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv6MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv6MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv6MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+
+                            if (SelectedPlanet == 5) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv5Name"
+
+
+                                if (AlienCiv5Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv5Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv5Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv5Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv5Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv5Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv5Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv5Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv5Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv5Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv5Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv5Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 7) {
 
-                            if (AlienCiv7MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv7MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv7MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv7MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 6) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv6Name"
+
+
+                                if (AlienCiv6Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv6Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv6Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv6Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv6Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv6Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv6Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv6Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv6Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv6Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv6Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv6Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 8) {
 
-                            if (AlienCiv8MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv8MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv8MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv8MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 7) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv7Name"
+
+
+                                if (AlienCiv7Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv7Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv7Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv7Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv7Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv7Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv7Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv7Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv7Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv7Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv7Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv7Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 9) {
 
-                            if (AlienCiv9MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv9MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv9MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv9MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+                            if (SelectedPlanet == 8) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv8Name"
+
+
+                                if (AlienCiv8Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv8Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv8Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv8Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv8Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv8Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv8Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv8Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv8Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv8Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv8Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv8Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 999) {
 
-                            if (AlienCiv11MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv11MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv11MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv11MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 9) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv9Name"
+
+
+                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                                if (isAlienCiv9Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv9Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 10) {
 
-                            if (AlienCiv10MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv10MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv10MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv10MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 10) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv10Name"
+
+
+                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                                if (isAlienCiv10Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv10Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet== 101010) {
 
-                            if (AlienCiv12MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv12MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv12MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv12MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 999) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv11Name"
+
+
+                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+
+                                if (isAlienCiv11Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv11Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet==10101010) {
 
-                            if (AlienCiv13MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv13MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv13MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv13MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 101010) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv12Name"
+
+
+                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+
+                                if (isAlienCiv12Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv12Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 11) {
 
-                            if (AlienCiv14MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv14MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv14MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv14MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 10101010) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv13Name"
+
+
+                                pictureofAlien.setImageResource(R.drawable.sporealientwo)
+
+
+
+                                if (isAlienCiv13Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv13Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if(SelectedPlanet==12) {
 
-                            if (AlienCiv15MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv15MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv15MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv15MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+                            if (SelectedPlanet == 11) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv14Name"
+
+
+                                if (AlienCiv14Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv14Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv14Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv14Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv14Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv14Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv14Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv14Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv14Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv14Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv14Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv14Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
 
-                        } else if (SelectedPlanet == 13) {
 
-                            if (AlienCiv16MilitaryBase!! <= 2.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvone)
-                            } else if (AlienCiv16MilitaryBase!! == 3.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv16MilitaryBase!! == 4.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlvtwo)
-                            } else if (AlienCiv16MilitaryBase!! == 5.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.alienworldlv3)
+
+
+                            if (SelectedPlanet == 12) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv15Name"
+
+
+                                if (AlienCiv15Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv15Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv15Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv15Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv15Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv15Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv15Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv15Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv15Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv15Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv15Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv15Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
                             }
+
+
+
+
+                            if (SelectedPlanet == 13) {
+
+                                // Displays name and picture of alien based on number
+
+                                nameOfAlienTxt.text = "$AlienCiv16Name"
+
+
+                                if (AlienCiv16Picture == 1) {
+                                    pictureofAlien.setImageResource(R.drawable.alien1)
+                                } else if (AlienCiv16Picture == 2) {
+                                    pictureofAlien.setImageResource(R.drawable.alien2)
+                                } else if (AlienCiv16Picture == 3) {
+                                    pictureofAlien.setImageResource(R.drawable.alien3)
+                                } else if (AlienCiv1Picture == 4) {
+                                    pictureofAlien.setImageResource(R.drawable.alien4)
+                                } else if (AlienCiv16Picture == 5) {
+                                    pictureofAlien.setImageResource(R.drawable.alien5)
+                                } else if (AlienCiv16Picture == 6) {
+                                    pictureofAlien.setImageResource(R.drawable.alien6)
+                                } else if (AlienCiv16Picture == 7) {
+                                    pictureofAlien.setImageResource(R.drawable.alien7)
+                                } else if (AlienCiv16Picture == 8) {
+                                    pictureofAlien.setImageResource(R.drawable.alien8)
+                                } else if (AlienCiv16Picture == 9) {
+                                    pictureofAlien.setImageResource(R.drawable.alien9)
+                                } else if (AlienCiv16Picture == 10) {
+                                    pictureofAlien.setImageResource(R.drawable.alien10)
+                                }
+
+
+
+
+                                if (isAlienCiv16Damaged!! <= 0) {
+                                    visitAlienWorldLayout.background =
+                                        resources.getDrawable(R.drawable.destoiedplanet)
+                                } else if (isAlienCiv16Damaged!! == 1.0) {
+                                    explosionPic.isVisible = true
+                                }
+
+                            }
+
 
                         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        if (SelectedPlanet == 1) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv1Name"
-
-
-                            if (AlienCiv1Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv1Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv1Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv1Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv1Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv1Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv1Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv1Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv1Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv1Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv1Damaged!! <= 0.0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv1Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-
-
-
-
-                        if (SelectedPlanet == 2) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv2Name"
-
-
-                            if (AlienCiv2Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv2Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv2Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv2Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv2Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv2Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv2Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv2Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv2Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv2Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv2Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv2Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 3) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv3Name"
-
-
-                            if (AlienCiv3Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv3Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv3Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv3Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv3Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv3Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv3Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv3Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv3Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv3Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv3Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv3Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 4) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv4Name"
-
-
-                            if (AlienCiv4Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv4Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv4Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv4Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv4Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv4Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv4Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv4Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv4Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv4Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv4Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv4Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-
-                        if (SelectedPlanet == 5) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv5Name"
-
-
-                            if (AlienCiv5Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv5Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv5Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv5Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv5Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv5Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv5Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv5Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv5Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv5Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv5Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv5Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 6) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv6Name"
-
-
-                            if (AlienCiv6Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv6Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv6Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv6Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv6Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv6Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv6Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv6Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv6Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv6Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv6Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv6Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 7) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv7Name"
-
-
-                            if (AlienCiv7Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv7Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv7Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv7Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv7Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv7Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv7Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv7Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv7Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv7Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv7Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv7Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-                        if (SelectedPlanet == 8) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv8Name"
-
-
-                            if (AlienCiv8Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv8Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv8Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv8Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv8Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv8Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv8Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv8Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv8Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv8Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv8Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv8Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 9) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv9Name"
-
-
-                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
-
-
-
-                            if (isAlienCiv9Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv9Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 10) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv10Name"
-
-
-                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
-
-
-
-                            if (isAlienCiv10Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv10Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 999) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv11Name"
-
-
-                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
-
-
-
-
-                            if (isAlienCiv11Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv11Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 101010) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv12Name"
-
-
-                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
-
-
-
-
-                            if (isAlienCiv12Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv12Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 10101010) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv13Name"
-
-
-                            pictureofAlien.setImageResource(R.drawable.sporealientwo)
-
-
-
-                            if (isAlienCiv13Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv13Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-                        if (SelectedPlanet == 11) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv14Name"
-
-
-                            if (AlienCiv14Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv14Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv14Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv14Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv14Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv14Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv14Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv14Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv14Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv14Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv14Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv14Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 12) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv15Name"
-
-
-                            if (AlienCiv15Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv15Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv15Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv15Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv15Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv15Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv15Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv15Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv15Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv15Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv15Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv15Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-                        if (SelectedPlanet == 13) {
-
-                            // Displays name and picture of alien based on number
-
-                            nameOfAlienTxt.text = "$AlienCiv16Name"
-
-
-                            if (AlienCiv16Picture == 1) {
-                                pictureofAlien.setImageResource(R.drawable.alien1)
-                            } else if (AlienCiv16Picture == 2) {
-                                pictureofAlien.setImageResource(R.drawable.alien2)
-                            } else if (AlienCiv16Picture == 3) {
-                                pictureofAlien.setImageResource(R.drawable.alien3)
-                            } else if (AlienCiv1Picture == 4) {
-                                pictureofAlien.setImageResource(R.drawable.alien4)
-                            } else if (AlienCiv16Picture == 5) {
-                                pictureofAlien.setImageResource(R.drawable.alien5)
-                            } else if (AlienCiv16Picture == 6) {
-                                pictureofAlien.setImageResource(R.drawable.alien6)
-                            } else if (AlienCiv16Picture == 7) {
-                                pictureofAlien.setImageResource(R.drawable.alien7)
-                            } else if (AlienCiv16Picture == 8) {
-                                pictureofAlien.setImageResource(R.drawable.alien8)
-                            } else if (AlienCiv16Picture == 9) {
-                                pictureofAlien.setImageResource(R.drawable.alien9)
-                            }  else if (AlienCiv16Picture == 10) {
-                                pictureofAlien.setImageResource(R.drawable.alien10)
-                            }
-
-
-
-
-                            if (isAlienCiv16Damaged!! <= 0) {
-                                visitAlienWorldLayout.background = resources.getDrawable(R.drawable.destoiedplanet)
-                            } else if (isAlienCiv16Damaged!! == 1.0) {
-                                explosionPic.isVisible = true
-                            }
-
-                        }
-
-
-
-
-
                     }
                 }
-            }
+
+        }
 
 
 
@@ -1869,25 +1873,25 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         // Snapshot of messages
 
 
-        database.collection("users").document("User path")
-            .collection("Messages")
+        if (user != null) {
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+            database.collection("users").document(user.uid)
+                .collection("Messages")
 
-                        savedMessages = document.toObject()!!
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        calculator += savedMessages.constantNumber
+                            savedMessages = document.toObject()!!
 
-
-
-
+                            calculator += savedMessages.constantNumber
 
 
+                        }
                     }
                 }
-            }
+
+        }
 
 
 
@@ -5513,19 +5517,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         var newMessage = messages(messageContent = messageText, isItNewMessage = true, constantNumber = 1,
             docNumber = calculator)
 
-
-
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -5894,18 +5905,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
 
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -6192,17 +6211,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -6244,15 +6272,23 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-      database.collection("users").document("User path").collection("Saved data")
-          .document("hmkogjk").set(data)
+
+      auth = Firebase.auth
+      val user = auth.currentUser
 
 
-          .addOnCompleteListener {
+      if (user != null) {
+
+          database.collection("users").document(user.uid).collection("Saved data")
+              .document("hmkogjk").set(data)
 
 
+              .addOnCompleteListener {
 
-          }
+
+              }
+
+      }
 
 
 
@@ -6596,18 +6632,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
 
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -6970,18 +7014,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
 
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
+
+
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -7337,19 +7389,26 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
-            }
 
-        calculator = 0
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
 
 
+                .addOnCompleteListener {
+
+
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -7518,7 +7577,16 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
-      database.collection("users").document("User path").collection("Saved aliens data")
+      auth = Firebase.auth
+      val user = auth.currentUser
+
+
+
+
+
+      if (user != null) {
+
+          database.collection("users").document(user.uid).collection("Saved aliens data")
               .document("Aliens data").set(dataOfAlienCivilisations)
 
 
@@ -7526,6 +7594,8 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
               }
+
+      }
 
 
       }

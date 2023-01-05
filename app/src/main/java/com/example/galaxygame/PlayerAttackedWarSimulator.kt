@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -400,6 +402,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     lateinit var savedDataOfAliens : aliens
     lateinit var savedDataOfUser : playerData
     lateinit var database : FirebaseFirestore
+    lateinit var auth : FirebaseAuth
 
 
     lateinit var backButton : Button
@@ -418,6 +421,8 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
         database = Firebase.firestore
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
         backButton = findViewById(R.id.backButton)
@@ -523,404 +528,317 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
+        if (user != null) {
 
 
-        database.collection("users").document("User path")
-            .collection("Saved data")
+            database.collection("users").document(user.uid)
+                .collection("Saved data")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedDataOfUser = document.toObject()!!
-
-
-
-                        // Sets the saved values from the database to the variables of the activity
-
-                        soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
-                        airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
-                        cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
-                        airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
-                        tankQuantity = savedDataOfUser.savedTankUnitQuantity
-                        sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
-
-                        moneyAmount = savedDataOfUser.savedMoneyAmount
-                        resoursesAmount = savedDataOfUser.savedResoursesAmount
-                        levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
-                        levelFactory = savedDataOfUser.savedLevelFactory
-                        militaryBaseLevel = savedDataOfUser.savedLevelMilitaryBase
-                        levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
-                        levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
-                        levelSpionage = savedDataOfUser.savedLevelSpionage
-                        damageToPlayerPlanet = savedDataOfUser.isDamagedAlive
-                        colonyId1 = savedDataOfUser.colonyId1
-                        colonyResourses1 = savedDataOfUser.colonyResourses1
+                            savedDataOfUser = document.toObject()!!
 
 
+                            // Sets the saved values from the database to the variables of the activity
+
+                            soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
+                            airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
+                            cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
+                            airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
+                            tankQuantity = savedDataOfUser.savedTankUnitQuantity
+                            sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+
+                            moneyAmount = savedDataOfUser.savedMoneyAmount
+                            resoursesAmount = savedDataOfUser.savedResoursesAmount
+                            levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
+                            levelFactory = savedDataOfUser.savedLevelFactory
+                            militaryBaseLevel = savedDataOfUser.savedLevelMilitaryBase
+                            levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
+                            levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
+                            levelSpionage = savedDataOfUser.savedLevelSpionage
+                            damageToPlayerPlanet = savedDataOfUser.isDamagedAlive
+                            colonyId1 = savedDataOfUser.colonyId1
+                            colonyResourses1 = savedDataOfUser.colonyResourses1
+
+
+                        }
+                    }
+                }
+
+        }
 
 
 
 
 
 
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Saved aliens data")
+
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
+
+                            savedDataOfAliens = document.toObject()!!
+
+
+                            // Fetches the data of first civilisation in galaxy
+
+                            AlienCiv1Name = savedDataOfAliens.nameAlienRace1
+                            AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
+                            AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
+                            AlienCiv1Soldiers = savedDataOfAliens.soldiersAlienRace1
+                            AlienCiv1SpacePlanes = savedDataOfAliens.spacePlanesAlienRace1
+                            AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
+                            AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
+                            AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
+                            isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
+                            alienCiv1RelationWithPlayer =
+                                savedDataOfAliens.alienRace1RelationWithPlayer
+
+
+                            // Fetches the data of second civilisation in galaxy
+
+                            AlienCiv2Name = savedDataOfAliens.nameAlienRace2
+                            AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
+                            AlienCiv2MilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
+                            AlienCiv2Soldiers = savedDataOfAliens.soldiersAlienRace2
+                            AlienCiv2SpacePlanes = savedDataOfAliens.spacePlanesAlienRace2
+                            AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
+                            AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
+                            AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
+                            isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
+                            alienCiv2RelationWithPlayer =
+                                savedDataOfAliens.alienRace2RelationWithPlayer
+
+
+                            // Fetches the data of 3 civilisation in galaxy
+
+                            AlienCiv3Name = savedDataOfAliens.nameAlienRace3
+                            AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
+                            AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
+                            AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
+                            AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
+                            AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
+                            AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
+                            AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
+                            isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
+                            alienCiv3RelationWithPlayer =
+                                savedDataOfAliens.alienRace3RelationWithPlayer
+
+
+                            // Fetches the data of 4 civilisation in galaxy
+
+                            AlienCiv4Name = savedDataOfAliens.nameAlienRace4
+                            AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
+                            AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
+                            AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
+                            AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
+                            AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
+                            AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
+                            AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
+                            isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
+                            alienCiv4RelationWithPlayer =
+                                savedDataOfAliens.alienRace4RelationWithPlayer
+
+
+                            // Fetches the data of 5 civilisation in galaxy
+
+                            AlienCiv5Name = savedDataOfAliens.nameAlienRace5
+                            AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
+                            AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
+                            AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
+                            AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
+                            AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
+                            AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
+                            AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
+                            isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
+                            alienCiv5RelationWithPlayer =
+                                savedDataOfAliens.alienRace5RelationWithPlayer
+
+
+                            // Fetches the data of 6 civilisation in galaxy
+
+                            AlienCiv6Name = savedDataOfAliens.nameAlienRace6
+                            AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
+                            AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
+                            AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
+                            AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
+                            AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
+                            AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
+                            AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
+                            isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
+                            alienCiv6RelationWithPlayer =
+                                savedDataOfAliens.alienRace6RelationWithPlayer
+
+
+                            // Fetches the data of 7 civilisation in galaxy
+
+                            AlienCiv7Name = savedDataOfAliens.nameAlienRace7
+                            AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
+                            AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
+                            AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
+                            AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
+                            AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
+                            AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
+                            AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
+                            isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
+                            alienCiv7RelationWithPlayer =
+                                savedDataOfAliens.alienRace7RelationWithPlayer
+
+
+                            // Fetches the data of 8 civilisation in galaxy
+
+                            AlienCiv8Name = savedDataOfAliens.nameAlienRace8
+                            AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
+                            AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
+                            AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
+                            AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
+                            AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
+                            AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
+                            AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
+                            isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
+                            alienCiv8RelationWithPlayer =
+                                savedDataOfAliens.alienRace8RelationWithPlayer
+
+
+                            // Fetches the data of 9 civilisation in galaxy
+
+                            AlienCiv9Name = savedDataOfAliens.nameAlienRace9
+                            AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
+                            AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
+                            AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
+                            AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
+                            AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
+                            AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
+                            AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
+                            isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
+                            alienCiv9RelationWithPlayer =
+                                savedDataOfAliens.alienRace9RelationWithPlayer
+
+
+                            // Fetches the data of 10 civilisation in galaxy
+
+                            AlienCiv10Name = savedDataOfAliens.nameAlienRace10
+                            AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
+                            AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
+                            AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
+                            AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
+                            AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
+                            AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
+                            AlienCiv10NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace10
+                            isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
+                            alienCiv10RelationWithPlayer =
+                                savedDataOfAliens.alienRace10RelationWithPlayer
+
+
+                            // Fetches the data of 11 civilisation in galaxy
+
+                            AlienCiv11Name = savedDataOfAliens.nameAlienRace11
+                            AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
+                            AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
+                            AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
+                            AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
+                            AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
+                            AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
+                            AlienCiv11NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace11
+                            isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
+                            alienCiv11RelationWithPlayer =
+                                savedDataOfAliens.alienRace11RelationWithPlayer
+
+
+                            // Fetches the data of 12 civilisation in galaxy
+
+                            AlienCiv12Name = savedDataOfAliens.nameAlienRace12
+                            AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
+                            AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
+                            AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
+                            AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
+                            AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
+                            AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
+                            AlienCiv12NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace12
+                            isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
+                            alienCiv12RelationWithPlayer =
+                                savedDataOfAliens.alienRace12RelationWithPlayer
+
+
+                            // Fetches the data of 13 civilisation in galaxy
+
+                            AlienCiv13Name = savedDataOfAliens.nameAlienRace13
+                            AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
+                            AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
+                            AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
+                            AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
+                            AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
+                            AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
+                            AlienCiv13NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace13
+                            isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
+                            alienCiv13RelationWithPlayer =
+                                savedDataOfAliens.alienRace13RelationWithPlayer
+
+
+                            // Fetches the data of 14 civilisation in galaxy
+
+                            AlienCiv14Name = savedDataOfAliens.nameAlienRace14
+                            AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
+                            AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
+                            AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
+                            AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
+                            AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
+                            AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
+                            AlienCiv14NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace14
+                            isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
+                            alienCiv14RelationWithPlayer =
+                                savedDataOfAliens.alienRace14RelationWithPlayer
+
+
+                            // Fetches the data of 15 civilisation in galaxy
+
+                            AlienCiv15Name = savedDataOfAliens.nameAlienRace15
+                            AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
+                            AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
+                            AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
+                            AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
+                            AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
+                            AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
+                            AlienCiv15NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace15
+                            isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
+                            alienCiv15RelationWithPlayer =
+                                savedDataOfAliens.alienRace15RelationWithPlayer
+
+
+                            // Fetches the data of 16 civilisation in galaxy
+
+                            AlienCiv16Name = savedDataOfAliens.nameAlienRace16
+                            AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
+                            AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
+                            AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
+                            AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
+                            AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
+                            AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
+                            AlienCiv16NuclearSatelites =
+                                savedDataOfAliens.nuclearSatelitesAlienRace16
+                            isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
+                            alienCiv16RelationWithPlayer =
+                                savedDataOfAliens.alienRace16RelationWithPlayer
+
+
+                        }
 
                     }
                 }
-            }
 
-
-
-
-
-
-
-        database.collection("users").document("User path")
-            .collection("Saved aliens data")
-
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
-
-                        savedDataOfAliens = document.toObject()!!
-
-
-
-
-                        // Fetches the data of first civilisation in galaxy
-
-                        AlienCiv1Name = savedDataOfAliens.nameAlienRace1
-                        AlienCiv1Picture = savedDataOfAliens.pictureAlienRace1
-                        AlienCiv1MilitaryBase = savedDataOfAliens.militaryBaseAlienRace1
-                        AlienCiv1Soldiers = savedDataOfAliens.soldiersAlienRace1
-                        AlienCiv1SpacePlanes = savedDataOfAliens.spacePlanesAlienRace1
-                        AlienCiv1SpaceJets = savedDataOfAliens.spaceJetsAlienRace1
-                        AlienCiv1Tanks = savedDataOfAliens.tanksAlienRace1
-                        AlienCiv1NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace1
-                        isAlienCiv1Damaged = savedDataOfAliens.isAlienRace1Damaged
-                        alienCiv1RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
-
-
-
-
-
-                        // Fetches the data of second civilisation in galaxy
-
-                        AlienCiv2Name = savedDataOfAliens.nameAlienRace2
-                        AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
-                        AlienCiv2MilitaryBase = savedDataOfAliens.militaryBaseAlienRace2
-                        AlienCiv2Soldiers = savedDataOfAliens.soldiersAlienRace2
-                        AlienCiv2SpacePlanes = savedDataOfAliens.spacePlanesAlienRace2
-                        AlienCiv2SpaceJets = savedDataOfAliens.spaceJetsAlienRace2
-                        AlienCiv2Tanks = savedDataOfAliens.tanksAlienRace2
-                        AlienCiv2NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace2
-                        isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
-                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 3 civilisation in galaxy
-
-                        AlienCiv3Name = savedDataOfAliens.nameAlienRace3
-                        AlienCiv3Picture = savedDataOfAliens.pictureAlienRace3
-                        AlienCiv3MilitaryBase = savedDataOfAliens.militaryBaseAlienRace3
-                        AlienCiv3Soldiers = savedDataOfAliens.soldiersAlienRace3
-                        AlienCiv3SpacePlanes = savedDataOfAliens.spacePlanesAlienRace3
-                        AlienCiv3SpaceJets = savedDataOfAliens.spaceJetsAlienRace3
-                        AlienCiv3Tanks = savedDataOfAliens.tanksAlienRace3
-                        AlienCiv3NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace3
-                        isAlienCiv3Damaged = savedDataOfAliens.isAlienRace3Damaged
-                        alienCiv3RelationWithPlayer = savedDataOfAliens.alienRace3RelationWithPlayer
-
-
-
-
-                        // Fetches the data of 4 civilisation in galaxy
-
-                        AlienCiv4Name = savedDataOfAliens.nameAlienRace4
-                        AlienCiv4Picture = savedDataOfAliens.pictureAlienRace4
-                        AlienCiv4MilitaryBase = savedDataOfAliens.militaryBaseAlienRace4
-                        AlienCiv4Soldiers = savedDataOfAliens.soldiersAlienRace4
-                        AlienCiv4SpacePlanes = savedDataOfAliens.spacePlanesAlienRace4
-                        AlienCiv4SpaceJets = savedDataOfAliens.spaceJetsAlienRace4
-                        AlienCiv4Tanks = savedDataOfAliens.tanksAlienRace4
-                        AlienCiv4NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace4
-                        isAlienCiv4Damaged = savedDataOfAliens.isAlienRace4Damaged
-                        alienCiv4RelationWithPlayer = savedDataOfAliens.alienRace4RelationWithPlayer
-
-
-
-
-
-
-                        // Fetches the data of 5 civilisation in galaxy
-
-                        AlienCiv5Name = savedDataOfAliens.nameAlienRace5
-                        AlienCiv5Picture = savedDataOfAliens.pictureAlienRace5
-                        AlienCiv5MilitaryBase = savedDataOfAliens.militaryBaseAlienRace5
-                        AlienCiv5Soldiers = savedDataOfAliens.soldiersAlienRace5
-                        AlienCiv5SpacePlanes = savedDataOfAliens.spacePlanesAlienRace5
-                        AlienCiv5SpaceJets = savedDataOfAliens.spaceJetsAlienRace5
-                        AlienCiv5Tanks = savedDataOfAliens.tanksAlienRace5
-                        AlienCiv5NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace5
-                        isAlienCiv5Damaged = savedDataOfAliens.isAlienRace5Damaged
-                        alienCiv5RelationWithPlayer = savedDataOfAliens.alienRace5RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 6 civilisation in galaxy
-
-                        AlienCiv6Name = savedDataOfAliens.nameAlienRace6
-                        AlienCiv6Picture = savedDataOfAliens.pictureAlienRace6
-                        AlienCiv6MilitaryBase = savedDataOfAliens.militaryBaseAlienRace6
-                        AlienCiv6Soldiers = savedDataOfAliens.soldiersAlienRace6
-                        AlienCiv6SpacePlanes = savedDataOfAliens.spacePlanesAlienRace6
-                        AlienCiv6SpaceJets = savedDataOfAliens.spaceJetsAlienRace6
-                        AlienCiv6Tanks = savedDataOfAliens.tanksAlienRace6
-                        AlienCiv6NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace6
-                        isAlienCiv6Damaged = savedDataOfAliens.isAlienRace6Damaged
-                        alienCiv6RelationWithPlayer = savedDataOfAliens.alienRace6RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 7 civilisation in galaxy
-
-                        AlienCiv7Name = savedDataOfAliens.nameAlienRace7
-                        AlienCiv7Picture = savedDataOfAliens.pictureAlienRace7
-                        AlienCiv7MilitaryBase = savedDataOfAliens.militaryBaseAlienRace7
-                        AlienCiv7Soldiers = savedDataOfAliens.soldiersAlienRace7
-                        AlienCiv7SpacePlanes = savedDataOfAliens.spacePlanesAlienRace7
-                        AlienCiv7SpaceJets = savedDataOfAliens.spaceJetsAlienRace7
-                        AlienCiv7Tanks = savedDataOfAliens.tanksAlienRace7
-                        AlienCiv7NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace7
-                        isAlienCiv7Damaged = savedDataOfAliens.isAlienRace7Damaged
-                        alienCiv7RelationWithPlayer = savedDataOfAliens.alienRace7RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 8 civilisation in galaxy
-
-                        AlienCiv8Name = savedDataOfAliens.nameAlienRace8
-                        AlienCiv8Picture = savedDataOfAliens.pictureAlienRace8
-                        AlienCiv8MilitaryBase = savedDataOfAliens.militaryBaseAlienRace8
-                        AlienCiv8Soldiers = savedDataOfAliens.soldiersAlienRace8
-                        AlienCiv8SpacePlanes = savedDataOfAliens.spacePlanesAlienRace8
-                        AlienCiv8SpaceJets = savedDataOfAliens.spaceJetsAlienRace8
-                        AlienCiv8Tanks = savedDataOfAliens.tanksAlienRace8
-                        AlienCiv8NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace8
-                        isAlienCiv8Damaged = savedDataOfAliens.isAlienRace8Damaged
-                        alienCiv8RelationWithPlayer = savedDataOfAliens.alienRace8RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 9 civilisation in galaxy
-
-                        AlienCiv9Name = savedDataOfAliens.nameAlienRace9
-                        AlienCiv9Picture = savedDataOfAliens.pictureAlienRace9
-                        AlienCiv9MilitaryBase = savedDataOfAliens.militaryBaseAlienRace9
-                        AlienCiv9Soldiers = savedDataOfAliens.soldiersAlienRace9
-                        AlienCiv9SpacePlanes = savedDataOfAliens.spacePlanesAlienRace9
-                        AlienCiv9SpaceJets = savedDataOfAliens.spaceJetsAlienRace9
-                        AlienCiv9Tanks = savedDataOfAliens.tanksAlienRace9
-                        AlienCiv9NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace9
-                        isAlienCiv9Damaged = savedDataOfAliens.isAlienRace9Damaged
-                        alienCiv9RelationWithPlayer = savedDataOfAliens.alienRace9RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 10 civilisation in galaxy
-
-                        AlienCiv10Name = savedDataOfAliens.nameAlienRace10
-                        AlienCiv10Picture = savedDataOfAliens.pictureAlienRace10
-                        AlienCiv10MilitaryBase = savedDataOfAliens.militaryBaseAlienRace10
-                        AlienCiv10Soldiers = savedDataOfAliens.soldiersAlienRace10
-                        AlienCiv10SpacePlanes = savedDataOfAliens.spacePlanesAlienRace10
-                        AlienCiv10SpaceJets = savedDataOfAliens.spaceJetsAlienRace10
-                        AlienCiv10Tanks = savedDataOfAliens.tanksAlienRace10
-                        AlienCiv10NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace10
-                        isAlienCiv10Damaged = savedDataOfAliens.isAlienRace10Damaged
-                        alienCiv10RelationWithPlayer = savedDataOfAliens.alienRace10RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 11 civilisation in galaxy
-
-                        AlienCiv11Name = savedDataOfAliens.nameAlienRace11
-                        AlienCiv11Picture = savedDataOfAliens.pictureAlienRace11
-                        AlienCiv11MilitaryBase = savedDataOfAliens.militaryBaseAlienRace11
-                        AlienCiv11Soldiers = savedDataOfAliens.soldiersAlienRace11
-                        AlienCiv11SpacePlanes = savedDataOfAliens.spacePlanesAlienRace11
-                        AlienCiv11SpaceJets = savedDataOfAliens.spaceJetsAlienRace11
-                        AlienCiv11Tanks = savedDataOfAliens.tanksAlienRace11
-                        AlienCiv11NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace11
-                        isAlienCiv11Damaged = savedDataOfAliens.isAlienRace11Damaged
-                        alienCiv11RelationWithPlayer = savedDataOfAliens.alienRace11RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 12 civilisation in galaxy
-
-                        AlienCiv12Name = savedDataOfAliens.nameAlienRace12
-                        AlienCiv12Picture = savedDataOfAliens.pictureAlienRace12
-                        AlienCiv12MilitaryBase = savedDataOfAliens.militaryBaseAlienRace12
-                        AlienCiv12Soldiers = savedDataOfAliens.soldiersAlienRace12
-                        AlienCiv12SpacePlanes = savedDataOfAliens.spacePlanesAlienRace12
-                        AlienCiv12SpaceJets = savedDataOfAliens.spaceJetsAlienRace12
-                        AlienCiv12Tanks = savedDataOfAliens.tanksAlienRace12
-                        AlienCiv12NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace12
-                        isAlienCiv12Damaged = savedDataOfAliens.isAlienRace12Damaged
-                        alienCiv12RelationWithPlayer = savedDataOfAliens.alienRace12RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 13 civilisation in galaxy
-
-                        AlienCiv13Name = savedDataOfAliens.nameAlienRace13
-                        AlienCiv13Picture = savedDataOfAliens.pictureAlienRace13
-                        AlienCiv13MilitaryBase = savedDataOfAliens.militaryBaseAlienRace13
-                        AlienCiv13Soldiers = savedDataOfAliens.soldiersAlienRace13
-                        AlienCiv13SpacePlanes = savedDataOfAliens.spacePlanesAlienRace13
-                        AlienCiv13SpaceJets = savedDataOfAliens.spaceJetsAlienRace13
-                        AlienCiv13Tanks = savedDataOfAliens.tanksAlienRace13
-                        AlienCiv13NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace13
-                        isAlienCiv13Damaged = savedDataOfAliens.isAlienRace13Damaged
-                        alienCiv13RelationWithPlayer = savedDataOfAliens.alienRace13RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 14 civilisation in galaxy
-
-                        AlienCiv14Name = savedDataOfAliens.nameAlienRace14
-                        AlienCiv14Picture = savedDataOfAliens.pictureAlienRace14
-                        AlienCiv14MilitaryBase = savedDataOfAliens.militaryBaseAlienRace14
-                        AlienCiv14Soldiers = savedDataOfAliens.soldiersAlienRace14
-                        AlienCiv14SpacePlanes = savedDataOfAliens.spacePlanesAlienRace14
-                        AlienCiv14SpaceJets = savedDataOfAliens.spaceJetsAlienRace14
-                        AlienCiv14Tanks = savedDataOfAliens.tanksAlienRace14
-                        AlienCiv14NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace14
-                        isAlienCiv14Damaged = savedDataOfAliens.isAlienRace14Damaged
-                        alienCiv14RelationWithPlayer = savedDataOfAliens.alienRace14RelationWithPlayer
-
-
-
-
-
-
-
-
-
-
-
-                        // Fetches the data of 15 civilisation in galaxy
-
-                        AlienCiv15Name = savedDataOfAliens.nameAlienRace15
-                        AlienCiv15Picture = savedDataOfAliens.pictureAlienRace15
-                        AlienCiv15MilitaryBase = savedDataOfAliens.militaryBaseAlienRace15
-                        AlienCiv15Soldiers = savedDataOfAliens.soldiersAlienRace15
-                        AlienCiv15SpacePlanes = savedDataOfAliens.spacePlanesAlienRace15
-                        AlienCiv15SpaceJets = savedDataOfAliens.spaceJetsAlienRace15
-                        AlienCiv15Tanks = savedDataOfAliens.tanksAlienRace15
-                        AlienCiv15NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace15
-                        isAlienCiv15Damaged = savedDataOfAliens.isAlienRace15Damaged
-                        alienCiv15RelationWithPlayer = savedDataOfAliens.alienRace15RelationWithPlayer
-
-
-
-
-
-
-
-
-                        // Fetches the data of 16 civilisation in galaxy
-
-                        AlienCiv16Name = savedDataOfAliens.nameAlienRace16
-                        AlienCiv16Picture = savedDataOfAliens.pictureAlienRace16
-                        AlienCiv16MilitaryBase = savedDataOfAliens.militaryBaseAlienRace16
-                        AlienCiv16Soldiers = savedDataOfAliens.soldiersAlienRace16
-                        AlienCiv16SpacePlanes = savedDataOfAliens.spacePlanesAlienRace16
-                        AlienCiv16SpaceJets = savedDataOfAliens.spaceJetsAlienRace16
-                        AlienCiv16Tanks = savedDataOfAliens.tanksAlienRace16
-                        AlienCiv16NuclearSatelites = savedDataOfAliens.nuclearSatelitesAlienRace16
-                        isAlienCiv16Damaged = savedDataOfAliens.isAlienRace16Damaged
-                        alienCiv16RelationWithPlayer = savedDataOfAliens.alienRace16RelationWithPlayer
-
-
-
-
-
-
-
-
-
-                    }
-
-                }
-            }
+        }
 
 
 
@@ -933,26 +851,26 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
         // Snapshot of messages
 
-
-        database.collection("users").document("User path")
-            .collection("Messages")
-
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
-
-                        savedMessages = document.toObject()!!
-
-                        calculator += savedMessages.constantNumber
+        if (user != null) {
 
 
+            database.collection("users").document(user.uid)
+                .collection("Messages")
+
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
+
+                            savedMessages = document.toObject()!!
+
+                            calculator += savedMessages.constantNumber
 
 
-
-
+                        }
                     }
                 }
-            }
+
+        }
 
 
 
@@ -4515,19 +4433,23 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+        if (user != null) {
+
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
 
 
-            .addOnCompleteListener {
+                .addOnCompleteListener {
 
 
+                }
 
-            }
+            calculator = 0
 
-        calculator = 0
-
-
+        }
 
 
 
@@ -4868,20 +4790,24 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
             docNumber = calculator)
 
 
-
-        database.collection("users").document("User path")
-            .collection("Messages").add(newMessage)
-
-
-            .addOnCompleteListener {
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
+        if (user != null) {
 
-            }
+            database.collection("users").document(user.uid)
+                .collection("Messages").add(newMessage)
 
-        calculator = 0
+
+                .addOnCompleteListener {
 
 
+                }
+
+            calculator = 0
+
+        }
 
 
 
@@ -4929,15 +4855,23 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path").collection("Saved data")
-            .document("hmkogjk").set(data)
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
-            .addOnCompleteListener {
+        if (user != null) {
+
+            database.collection("users").document(user.uid).collection("Saved data")
+                .document("hmkogjk").set(data)
 
 
+                .addOnCompleteListener {
 
-            }
+
+                }
+
+
+        }
 
 
 
@@ -5098,15 +5032,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
             /* Alien 16 */
 
 
+            auth = Firebase.auth
+            val user = auth.currentUser
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -5256,14 +5196,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -5414,14 +5361,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -5572,14 +5526,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -5731,14 +5692,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -5890,14 +5858,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6048,14 +6023,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6207,14 +6189,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6365,14 +6354,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6527,14 +6523,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6687,14 +6690,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -6846,14 +6856,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -7007,14 +7024,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -7165,14 +7189,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -7325,14 +7356,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
@@ -7485,14 +7523,21 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
 
-            database.collection("users").document("User path").collection("Saved aliens data")
-                .document("Aliens data").set(dataOfAlienCivilisations)
+            auth = Firebase.auth
+            val user = auth.currentUser
+
+            if (user != null) {
+
+                database.collection("users").document(user.uid).collection("Saved aliens data")
+                    .document("Aliens data").set(dataOfAlienCivilisations)
 
 
-                .addOnCompleteListener {
+                    .addOnCompleteListener {
 
 
-                }
+                    }
+
+            }
 
         }
 
