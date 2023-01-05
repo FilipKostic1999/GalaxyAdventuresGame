@@ -1307,7 +1307,7 @@ class RecruitArmy : AppCompatActivity() {
         if (user != null) {
 
 
-            database.collection("users").document("User path").collection("Saved data")
+            database.collection("users").document(user.uid).collection("Saved data")
                 .document("hmkogjk").set(data)
 
 
