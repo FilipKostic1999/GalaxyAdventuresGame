@@ -319,7 +319,7 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
     var alienSpaceJetsLeft : Double? = 0.0
     var alienMilitaryBase : Double? = null
     var alienRelationship : Double? = null
-    var levelDamageToAlienPlanet : Double = 0.0
+    var levelDamageToAlienPlanet : Double? = 2.0
 
 
 
@@ -4903,6 +4903,8 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
 
         if (selectedPlanetV == 1) {
+
+            Log.d("!!!", "$levelDamageToAlienPlanet leve dmg 0")
 
             var dataOfAlienCivilisations = aliens(nameAlienRace1 = AlienCiv1Name, pictureAlienRace1 = AlienCiv1Picture,
                 soldiersAlienRace1 = alienSoldiersLeft, spacePlanesAlienRace1 = alienSpacePlanesLeft,
