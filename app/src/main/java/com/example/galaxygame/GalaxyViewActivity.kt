@@ -8,6 +8,8 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.view.isVisible
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -38,6 +40,7 @@ class GalaxyViewActivity : AppCompatActivity() {
 
     lateinit var savedDataOfUser : playerData
     lateinit var database : FirebaseFirestore
+    lateinit var auth : FirebaseAuth
 
 
 
@@ -52,6 +55,8 @@ class GalaxyViewActivity : AppCompatActivity() {
 
 
         database = Firebase.firestore
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
@@ -84,28 +89,26 @@ class GalaxyViewActivity : AppCompatActivity() {
 
 
 
+        if (user != null) {
 
-        database.collection("users").document("User path")
-            .collection("Saved data")
+            database.collection("users").document(user.uid)
+                .collection("Saved data")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedDataOfUser = document.toObject()!!
+                            savedDataOfUser = document.toObject()!!
 
-                        scientificDevelopment = savedDataOfUser.savedLevelScienficResearch
-
-
-
+                            scientificDevelopment = savedDataOfUser.savedLevelScienficResearch
 
 
+                        }
                     }
                 }
-            }
 
 
-
+        }
 
 
 
