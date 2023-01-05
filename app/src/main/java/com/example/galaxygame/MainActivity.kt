@@ -564,7 +564,7 @@ class MainActivity : AppCompatActivity() {
 
                         AlienCiv2Name = savedDataOfAliens.nameAlienRace2
                         AlienCiv2Picture = savedDataOfAliens.pictureAlienRace2
-                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace1RelationWithPlayer
+                        alienCiv2RelationWithPlayer = savedDataOfAliens.alienRace2RelationWithPlayer
                         isAlienCiv2Damaged = savedDataOfAliens.isAlienRace2Damaged
 
 
@@ -737,7 +737,7 @@ class MainActivity : AppCompatActivity() {
 
         if (user != null) {
 
-            database.collection("users").document("User path")
+            database.collection("users").document(user.uid)
                 .collection("Messages")
 
                 .addSnapshotListener { snapshot, e ->
@@ -939,6 +939,7 @@ class MainActivity : AppCompatActivity() {
             // Alien 1
 
 
+            Log.d("!!!", "$isAlienAttacking attack!!!!")
 
             if (alienCiv1RelationWithPlayer != null) {
                 if (alienCiv1RelationWithPlayer!! <= 0 && isAlienCiv1Damaged!! > 0.0) {
@@ -963,6 +964,7 @@ class MainActivity : AppCompatActivity() {
             if (alienCiv2RelationWithPlayer != null) {
                 if (alienCiv2RelationWithPlayer!! <= 0 && isAlienCiv2Damaged!! > 0.0) {
 
+                    Log.d("!!!", "$isAlienAttacking attack!!!!")
 
                     if (isAlienAttacking == 2) {
                         // Saves which alien attacks so that the simulator knows which army to use as the attacker
@@ -974,6 +976,8 @@ class MainActivity : AppCompatActivity() {
                         isPlayerAttacked()
                     }
                 }
+
+            }
 
 
 
@@ -1310,7 +1314,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            } // CPU
+            // CPU
 
 
 
@@ -1411,7 +1415,7 @@ class MainActivity : AppCompatActivity() {
 
         if (user != null) {
 
-            database.collection("users").document("User path").collection("Saved aliens data")
+            database.collection("users").document(user.uid).collection("Saved aliens data")
                 .document("Aliens data").set(dataOfAlienCivilisations)
 
 

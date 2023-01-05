@@ -1245,7 +1245,7 @@ class RecruitArmy : AppCompatActivity() {
 
         if (user != null) {
 
-            database.collection("users").document("User path").collection("Saved aliens data")
+            database.collection("users").document(user.uid).collection("Saved aliens data")
                 .document("Aliens data").set(dataOfAlienCivilisations)
 
 
@@ -1334,10 +1334,10 @@ class RecruitArmy : AppCompatActivity() {
     fun aliensRecruit() {
 
 
-        var soldiersIncrease = (50..100).shuffled().last()
-        var spacePlaneIncrease = (10..20).shuffled().last()
+        var soldiersIncrease = (400..1000).shuffled().last()
+        var spacePlaneIncrease = (40..80).shuffled().last()
         var tanksIncrease = (5..10).shuffled().last()
-        var spaceJetsIncrease = (5..10).shuffled().last()
+        var spaceJetsIncrease = (10..15).shuffled().last()
 
         var repaiPlanet = (1..3).shuffled().last()
 
