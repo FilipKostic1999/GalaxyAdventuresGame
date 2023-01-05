@@ -414,6 +414,7 @@ class WarSimulatorActivity : AppCompatActivity() {
     lateinit var cargoPlanesEt : TextView
 
     lateinit var attackBtn : Button
+    lateinit var warSimBackBtn : Button
 
 
 
@@ -442,6 +443,7 @@ class WarSimulatorActivity : AppCompatActivity() {
         spaceJetsEt = findViewById(R.id.spaceJetsEt)
         cargoPlanesEt = findViewById(R.id.cargoPlanesEt)
         attackBtn = findViewById(R.id.attackBtn)
+        warSimBackBtn = findViewById(R.id.warSimBackBtn)
 
 
         auth = Firebase.auth
@@ -463,6 +465,16 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
         selectedPlanetV = SelectedPlanet
+
+
+
+        warSimBackBtn.setOnClickListener {
+
+            val intent = Intent(this, VisitAlienPlanetActivity :: class.java)
+            startActivity(intent)
+
+
+        }
 
 
 
@@ -933,6 +945,14 @@ class WarSimulatorActivity : AppCompatActivity() {
 
 
     }
+
+
+    override fun onBackPressed () {
+
+        Toast.makeText(this, "This action is not allowed", Toast.LENGTH_SHORT).show()
+
+    }
+
 
 
 

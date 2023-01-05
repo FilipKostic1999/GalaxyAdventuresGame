@@ -889,6 +889,16 @@ class PlayerAttackedWarSimulator : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+
+        Toast.makeText(this, "This action is not allowed", Toast.LENGTH_SHORT).show()
+
+    }
+
+
+
+
+
 
 
     fun simulateWar() {

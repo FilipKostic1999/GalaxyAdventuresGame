@@ -357,6 +357,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
     lateinit var spyBtn : ImageView
     lateinit var strikeWithNuclearSatelitesBtn : ImageView
     lateinit var strikeBtn : Button
+    lateinit var visitAlienPlanetBackBtn : Button
     lateinit var nuclearSateliteImg : ImageView
     lateinit var donateImg : ImageView
 
@@ -388,6 +389,7 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
         collectColonyMoney = findViewById(R.id.collectColonyMoney)
         illegalExperiments = findViewById(R.id.illegalExperiments)
         illegalExperimentsTxt = findViewById(R.id.illegalExperimentsTxt)
+        visitAlienPlanetBackBtn = findViewById(R.id.visitAlienPlanetBackBtn)
 
 
 
@@ -2331,6 +2333,13 @@ class VisitAlienPlanetActivity : AppCompatActivity() {
 
 
 
+        visitAlienPlanetBackBtn.setOnClickListener {
+
+            val intent = Intent(this, GalaxyViewActivity :: class.java)
+            startActivity(intent)
+
+
+        }
 
 
 

@@ -10,6 +10,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
@@ -64,6 +66,7 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
 
     lateinit var database : FirebaseFirestore
+    lateinit var auth : FirebaseAuth
     lateinit var savedDataOfUser : playerData
 
 
@@ -94,6 +97,8 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
 
         database = Firebase.firestore
+        auth = Firebase.auth
+        val user = auth.currentUser
 
 
 
@@ -105,212 +110,216 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
 
 
+        if (user != null) {
 
 
-        database.collection("users").document("User path")
-            .collection("Saved data")
+            database.collection("users").document(user.uid)
+                .collection("Saved data")
 
-            .addSnapshotListener { snapshot, e ->
-                if (snapshot != null) {
-                    for (document in snapshot.documents) {
+                .addSnapshotListener { snapshot, e ->
+                    if (snapshot != null) {
+                        for (document in snapshot.documents) {
 
-                        savedDataOfUser = document.toObject()!!
-
-
+                            savedDataOfUser = document.toObject()!!
 
 
-                        // Sets the saved values from the database to the variables of the activity
+                            // Sets the saved values from the database to the variables of the activity
 
 
-                        moneyAmmount = savedDataOfUser.savedMoneyAmount
-                        resoursces = savedDataOfUser.savedResoursesAmount
-                        levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
-                        levelFactory = savedDataOfUser.savedLevelFactory
-                        levelMilitaryBase = savedDataOfUser.savedLevelMilitaryBase
-                        levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
-                        levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
-                        levelSpionage = savedDataOfUser.savedLevelSpionage
-                        soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
-                        airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
-                        cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
-                        airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
-                        tankQuantity = savedDataOfUser.savedTankUnitQuantity
-                        sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
+                            moneyAmmount = savedDataOfUser.savedMoneyAmount
+                            resoursces = savedDataOfUser.savedResoursesAmount
+                            levelInfrastructure = savedDataOfUser.savedLevelInfrastructure
+                            levelFactory = savedDataOfUser.savedLevelFactory
+                            levelMilitaryBase = savedDataOfUser.savedLevelMilitaryBase
+                            levelGeneralDevelopment = savedDataOfUser.savedLevelGeneralDevelopment
+                            levelScientificDevelopment = savedDataOfUser.savedLevelScienficResearch
+                            levelSpionage = savedDataOfUser.savedLevelSpionage
+                            soldierQuantity = savedDataOfUser.savedSoldierUnitQuantity
+                            airplaneQuantity = savedDataOfUser.savedAirplaneUnitQuantity
+                            cargoplaneQuantity = savedDataOfUser.savedCargoPlaneQuantity
+                            airplane2Quantity = savedDataOfUser.savedAirplane2UnitQuantity
+                            tankQuantity = savedDataOfUser.savedTankUnitQuantity
+                            sateliteQuantity = savedDataOfUser.savedSateliteUnitQuantity
 
-                        colonyId1 = savedDataOfUser.colonyId1
-                        colonyResourses1 = savedDataOfUser.colonyResourses1
-
-
+                            colonyId1 = savedDataOfUser.colonyId1
+                            colonyResourses1 = savedDataOfUser.colonyResourses1
 
 
+                            // Displays the saved state and values of the views
 
 
-                        // Displays the saved state and values of the views
+                            Log.d("!!!", "$levelInfrastructure")
+
+                            if (levelInfrastructure == 2) {
+
+                                infrastructureTextView.text =
+                                    "Infrastructure (LV2), + 2 money per s. Next upgrade + 5 money per s. Cost: 1000 money, 1000 resourses."
 
 
-                        Log.d("!!!", "$levelInfrastructure")
+                            } else if (levelInfrastructure == 3) {
 
-                        if (levelInfrastructure == 2) {
-
-                            infrastructureTextView.text = "Infrastructure (LV2), + 2 money per s. Next upgrade + 5 money per s. Cost: 1000 money, 1000 resourses."
-
-
-                        } else if (levelInfrastructure == 3) {
-
-                            infrastructureTextView.text = "Infrastructure (LV3), + 5 money per s. Next upgrade + 10 money per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
+                                infrastructureTextView.text =
+                                    "Infrastructure (LV3), + 5 money per s. Next upgrade + 10 money per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
 
 
-                        } else if (levelInfrastructure == 4) {
+                            } else if (levelInfrastructure == 4) {
 
-                            infrastructureTextView.text = "Infrastructure (LV4), + 10 money per s. Next upgrade + 50 money per s. Cost: 20000 money, 20000 resourses (general dev. LV 3 required)"
+                                infrastructureTextView.text =
+                                    "Infrastructure (LV4), + 10 money per s. Next upgrade + 50 money per s. Cost: 20000 money, 20000 resourses (general dev. LV 3 required)"
 
 
-                        } else if (levelInfrastructure == 5) {
+                            } else if (levelInfrastructure == 5) {
 
-                            infrastructureTextView.text = "Infrastructure LV 5"
+                                infrastructureTextView.text = "Infrastructure LV 5"
+
+                            }
+
+
+
+
+                            if (levelFactory == 2) {
+
+                                factoryTextView.text =
+                                    "Factory LV2, + 2 resourses per s. Next upgrade + 5 resourses per s. Cost: 1000 money, 1000 resourses"
+
+
+                            } else if (levelFactory == 3) {
+
+                                factoryTextView.text =
+                                    "Factory LV3, + 5 resourses per s. Next upgrade + 10 resourses per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
+
+                            } else if (levelFactory == 4) {
+
+                                factoryTextView.text =
+                                    "Factory LV4, + 10 resourses per s. Next upgrade + 50 resourses per s. Cost: 20000 money, 15000 resourses (general dev. LV 3 required)"
+
+
+                            } else if (levelFactory == 5) {
+
+                                factoryTextView.text = "Factory LV 5"
+
+                            }
+
+
+
+
+
+
+
+
+                            if (levelMilitaryBase == 2) {
+
+                                militaryBaseTextView.text =
+                                    "Military base LV2. Unlocks new troops and levels up old ones. Next level cost: 3000 money, 2000 resourses (general dev. LV 2 required)"
+
+
+                            } else if (levelMilitaryBase == 3) {
+
+                                militaryBaseTextView.text =
+                                    "Military base LV3. Unlocks new troops and levels up old ones. Next level cost: 20000 money, 15000 resourses"
+
+
+                            } else if (levelMilitaryBase == 4) {
+
+                                militaryBaseTextView.text =
+                                    "Military base LV4. Unlocks new troops and levels up old ones. Next level cost: 40000 money, 40000 resourses (general dev. LV 3 required)"
+
+
+                            } else if (levelMilitaryBase == 5) {
+
+                                militaryBaseTextView.text = "Military base LV 5"
+
+                            }
+
+
+
+
+
+
+
+
+
+
+                            if (levelGeneralDevelopment == 2) {
+
+                                generalDevelopmentTextView.text =
+                                    "General Development of world LV2. Unlocks new structures and modernises the worlds design. Cost: 80000 money, 60000 resourses (science LV 5 required)"
+
+
+                            } else if (levelGeneralDevelopment == 3) {
+
+                                generalDevelopmentTextView.text = "General development LV3"
+
+                            }
+
+
+
+
+
+
+                            if (levelScientificDevelopment == 2) {
+
+                                scientificDevelopmentTextView.text =
+                                    "Scientific research LV2. Allow to travel further in space. Cost: money 800, reourses 450 (general dev. LV 2 required)"
+
+
+                            } else if (levelScientificDevelopment == 3) {
+
+                                scientificDevelopmentTextView.text =
+                                    "Scientific research LV3. Allow to travel further in space. Cost: money 10000, reourses 10000"
+
+
+                            } else if (levelScientificDevelopment == 4) {
+
+                                scientificDevelopmentTextView.text =
+                                    "Scientific research LV4. Allow to travel further in space. Cost: money 15000, reourses 15000"
+
+
+                            } else if (levelScientificDevelopment == 5) {
+
+                                scientificDevelopmentTextView.text = "Scientific research LV 5"
+
+                            }
+
+
+
+
+
+
+
+
+
+
+                            if (levelSpionage == 2) {
+
+                                spionageTextView.text =
+                                    "Spionage LV2. Improves chance of spying without being detected. Cost: money 4000, resourses 4000 (general dev. LV 2 required)"
+
+
+                            } else if (levelSpionage == 3) {
+
+                                spionageTextView.text =
+                                    "Spionage LV3. Improves chance of spying without being detected. Cost: money 10000, resourses 10000"
+
+
+                            } else if (levelSpionage == 4) {
+
+                                spionageTextView.text =
+                                    "Spionage LV4. Improves chance of spying without being detected. Cost: money 40000, resourses 40000"
+
+
+                            } else if (levelSpionage == 5) {
+
+                                spionageTextView.text = "Spionage LV 5"
+
+                            }
+
 
                         }
-
-
-
-
-                        if (levelFactory == 2) {
-
-                            factoryTextView.text = "Factory LV2, + 2 resourses per s. Next upgrade + 5 resourses per s. Cost: 1000 money, 1000 resourses"
-
-
-                        } else if (levelFactory == 3) {
-
-                            factoryTextView.text = "Factory LV3, + 5 resourses per s. Next upgrade + 10 resourses per s. Cost: 4500 money, 4500 resourses (general dev. LV 2 required)"
-
-                        } else if (levelFactory == 4) {
-
-                            factoryTextView.text = "Factory LV4, + 10 resourses per s. Next upgrade + 50 resourses per s. Cost: 20000 money, 15000 resourses (general dev. LV 3 required)"
-
-
-                        } else if (levelFactory == 5) {
-
-                            factoryTextView.text = "Factory LV 5"
-
-                        }
-
-
-
-
-
-
-
-
-                        if (levelMilitaryBase == 2) {
-
-                            militaryBaseTextView.text = "Military base LV2. Unlocks new troops and levels up old ones. Next level cost: 3000 money, 2000 resourses (general dev. LV 2 required)"
-
-
-                        } else if (levelMilitaryBase == 3) {
-
-                            militaryBaseTextView.text = "Military base LV3. Unlocks new troops and levels up old ones. Next level cost: 20000 money, 15000 resourses"
-
-
-                        } else if (levelMilitaryBase == 4) {
-
-                            militaryBaseTextView.text = "Military base LV4. Unlocks new troops and levels up old ones. Next level cost: 40000 money, 40000 resourses (general dev. LV 3 required)"
-
-
-                        } else if (levelMilitaryBase == 5) {
-
-                            militaryBaseTextView.text = "Military base LV 5"
-
-                        }
-
-
-
-
-
-
-
-
-
-
-                        if (levelGeneralDevelopment == 2) {
-
-                            generalDevelopmentTextView.text = "General Development of world LV2. Unlocks new structures and modernises the worlds design. Cost: 80000 money, 60000 resourses (science LV 5 required)"
-
-
-                        } else if (levelGeneralDevelopment == 3) {
-
-                            generalDevelopmentTextView.text = "General development LV3"
-
-                        }
-
-
-
-
-
-
-                        if (levelScientificDevelopment == 2) {
-
-                            scientificDevelopmentTextView.text = "Scientific research LV2. Allow to travel further in space. Cost: money 800, reourses 450 (general dev. LV 2 required)"
-
-
-                        } else if (levelScientificDevelopment == 3) {
-
-                            scientificDevelopmentTextView.text = "Scientific research LV3. Allow to travel further in space. Cost: money 10000, reourses 10000"
-
-
-                        } else if (levelScientificDevelopment == 4) {
-
-                            scientificDevelopmentTextView.text = "Scientific research LV4. Allow to travel further in space. Cost: money 15000, reourses 15000"
-
-
-                        } else if (levelScientificDevelopment == 5) {
-
-                            scientificDevelopmentTextView.text = "Scientific research LV 5"
-
-                        }
-
-
-
-
-
-
-
-
-
-
-                        if (levelSpionage == 2) {
-
-                            spionageTextView.text = "Spionage LV2. Improves chance of spying without being detected. Cost: money 4000, resourses 4000 (general dev. LV 2 required)"
-
-
-                        } else if (levelSpionage == 3) {
-
-                            spionageTextView.text = "Spionage LV3. Improves chance of spying without being detected. Cost: money 10000, resourses 10000"
-
-
-                        } else if (levelSpionage == 4) {
-
-                            spionageTextView.text = "Spionage LV4. Improves chance of spying without being detected. Cost: money 40000, resourses 40000"
-
-
-                        } else if (levelSpionage == 5) {
-
-                            spionageTextView.text = "Spionage LV 5"
-
-                        }
-
-
-
-
-
-
-
-
-
-
                     }
                 }
-            }
 
+        }
 
 
 
@@ -701,15 +710,21 @@ class DevelopHomeWorldActivity : AppCompatActivity() {
 
 
 
-        database.collection("users").document("User path").collection("Saved data")
-            .document("hmkogjk").set(data)
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+        if (user != null) {
+
+            database.collection("users").document(user.uid).collection("Saved data")
+                .document("hmkogjk").set(data)
 
 
-            .addOnCompleteListener {
+                .addOnCompleteListener {
 
 
+                }
 
-            }
+        }
 
 
         moneyAmmount = 0
